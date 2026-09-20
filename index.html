@@ -1,0 +1,3924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07111f">
+<meta name="description" content="MESHAQ Engineering & Contractors — Engineering excellence, construction, civil works, structural solutions, project management and modern building solutions.">
+<title>MESHAQ Engineering & Contractors | Engineering Excellence. Building the Future.</title>
+
+<style>
+:root{
+  --navy:#07111f;
+  --navy2:#0b1c31;
+  --blue:#123a63;
+  --gold:#f3a712;
+  --gold2:#ffbf3c;
+  --white:#ffffff;
+  --soft:#f4f7fa;
+  --muted:#667085;
+  --dark:#111827;
+  --line:#e5e7eb;
+  --green:#159957;
+  --shadow:0 20px 60px rgba(7,17,31,.12);
+  --radius:18px;
+  --max:1240px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  color:var(--dark);
+  background:#fff;
+  line-height:1.65;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+button,
+input,
+textarea,
+select{
+  font:inherit;
+}
+
+.container{
+  width:min(var(--max),92%);
+  margin:auto;
+}
+
+.section{
+  padding:100px 0;
+}
+
+.soft{
+  background:var(--soft);
+}
+
+.center{
+  text-align:center;
+}
+
+/* TOP BAR */
+.topbar{
+  background:#030a13;
+  color:#d9e2ee;
+  font-size:13px;
+}
+
+.topbar-inner{
+  min-height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.top-links{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+}
+
+.top-links span{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,17,31,.96);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+  height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:white;
+  min-width:max-content;
+}
+
+.logo-mark{
+  width:48px;
+  height:48px;
+  flex:none;
+}
+
+.logo-text strong{
+  display:block;
+  font-size:22px;
+  letter-spacing:2px;
+  line-height:1;
+}
+
+.logo-text small{
+  display:block;
+  color:#b8c5d4;
+  font-size:8px;
+  letter-spacing:1.8px;
+  margin-top:5px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+
+.nav-links a{
+  color:#d9e2ee;
+  font-size:14px;
+  font-weight:600;
+  transition:.25s;
+}
+
+.nav-links a:hover{
+  color:var(--gold2);
+}
+
+.nav-cta{
+  padding:12px 18px!important;
+  background:var(--gold);
+  color:#111!important;
+  border-radius:8px;
+}
+
+.nav-cta:hover{
+  background:var(--gold2);
+}
+
+.menu{
+  display:none;
+  border:0;
+  background:none;
+  color:#fff;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  min-height:calc(100vh - 120px);
+  position:relative;
+  display:flex;
+  align-items:center;
+  color:#fff;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,10,19,.96) 0%,
+      rgba(3,10,19,.83) 42%,
+      rgba(3,10,19,.32) 100%
+    ),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=88")
+    center/cover no-repeat;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0;
+  height:120px;
+  background:linear-gradient(transparent,var(--navy));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:min(780px,100%);
+  padding:90px 0 130px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--gold2);
+  font-weight:800;
+  font-size:13px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.eyebrow:before{
+  content:"";
+  width:34px;
+  height:2px;
+  background:var(--gold);
+}
+
+.hero h1{
+  font-size:clamp(45px,7vw,86px);
+  line-height:1.02;
+  letter-spacing:-3px;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:var(--gold);
+}
+
+.hero p{
+  color:#dbe5ef;
+  font-size:18px;
+  max-width:670px;
+  margin-bottom:35px;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  min-height:50px;
+  padding:0 21px;
+  border-radius:8px;
+  border:1px solid transparent;
+  font-weight:800;
+  font-size:14px;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.btn-gold{
+  background:var(--gold);
+  color:#111;
+}
+
+.btn-gold:hover{
+  background:var(--gold2);
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+  border-color:rgba(255,255,255,.35);
+  color:white;
+}
+
+.btn-outline:hover{
+  background:white;
+  color:var(--navy);
+}
+
+.btn-dark{
+  background:var(--navy);
+  color:#fff;
+}
+
+.btn-green{
+  background:#159957;
+  color:#fff;
+}
+
+.hero-proof{
+  display:flex;
+  gap:35px;
+  margin-top:48px;
+  flex-wrap:wrap;
+}
+
+.proof strong{
+  display:block;
+  font-size:25px;
+  color:white;
+}
+
+.proof span{
+  font-size:12px;
+  color:#aebdcb;
+}
+
+/* TRUST */
+.trust{
+  background:var(--navy);
+  color:#fff;
+  padding:22px 0;
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.trust-item{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  border-right:1px solid rgba(255,255,255,.12);
+}
+
+.trust-item:last-child{
+  border:0;
+}
+
+.trust-icon{
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  background:rgba(243,167,18,.12);
+  color:var(--gold2);
+  display:grid;
+  place-items:center;
+  font-size:19px;
+}
+
+.trust-item strong{
+  font-size:13px;
+}
+
+.trust-item span{
+  display:block;
+  color:#91a2b5;
+  font-size:11px;
+}
+
+/* TITLES */
+.section-head{
+  max-width:760px;
+  margin-bottom:50px;
+}
+
+.section-head.center{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.section-kicker{
+  color:#b47400;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.section h2{
+  font-size:clamp(32px,4vw,52px);
+  line-height:1.1;
+  letter-spacing:-1.5px;
+  color:var(--navy);
+}
+
+.section-head p{
+  color:var(--muted);
+  margin-top:16px;
+  font-size:16px;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:75px;
+  align-items:center;
+}
+
+.about-image{
+  position:relative;
+  border-radius:24px;
+  overflow:visible;
+}
+
+.about-image img{
+  width:100%;
+  height:600px;
+  object-fit:cover;
+  border-radius:24px;
+}
+
+.experience{
+  position:absolute;
+  right:-25px;
+  bottom:35px;
+  width:185px;
+  padding:23px;
+  background:var(--gold);
+  color:#111;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+}
+
+.experience strong{
+  display:block;
+  font-size:38px;
+  line-height:1;
+}
+
+.experience span{
+  font-weight:700;
+  font-size:12px;
+}
+
+.about-copy p{
+  color:var(--muted);
+  margin:18px 0;
+}
+
+.checks{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+  margin:27px 0;
+}
+
+.check{
+  display:flex;
+  align-items:flex-start;
+  gap:9px;
+  font-size:14px;
+  font-weight:700;
+}
+
+.check i{
+  color:var(--green);
+  font-style:normal;
+  font-weight:900;
+}
+
+/* SERVICES */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.service-card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.service-card:hover{
+  transform:translateY(-7px);
+  box-shadow:var(--shadow);
+}
+
+.service-img{
+  height:215px;
+  overflow:hidden;
+}
+
+.service-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.service-card:hover .service-img img{
+  transform:scale(1.06);
+}
+
+.service-body{
+  padding:25px;
+}
+
+.service-no{
+  color:#b47400;
+  font-weight:900;
+  font-size:12px;
+}
+
+.service-body h3{
+  margin:6px 0 10px;
+  font-size:20px;
+  color:var(--navy);
+}
+
+.service-body p{
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+
+.learn{
+  color:#a86b00;
+  font-size:13px;
+  font-weight:900;
+}
+
+/* TEAM */
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.team-card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+
+.team-photo{
+  height:330px;
+}
+
+.team-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.team-info{
+  padding:19px;
+}
+
+.team-info h3{
+  font-size:18px;
+  color:var(--navy);
+}
+
+.team-info p{
+  font-size:13px;
+  color:#a36b00;
+  font-weight:800;
+}
+
+/* MATERIALS */
+.material-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.material{
+  position:relative;
+  height:260px;
+  border-radius:17px;
+  overflow:hidden;
+  color:#fff;
+}
+
+.material img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.material:hover img{
+  transform:scale(1.07);
+}
+
+.material:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent 35%,rgba(0,0,0,.88));
+}
+
+.material-info{
+  position:absolute;
+  z-index:2;
+  left:18px;
+  right:18px;
+  bottom:17px;
+}
+
+.material-info h3{
+  font-size:18px;
+}
+
+.material-info p{
+  font-size:12px;
+  color:#d5dde5;
+}
+
+/* TOOLS */
+.tools-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:14px;
+}
+
+.tool{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:25px 12px;
+  text-align:center;
+  transition:.25s;
+}
+
+.tool:hover{
+  border-color:#d9a32d;
+  transform:translateY(-4px);
+}
+
+.tool-icon{
+  width:54px;
+  height:54px;
+  margin:0 auto 13px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#fff5dc;
+  color:#9a6500;
+  font-size:23px;
+}
+
+.tool h3{
+  font-size:13px;
+  color:var(--navy);
+}
+
+.tool p{
+  font-size:11px;
+  color:var(--muted);
+  margin-top:5px;
+}
+
+/* PROCESS */
+.process{
+  background:var(--navy);
+  color:#fff;
+  position:relative;
+}
+
+.process h2{
+  color:white;
+}
+
+.process .section-head p{
+  color:#aebdcc;
+}
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+  position:relative;
+}
+
+.process-grid:before{
+  content:"";
+  position:absolute;
+  top:34px;
+  left:8%;
+  right:8%;
+  height:1px;
+  background:rgba(255,255,255,.16);
+}
+
+.step{
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
+
+.step-number{
+  width:68px;
+  height:68px;
+  margin:auto;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--gold);
+  color:#111;
+  font-weight:900;
+  border:8px solid var(--navy);
+}
+
+.step h3{
+  font-size:16px;
+  margin:18px 0 8px;
+}
+
+.step p{
+  color:#91a2b5;
+  font-size:12px;
+  padding:0 12px;
+}
+
+/* HOUSE DESIGNS */
+.house-grid{
+  display:grid;
+  grid-template-columns:1.35fr .8fr .8fr;
+  grid-template-rows:250px 250px;
+  gap:15px;
+}
+
+.house{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+}
+
+.house:first-child{
+  grid-row:span 2;
+}
+
+.house img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.house:hover img{
+  transform:scale(1.05);
+}
+
+.house:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent 40%,rgba(0,0,0,.85));
+}
+
+.house-label{
+  position:absolute;
+  z-index:2;
+  bottom:20px;
+  left:20px;
+  color:#fff;
+}
+
+.house-label small{
+  color:var(--gold2);
+  font-weight:800;
+}
+
+.house-label h3{
+  font-size:21px;
+}
+
+/* FEATURE */
+.feature-dark{
+  background:linear-gradient(120deg,#07111f,#102c4b);
+  color:#fff;
+  border-radius:28px;
+  padding:55px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.feature-dark h2{
+  color:#fff;
+}
+
+.feature-dark p{
+  color:#b7c5d4;
+  margin:18px 0;
+}
+
+.feature-list{
+  display:grid;
+  gap:14px;
+  margin-top:20px;
+}
+
+.feature-list div{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+
+.feature-list b{
+  color:var(--gold2);
+}
+
+.feature-photo{
+  height:500px;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.feature-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* PROJECTS */
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.project{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+}
+
+.project-img{
+  height:270px;
+}
+
+.project-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.project-info{
+  padding:22px;
+}
+
+.project-tag{
+  font-size:11px;
+  font-weight:900;
+  color:#a56d00;
+  text-transform:uppercase;
+}
+
+.project h3{
+  margin:7px 0;
+  font-size:20px;
+  color:var(--navy);
+}
+
+.project p{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* APPLICATION */
+.application{
+  background:#f7f9fb;
+}
+
+.app-wrap{
+  display:grid;
+  grid-template-columns:.7fr 1.3fr;
+  gap:30px;
+  align-items:start;
+}
+
+.app-intro{
+  background:var(--navy);
+  color:white;
+  padding:38px;
+  border-radius:22px;
+  position:sticky;
+  top:105px;
+}
+
+.app-intro h2{
+  color:white;
+  font-size:34px;
+  line-height:1.15;
+}
+
+.app-intro p{
+  color:#b6c3d0;
+  margin:17px 0 25px;
+}
+
+.app-benefits{
+  display:grid;
+  gap:13px;
+}
+
+.app-benefits div{
+  font-size:13px;
+}
+
+.app-benefits span{
+  color:var(--gold2);
+  margin-right:7px;
+}
+
+.form-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:35px;
+  box-shadow:0 10px 40px rgba(7,17,31,.05);
+}
+
+.form-card h3{
+  font-size:25px;
+  color:var(--navy);
+  margin-bottom:22px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+
+.field.full{
+  grid-column:1/-1;
+}
+
+.field label{
+  font-size:12px;
+  font-weight:800;
+  color:#344054;
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  border:1px solid #d7dde5;
+  border-radius:9px;
+  padding:13px 14px;
+  outline:none;
+  background:#fff;
+  color:#111827;
+  transition:.2s;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(243,167,18,.12);
+}
+
+.field textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.service-options{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:9px;
+}
+
+.service-option{
+  border:1px solid #e0e5ea;
+  padding:11px;
+  border-radius:9px;
+  font-size:12px;
+  cursor:pointer;
+}
+
+.service-option input{
+  width:auto;
+  margin-right:6px;
+}
+
+.form-note{
+  font-size:11px;
+  color:#7a8492;
+  margin:15px 0;
+}
+
+/* CONTACT */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.contact-card{
+  border-radius:20px;
+  overflow:hidden;
+  min-height:480px;
+}
+
+.contact-info{
+  background:var(--navy);
+  color:white;
+  padding:45px;
+}
+
+.contact-info h2{
+  color:white;
+  font-size:42px;
+  line-height:1.1;
+}
+
+.contact-info>p{
+  color:#adbdcc;
+  margin:17px 0 30px;
+}
+
+.contact-row{
+  display:flex;
+  gap:15px;
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.contact-icon{
+  width:42px;
+  height:42px;
+  border-radius:10px;
+  background:rgba(243,167,18,.12);
+  display:grid;
+  place-items:center;
+  color:var(--gold2);
+}
+
+.contact-row strong{
+  font-size:13px;
+  display:block;
+}
+
+.contact-row span{
+  color:#9eafbf;
+  font-size:12px;
+}
+
+.contact-row a{
+  transition:.2s;
+}
+
+.contact-row a:hover{
+  color:var(--gold2);
+}
+
+.map{
+  min-height:480px;
+  background:
+    linear-gradient(rgba(7,17,31,.35),rgba(7,17,31,.35)),
+    url("https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=1400&q=85")
+    center/cover;
+  display:flex;
+  align-items:flex-end;
+  padding:30px;
+}
+
+.map-box{
+  background:#fff;
+  padding:20px;
+  border-radius:15px;
+  max-width:330px;
+  box-shadow:var(--shadow);
+}
+
+.map-box h3{
+  color:var(--navy);
+}
+
+.map-box p{
+  font-size:12px;
+  color:var(--muted);
+  margin:5px 0 12px;
+}
+
+/* FOOTER */
+footer{
+  background:#030a13;
+  color:#a9b8c8;
+  padding:65px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:40px;
+  padding-bottom:45px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.footer-logo{
+  margin-bottom:18px;
+}
+
+.footer-about{
+  font-size:13px;
+  max-width:360px;
+}
+
+.footer h3{
+  color:white;
+  font-size:14px;
+  margin-bottom:17px;
+}
+
+.footer-links{
+  display:grid;
+  gap:9px;
+  font-size:13px;
+}
+
+.footer-links a:hover{
+  color:var(--gold2);
+}
+
+.copyright{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding-top:20px;
+  font-size:11px;
+}
+
+/* FLOATING CONTACT */
+.floating{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:900;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.float-btn{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:white;
+  font-size:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.float-call{
+  background:var(--navy);
+}
+
+.float-wa{
+  background:#159957;
+}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  z-index:2000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.modal.active{
+  display:flex;
+}
+
+.modal-box{
+  background:#fff;
+  max-width:480px;
+  width:100%;
+  border-radius:20px;
+  padding:35px;
+  text-align:center;
+  position:relative;
+}
+
+.modal-close{
+  position:absolute;
+  right:15px;
+  top:10px;
+  border:0;
+  background:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+.success-icon{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background:#e7f8ef;
+  color:#159957;
+  display:grid;
+  place-items:center;
+  margin:0 auto 17px;
+  font-size:32px;
+}
+
+/* REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:.7s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:1050px){
+
+  .nav-links{
+    gap:14px;
+  }
+
+  .nav-links a{
+    font-size:12px;
+  }
+
+  .tools-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .team-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .material-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:850px){
+
+  .topbar{
+    display:none;
+  }
+
+  .nav{
+    height:72px;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    left:4%;
+    right:4%;
+    top:72px;
+    background:#081522;
+    padding:20px;
+    border-radius:0 0 15px 15px;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:13px 10px;
+    border-bottom:1px solid rgba(255,255,255,.07);
+    font-size:14px;
+  }
+
+  .nav-cta{
+    text-align:center;
+  }
+
+  .hero{
+    min-height:700px;
+  }
+
+  .hero h1{
+    letter-spacing:-2px;
+  }
+
+  .trust-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .trust-item:nth-child(2){
+    border:0;
+  }
+
+  .about-grid,
+  .feature-dark,
+  .app-wrap,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-image img{
+    height:480px;
+  }
+
+  .experience{
+    right:15px;
+  }
+
+  .services-grid,
+  .projects-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .process-grid{
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+  }
+
+  .process-grid:before{
+    display:none;
+  }
+
+  .house-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:250px 250px 250px;
+  }
+
+  .house:first-child{
+    grid-row:auto;
+    grid-column:span 2;
+  }
+
+  .app-intro{
+    position:static;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  .section{
+    padding:70px 0;
+  }
+
+  .container{
+    width:91%;
+  }
+
+  .hero-content{
+    padding:70px 0 100px;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .hero-proof{
+    gap:20px;
+  }
+
+  .trust-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trust-item{
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.1);
+    padding-bottom:12px;
+  }
+
+  .services-grid,
+  .projects-grid,
+  .team-grid,
+  .material-grid{
+    grid-template-columns:1fr;
+  }
+
+  .tools-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .checks,
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .field.full{
+    grid-column:auto;
+  }
+
+  .service-options{
+    grid-template-columns:1fr;
+  }
+
+  .feature-dark{
+    padding:30px 22px;
+  }
+
+  .feature-photo{
+    height:350px;
+  }
+
+  .house-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:280px 220px 220px 220px;
+  }
+
+  .house:first-child{
+    grid-column:auto;
+  }
+
+  .app-intro{
+    padding:28px;
+  }
+
+  .form-card{
+    padding:22px;
+  }
+
+  .contact-info{
+    padding:30px;
+  }
+
+  .contact-info h2{
+    font-size:34px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .copyright{
+    flex-direction:column;
+  }
+
+  .floating{
+    right:12px;
+    bottom:12px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  *{
+    scroll-behavior:auto!important;
+    transition:none!important;
+    animation:none!important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ==========================================================
+     TOP INFORMATION BAR
+========================================================== -->
+<div class="topbar">
+
+  <div class="container topbar-inner">
+
+    <div class="top-links">
+
+      <span>📍 Kenya & East Africa</span>
+
+      <span>
+        ✉️
+        <a href="mailto:meshaqengineeringlimitedsupport@gmail.com">
+          meshaqengineeringlimitedsupport@gmail.com
+        </a>
+      </span>
+
+    </div>
+
+    <div class="top-links">
+
+      <span>
+        ☎
+        <a href="tel:0712242050">0712242050</a>
+      </span>
+
+      <span>
+        ☎
+        <a href="tel:0732444187">0732444187</a>
+      </span>
+
+      <span>
+        ☎
+        <a href="tel:0141976710">0141 976710</a>
+      </span>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ==========================================================
+     HEADER
+========================================================== -->
+<header>
+
+  <div class="container nav">
+
+    <a href="#home" class="logo" aria-label="MESHAQ Engineering & Contractors">
+
+      <svg class="logo-mark"
+           viewBox="0 0 100 100"
+           fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+
+        <rect x="3"
+              y="3"
+              width="94"
+              height="94"
+              rx="18"
+              fill="#F3A712"/>
+
+        <path d="M18 75V28L31 42L44 25L57 42L70 28V75"
+              stroke="#07111F"
+              stroke-width="8"
+              stroke-linejoin="round"/>
+
+        <path d="M18 75H82"
+              stroke="#07111F"
+              stroke-width="8"
+              stroke-linecap="round"/>
+
+        <path d="M70 28V75"
+              stroke="#07111F"
+              stroke-width="8"/>
+
+      </svg>
+
+      <div class="logo-text">
+
+        <strong>MESHAQ</strong>
+
+        <small>
+          ENGINEERING & CONTRACTORS
+        </small>
+
+      </div>
+
+    </a>
+
+    <button class="menu"
+            id="menuBtn"
+            aria-label="Open menu">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+
+      <a href="#home">Home</a>
+
+      <a href="#about">About</a>
+
+      <a href="#services">Services</a>
+
+      <a href="#projects">Projects</a>
+
+      <a href="#designs">Designs</a>
+
+      <a href="#process">How We Work</a>
+
+      <a href="#contact">Contact</a>
+
+      <a href="#application" class="nav-cta">
+        START A PROJECT
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+<!-- ==========================================================
+     HERO
+========================================================== -->
+<section class="hero" id="home">
+
+  <div class="container">
+
+    <div class="hero-content reveal">
+
+      <div class="eyebrow">
+        Engineering • Construction • Infrastructure
+      </div>
+
+      <h1>
+        ENGINEERING<br>
+        <span>EXCELLENCE.</span><br>
+        BUILDING THE FUTURE.
+      </h1>
+
+      <p>
+        MESHAQ Engineering & Contractors delivers professional
+        construction, civil engineering, structural solutions,
+        project management and modern building solutions with
+        precision, safety and quality at every stage.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#application"
+           class="btn btn-gold">
+          🏗️ START A PROJECT
+        </a>
+
+        <a href="#services"
+           class="btn btn-outline">
+          EXPLORE OUR SERVICES
+        </a>
+
+      </div>
+
+      <div class="hero-proof">
+
+        <div class="proof">
+          <strong>01</strong>
+          <span>QUALITY FOCUSED</span>
+        </div>
+
+        <div class="proof">
+          <strong>02</strong>
+          <span>SAFETY DRIVEN</span>
+        </div>
+
+        <div class="proof">
+          <strong>03</strong>
+          <span>CLIENT CENTRED</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     TRUST STRIP
+========================================================== -->
+<section class="trust">
+
+  <div class="container trust-grid">
+
+    <div class="trust-item">
+
+      <div class="trust-icon">✓</div>
+
+      <div>
+        <strong>Quality Workmanship</strong>
+        <span>Attention to every detail</span>
+      </div>
+
+    </div>
+
+    <div class="trust-item">
+
+      <div class="trust-icon">◈</div>
+
+      <div>
+        <strong>Technical Precision</strong>
+        <span>Engineering-led solutions</span>
+      </div>
+
+    </div>
+
+    <div class="trust-item">
+
+      <div class="trust-icon">◆</div>
+
+      <div>
+        <strong>Safety First</strong>
+        <span>Responsible site practices</span>
+      </div>
+
+    </div>
+
+    <div class="trust-item">
+
+      <div class="trust-icon">↗</div>
+
+      <div>
+        <strong>Project Focus</strong>
+        <span>From concept to completion</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     ABOUT
+========================================================== -->
+<section class="section" id="about">
+
+  <div class="container about-grid">
+
+    <div class="about-image reveal">
+
+      <img
+        src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1300&q=88"
+        alt="Engineering professionals reviewing construction plans"
+        loading="lazy">
+
+      <div class="experience">
+
+        <strong>M</strong>
+
+        <span>
+          ENGINEERED WITH PURPOSE
+        </span>
+
+      </div>
+
+    </div>
+
+    <div class="about-copy reveal">
+
+      <div class="section-kicker">
+        Who We Are
+      </div>
+
+      <h2>
+        Engineering solutions built around your vision.
+      </h2>
+
+      <p>
+        MESHAQ Engineering & Contractors is a modern,
+        client-focused engineering and construction brand
+        delivering solutions across building, civil works,
+        structural projects, renovation and technical services.
+      </p>
+
+      <p>
+        Our approach begins with understanding the client's
+        requirements, continues through careful planning and
+        technical coordination, and finishes with controlled
+        execution, quality checks and project handover.
+      </p>
+
+      <div class="checks">
+
+        <div class="check">
+          <i>✓</i>
+          Professional planning
+        </div>
+
+        <div class="check">
+          <i>✓</i>
+          Quality materials
+        </div>
+
+        <div class="check">
+          <i>✓</i>
+          Technical supervision
+        </div>
+
+        <div class="check">
+          <i>✓</i>
+          Safety-conscious work
+        </div>
+
+        <div class="check">
+          <i>✓</i>
+          Clear communication
+        </div>
+
+        <div class="check">
+          <i>✓</i>
+          Project documentation
+        </div>
+
+      </div>
+
+      <a href="#application"
+         class="btn btn-dark">
+        DISCUSS YOUR PROJECT →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     SERVICES
+========================================================== -->
+<section class="section soft" id="services">
+
+  <div class="container">
+
+    <div class="section-head center">
+
+      <div class="section-kicker">
+        What We Do
+      </div>
+
+      <h2>
+        Complete engineering & construction services.
+      </h2>
+
+      <p>
+        From the first idea to the final finish, MESHAQ brings
+        together technical planning, skilled workmanship,
+        project coordination and construction expertise.
+      </p>
+
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card reveal">
+
+        <div class="service-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
+            alt="Construction site"
+            loading="lazy">
+
+        </div>
+
+        <div class="service-body">
+
+          <span class="service-no">
+            01 / CONSTRUCTION
+          </span>
+
+          <h3>
+            Building & General Contracting
+          </h3>
+
+          <p>
+            Building solutions covering project preparation,
+            site works, structural construction, finishes and
+            coordinated completion.
+          </p>
+
+          <a href="#application"
+             class="learn">
+            REQUEST THIS SERVICE →
+          </a>
+
+        </div>
+
+      </article>
+
+      <article class="service-card reveal">
+
+        <div class="service-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85"
+            alt="Civil construction"
+            loading="lazy">
+
+        </div>
+
+        <div class="service-body">
+
+          <span class="service-no">
+            02 / CIVIL
+          </span>
+
+          <h3>
+            Civil Engineering
+          </h3>
+
+          <p>
+            Civil works and infrastructure solutions including
+            site development, drainage, earthworks and related
+            construction.
+          </p>
+
+          <a href="#application"
+             class="learn">
+            REQUEST THIS SERVICE →
+          </a>
+
+        </div>
+
+      </article>
+
+      <article class="service-card reveal">
+
+        <div class="service-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85"
+            alt="Architectural building design"
+            loading="lazy">
+
+        </div>
+
+        <div class="service-body">
+
+          <span class="service-no">
+            03 / STRUCTURAL
+          </span>
+
+          <h3>
+            Structural Solutions
+          </h3>
+
+          <p>
+            Technical structural coordination and construction
+            solutions developed around project requirements and
+            applicable standards.
+          </p>
+
+          <a href="#application"
+             class="learn">
+            REQUEST THIS SERVICE →
+          </a>
+
+        </div>
+
+      </article>
+
+      <article class="service-card reveal">
+
+        <div class="service-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1590725140246-20acdc7b5c0e?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern residential construction"
+            loading="lazy">
+
+        </div>
+
+        <div class="service-body">
+
+          <span class="service-no">
+            04 / DESIGN
+          </span>
+
+          <h3>
+            House Design & Planning
+          </h3>
+
+          <p>
+            Modern residential concepts, space planning,
+            exterior ideas and construction-oriented design
+            coordination.
+          </p>
+
+          <a href="#application"
+             class="learn">
+            DESIGN MY PROJECT →
+          </a>
+
+        </div>
+
+      </article>
+
+      <article class="service-card reveal">
+
+        <div class="service-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1542621334-a254cf47733d?auto=format&fit=crop&w=1000&q=85"
+            alt="Engineering project plans"
+            loading="lazy">
+
+        </div>
+
+        <div class="service-body">
+
+          <span class="service-no">
+            05 / MANAGEMENT
+          </span>
+
+          <h3>
+            Project Management
+          </h3>
+
+          <p>
+            Planning, coordination, scheduling, communication
+            and construction monitoring throughout the project
+            lifecycle.
+          </p>
+
+          <a href="#application"
+             class="learn">
+            MANAGE MY PROJECT →
+          </a>
+
+        </div>
+
+      </article>
+
+      <article class="service-card reveal">
+
+        <div class="service-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=85"
+            alt="Engineer working with technical equipment"
+            loading="lazy">
+
+        </div>
+
+        <div class="service-body">
+
+          <span class="service-no">
+            06 / TECHNICAL
+          </span>
+
+          <h3>
+            Consultancy & Site Services
+          </h3>
+
+          <p>
+            Technical consultation, site assessment,
+            construction coordination and practical
+            project support.
+          </p>
+
+          <a href="#application"
+             class="learn">
+            TALK TO OUR TEAM →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     ENGINEERING TEAM
+========================================================== -->
+<section class="section" id="team">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-kicker">
+        Our Professionals
+      </div>
+
+      <h2>
+        The people behind the work.
+      </h2>
+
+      <p>
+        A strong engineering project depends on disciplined
+        coordination between technical professionals, site teams
+        and the client.
+      </p>
+
+    </div>
+
+    <div class="team-grid">
+
+      <article class="team-card reveal">
+
+        <div class="team-photo">
+
+          <img
+            src="https://images.unsplash.com/photo-1581091215367-59ab6f2a8d3a?auto=format&fit=crop&w=900&q=85"
+            alt="Engineering professional"
+            loading="lazy">
+
+        </div>
+
+        <div class="team-info">
+
+          <h3>
+            Project Engineer
+          </h3>
+
+          <p>
+            TECHNICAL COORDINATION
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="team-card reveal">
+
+        <div class="team-photo">
+
+          <img
+            src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=900&q=85"
+            alt="Engineer on construction site"
+            loading="lazy">
+
+        </div>
+
+        <div class="team-info">
+
+          <h3>
+            Site Engineer
+          </h3>
+
+          <p>
+            FIELD SUPERVISION
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="team-card reveal">
+
+        <div class="team-photo">
+
+          <img
+            src="https://images.unsplash.com/photo-1581092919535-7146ff1a590f?auto=format&fit=crop&w=900&q=85"
+            alt="Construction engineer"
+            loading="lazy">
+
+        </div>
+
+        <div class="team-info">
+
+          <h3>
+            Technical Specialist
+          </h3>
+
+          <p>
+            ENGINEERING SUPPORT
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="team-card reveal">
+
+        <div class="team-photo">
+
+          <img
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85"
+            alt="Professional project manager"
+            loading="lazy">
+
+        </div>
+
+        <div class="team-info">
+
+          <h3>
+            Project Coordinator
+          </h3>
+
+          <p>
+            CLIENT & PROJECT SUPPORT
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     MATERIALS
+========================================================== -->
+<section class="section soft" id="materials">
+
+  <div class="container">
+
+    <div class="section-head center">
+
+      <div class="section-kicker">
+        Construction Materials
+      </div>
+
+      <h2>
+        Materials selected for the work.
+      </h2>
+
+      <p>
+        Construction quality depends on appropriate material
+        selection, correct application and controlled workmanship.
+      </p>
+
+    </div>
+
+    <div class="material-grid">
+
+      <div class="material reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=800&q=85"
+          alt="Concrete construction"
+          loading="lazy">
+
+        <div class="material-info">
+
+          <h3>
+            Concrete & Cement
+          </h3>
+
+          <p>
+            Structural and general construction applications.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="material reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=85"
+          alt="Construction bricks"
+          loading="lazy">
+
+        <div class="material-info">
+
+          <h3>
+            Masonry & Blocks
+          </h3>
+
+          <p>
+            Walling and building construction applications.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="material reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=85"
+          alt="Steel construction"
+          loading="lazy">
+
+        <div class="material-info">
+
+          <h3>
+            Steel & Reinforcement
+          </h3>
+
+          <p>
+            Structural and reinforced construction work.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="material reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=800&q=85"
+          alt="Construction timber"
+          loading="lazy">
+
+        <div class="material-info">
+
+          <h3>
+            Timber & Formwork
+          </h3>
+
+          <p>
+            Construction support and finishing applications.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="material reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=800&q=85"
+          alt="Construction finishing"
+          loading="lazy">
+
+        <div class="material-info">
+
+          <h3>
+            Tiles & Finishes
+          </h3>
+
+          <p>
+            Interior and exterior finishing solutions.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="material reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=85"
+          alt="Modern interior"
+          loading="lazy">
+
+        <div class="material-info">
+
+          <h3>
+            Interior Materials
+          </h3>
+
+          <p>
+            Materials supporting modern interior spaces.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="material reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=85"
+          alt="Glass building"
+          loading="lazy">
+
+        <div class="material-info">
+
+          <h3>
+            Glass & Aluminium
+          </h3>
+
+          <p>
+            Modern architectural applications.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="material reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1607400201515-c2c41c07fdb7?auto=format&fit=crop&w=800&q=85"
+          alt="Construction materials"
+          loading="lazy">
+
+        <div class="material-info">
+
+          <h3>
+            Roofing Systems
+          </h3>
+
+          <p>
+            Roof construction and finishing solutions.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     TOOLS
+========================================================== -->
+<section class="section" id="equipment">
+
+  <div class="container">
+
+    <div class="section-head center">
+
+      <div class="section-kicker">
+        Tools & Equipment
+      </div>
+
+      <h2>
+        Built with the right tools.
+      </h2>
+
+      <p>
+        Construction and engineering require the right equipment,
+        measurement tools, protective equipment and site resources.
+      </p>
+
+    </div>
+
+    <div class="tools-grid">
+
+      <div class="tool reveal">
+        <div class="tool-icon">📏</div>
+        <h3>Laser Level</h3>
+        <p>Precision alignment</p>
+      </div>
+
+      <div class="tool reveal">
+        <div class="tool-icon">📐</div>
+        <h3>Measuring Tools</h3>
+        <p>Site measurements</p>
+      </div>
+
+      <div class="tool reveal">
+        <div class="tool-icon">🔨</div>
+        <h3>Power Tools</h3>
+        <p>Construction work</p>
+      </div>
+
+      <div class="tool reveal">
+        <div class="tool-icon">⚙️</div>
+        <h3>Concrete Equipment</h3>
+        <p>Concrete operations</p>
+      </div>
+
+      <div class="tool reveal">
+        <div class="tool-icon">🚧</div>
+        <h3>Site Equipment</h3>
+        <p>Site preparation</p>
+      </div>
+
+      <div class="tool reveal">
+        <div class="tool-icon">🦺</div>
+        <h3>Safety Gear</h3>
+        <p>Site protection</p>
+      </div>
+
+      <div class="tool reveal">
+        <div class="tool-icon">🧱</div>
+        <h3>Masonry Tools</h3>
+        <p>Wall construction</p>
+      </div>
+
+      <div class="tool reveal">
+        <div class="tool-icon">🔧</div>
+        <h3>Hand Tools</h3>
+        <p>General works</p>
+      </div>
+
+      <div class="tool reveal">
+        <div class="tool-icon">🏗️</div>
+        <h3>Heavy Equipment</h3>
+        <p>Large site works</p>
+      </div>
+
+      <div class="tool reveal">
+        <div class="tool-icon">📊</div>
+        <h3>Survey Equipment</h3>
+        <p>Site information</p>
+      </div>
+
+      <div class="tool reveal">
+        <div class="tool-icon">💻</div>
+        <h3>Design Software</h3>
+        <p>Technical planning</p>
+      </div>
+
+      <div class="tool reveal">
+        <div class="tool-icon">🧰</div>
+        <h3>Site Kits</h3>
+        <p>Professional support</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     PROCESS
+========================================================== -->
+<section class="section process" id="process">
+
+  <div class="container">
+
+    <div class="section-head center">
+
+      <div class="section-kicker">
+        Our Process
+      </div>
+
+      <h2>
+        How MESHAQ works with you.
+      </h2>
+
+      <p>
+        Every project starts with understanding. We then move
+        through planning, technical preparation, execution and
+        final review.
+      </p>
+
+    </div>
+
+    <div class="process-grid">
+
+      <div class="step reveal">
+
+        <div class="step-number">
+          01
+        </div>
+
+        <h3>
+          Consult
+        </h3>
+
+        <p>
+          We listen to your goals, budget, location and project
+          requirements.
+        </p>
+
+      </div>
+
+      <div class="step reveal">
+
+        <div class="step-number">
+          02
+        </div>
+
+        <h3>
+          Assess
+        </h3>
+
+        <p>
+          We review the site, available information, scope and
+          technical needs.
+        </p>
+
+      </div>
+
+      <div class="step reveal">
+
+        <div class="step-number">
+          03
+        </div>
+
+        <h3>
+          Plan
+        </h3>
+
+        <p>
+          We develop the project approach, programme and required
+          documentation.
+        </p>
+
+      </div>
+
+      <div class="step reveal">
+
+        <div class="step-number">
+          04
+        </div>
+
+        <h3>
+          Build
+        </h3>
+
+        <p>
+          Work is coordinated and executed with attention to
+          quality and safety.
+        </p>
+
+      </div>
+
+      <div class="step reveal">
+
+        <div class="step-number">
+          05
+        </div>
+
+        <h3>
+          Deliver
+        </h3>
+
+        <p>
+          We review the completed work and coordinate the
+          handover process.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     HOUSE DESIGNS
+========================================================== -->
+<section class="section" id="designs">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-kicker">
+        House Designs
+      </div>
+
+      <h2>
+        Modern spaces designed around the way you live.
+      </h2>
+
+      <p>
+        Explore the type of residential design direction MESHAQ
+        can present to clients—from contemporary family homes
+        to premium architectural concepts.
+      </p>
+
+    </div>
+
+    <div class="house-grid">
+
+      <div class="house reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=88"
+          alt="Luxury modern house"
+          loading="lazy">
+
+        <div class="house-label">
+
+          <small>
+            FEATURED CONCEPT
+          </small>
+
+          <h3>
+            Modern Family Residence
+          </h3>
+
+        </div>
+
+      </div>
+
+      <div class="house reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=88"
+          alt="Contemporary home"
+          loading="lazy">
+
+        <div class="house-label">
+
+          <small>
+            RESIDENTIAL
+          </small>
+
+          <h3>
+            Contemporary Villa
+          </h3>
+
+        </div>
+
+      </div>
+
+      <div class="house reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=88"
+          alt="Modern home exterior"
+          loading="lazy">
+
+        <div class="house-label">
+
+          <small>
+            MODERN
+          </small>
+
+          <h3>
+            Urban Residence
+          </h3>
+
+        </div>
+
+      </div>
+
+      <div class="house reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=88"
+          alt="Premium home"
+          loading="lazy">
+
+        <div class="house-label">
+
+          <small>
+            PREMIUM
+          </small>
+
+          <h3>
+            Executive Home
+          </h3>
+
+        </div>
+
+      </div>
+
+      <div class="house reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=88"
+          alt="Modern interior"
+          loading="lazy">
+
+        <div class="house-label">
+
+          <small>
+            INTERIOR
+          </small>
+
+          <h3>
+            Modern Living Space
+          </h3>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     ENGINEERING MINDSET
+========================================================== -->
+<section class="section soft">
+
+  <div class="container">
+
+    <div class="feature-dark reveal">
+
+      <div>
+
+        <div class="section-kicker">
+          Engineering Mindset
+        </div>
+
+        <h2>
+          From drawings and ideas to a finished structure.
+        </h2>
+
+        <p>
+          A successful project requires more than materials.
+          It requires communication, planning, coordination,
+          measurement, supervision and disciplined execution.
+        </p>
+
+        <div class="feature-list">
+
+          <div>
+            <b>01</b>
+            <span>
+              Understand the client's requirements and intended outcome.
+            </span>
+          </div>
+
+          <div>
+            <b>02</b>
+            <span>
+              Coordinate design, technical information and project scope.
+            </span>
+          </div>
+
+          <div>
+            <b>03</b>
+            <span>
+              Plan resources, materials, workforce and construction activities.
+            </span>
+          </div>
+
+          <div>
+            <b>04</b>
+            <span>
+              Monitor progress and communicate important project developments.
+            </span>
+          </div>
+
+          <div>
+            <b>05</b>
+            <span>
+              Review completed work before project handover.
+            </span>
+          </div>
+
+        </div>
+
+        <br>
+
+        <a href="#application"
+           class="btn btn-gold">
+          START YOUR PROJECT →
+        </a>
+
+      </div>
+
+      <div class="feature-photo">
+
+        <img
+          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1300&q=88"
+          alt="Construction team working on a project"
+          loading="lazy">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     PROJECTS
+========================================================== -->
+<section class="section" id="projects">
+
+  <div class="container">
+
+    <div class="section-head center">
+
+      <div class="section-kicker">
+        Project Portfolio
+      </div>
+
+      <h2>
+        Spaces. Structures. Infrastructure.
+      </h2>
+
+      <p>
+        A portfolio area where MESHAQ can present completed and
+        ongoing work with project descriptions, photographs and
+        technical scope.
+      </p>
+
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="project reveal">
+
+        <div class="project-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1100&q=88"
+            alt="Commercial building"
+            loading="lazy">
+
+        </div>
+
+        <div class="project-info">
+
+          <span class="project-tag">
+            Commercial
+          </span>
+
+          <h3>
+            Commercial Development
+          </h3>
+
+          <p>
+            Concept example for a commercial building project portfolio.
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="project reveal">
+
+        <div class="project-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1100&q=88"
+            alt="Residential project"
+            loading="lazy">
+
+        </div>
+
+        <div class="project-info">
+
+          <span class="project-tag">
+            Residential
+          </span>
+
+          <h3>
+            Modern Residential Project
+          </h3>
+
+          <p>
+            Concept example for a modern residential development.
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="project reveal">
+
+        <div class="project-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1100&q=88"
+            alt="Infrastructure building"
+            loading="lazy">
+
+        </div>
+
+        <div class="project-info">
+
+          <span class="project-tag">
+            Infrastructure
+          </span>
+
+          <h3>
+            Architectural & Infrastructure Works
+          </h3>
+
+          <p>
+            Concept example for an infrastructure portfolio entry.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     PROJECT APPLICATION
+========================================================== -->
+<section class="section application" id="application">
+
+  <div class="container app-wrap">
+
+    <div class="app-intro reveal">
+
+      <div class="section-kicker">
+        Start Your Project
+      </div>
+
+      <h2>
+        Tell MESHAQ what you want to build.
+      </h2>
+
+      <p>
+        Send us your project requirements. Our team can review
+        the information and determine the next appropriate
+        consultation or technical step.
+      </p>
+
+      <div class="app-benefits">
+
+        <div>
+          <span>✓</span>
+          Tell us about your project
+        </div>
+
+        <div>
+          <span>✓</span>
+          Select the services you need
+        </div>
+
+        <div>
+          <span>✓</span>
+          Provide your location and timeline
+        </div>
+
+        <div>
+          <span>✓</span>
+          Explain your project requirements
+        </div>
+
+        <div>
+          <span>✓</span>
+          Receive an application reference
+        </div>
+
+      </div>
+
+      <br>
+
+      <p style="font-size:11px">
+        Do not upload passwords, payment PINs or other confidential
+        authentication credentials through this form.
+      </p>
+
+    </div>
+
+    <div class="form-card reveal">
+
+      <h3>
+        Project Application
+      </h3>
+
+      <form id="projectForm">
+
+        <div class="form-grid">
+
+          <div class="field">
+
+            <label>
+              Full Name *
+            </label>
+
+            <input
+              id="name"
+              type="text"
+              required
+              placeholder="Your full name">
+
+          </div>
+
+          <div class="field">
+
+            <label>
+              Phone Number *
+            </label>
+
+            <input
+              id="phone"
+              type="tel"
+              required
+              placeholder="+254 7XX XXX XXX">
+
+          </div>
+
+          <div class="field">
+
+            <label>
+              Email Address
+            </label>
+
+            <input
+              id="email"
+              type="email"
+              placeholder="you@example.com">
+
+          </div>
+
+          <div class="field">
+
+            <label>
+              Project Location *
+            </label>
+
+            <input
+              id="location"
+              type="text"
+              required
+              placeholder="Town / County">
+
+          </div>
+
+          <div class="field">
+
+            <label>
+              Project Type *
+            </label>
+
+            <select id="projectType" required>
+
+              <option value="">
+                Select project type
+              </option>
+
+              <option>
+                Residential House
+              </option>
+
+              <option>
+                Commercial Building
+              </option>
+
+              <option>
+                Industrial Project
+              </option>
+
+              <option>
+                Renovation
+              </option>
+
+              <option>
+                Civil Works
+              </option>
+
+              <option>
+                Infrastructure
+              </option>
+
+              <option>
+                Other
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="field">
+
+            <label>
+              Estimated Budget
+            </label>
+
+            <select id="budget">
+
+              <option value="">
+                Select range
+              </option>
+
+              <option>
+                Below KSh 500,000
+              </option>
+
+              <option>
+                KSh 500,000 – 1M
+              </option>
+
+              <option>
+                KSh 1M – 5M
+              </option>
+
+              <option>
+                KSh 5M – 10M
+              </option>
+
+              <option>
+                Above KSh 10M
+              </option>
+
+              <option>
+                Not yet determined
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="field full">
+
+            <label>
+              Services Required
+            </label>
+
+            <div class="service-options">
+
+              <label class="service-option">
+                <input
+                  type="checkbox"
+                  name="services"
+                  value="Construction">
+                Construction & Contracting
+              </label>
+
+              <label class="service-option">
+                <input
+                  type="checkbox"
+                  name="services"
+                  value="Civil Engineering">
+                Civil Engineering
+              </label>
+
+              <label class="service-option">
+                <input
+                  type="checkbox"
+                  name="services"
+                  value="Structural">
+                Structural Solutions
+              </label>
+
+              <label class="service-option">
+                <input
+                  type="checkbox"
+                  name="services"
+                  value="House Design">
+                House Design
+              </label>
+
+              <label class="service-option">
+                <input
+                  type="checkbox"
+                  name="services"
+                  value="Project Management">
+                Project Management
+              </label>
+
+              <label class="service-option">
+                <input
+                  type="checkbox"
+                  name="services"
+                  value="Consultancy">
+                Consultancy
+              </label>
+
+            </div>
+
+          </div>
+
+          <div class="field full">
+
+            <label>
+              Tell us about your project *
+            </label>
+
+            <textarea
+              id="message"
+              required
+              placeholder="Describe what you want to build, the current stage of your project, your requirements and any other useful information..."></textarea>
+
+          </div>
+
+          <div class="field full">
+
+            <label>
+              Preferred Start Date
+            </label>
+
+            <input
+              id="startDate"
+              type="date">
+
+          </div>
+
+        </div>
+
+        <p class="form-note">
+          By submitting this form, you are requesting contact
+          regarding your project. Final scope, technical
+          requirements, pricing and contractual terms should
+          be confirmed separately.
+        </p>
+
+        <button
+          type="submit"
+          class="btn btn-dark"
+          style="width:100%">
+
+          SUBMIT PROJECT APPLICATION →
+
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     CONTACT
+========================================================== -->
+<section class="section" id="contact">
+
+  <div class="container contact-grid">
+
+    <div class="contact-card contact-info reveal">
+
+      <div class="section-kicker">
+        Contact MESHAQ
+      </div>
+
+      <h2>
+        Let's talk about your next project.
+      </h2>
+
+      <p>
+        Have a house to build, a commercial project to develop,
+        infrastructure work to discuss or an engineering question?
+        Contact the MESHAQ team.
+      </p>
+
+      <!-- OFFICE NUMBERS -->
+      <div class="contact-row">
+
+        <div class="contact-icon">
+          ☎
+        </div>
+
+        <div>
+
+          <strong>
+            OFFICE NUMBERS
+          </strong>
+
+          <span>
+
+            <a href="tel:0712242050">
+              0712242050
+            </a>
+
+            &nbsp;/&nbsp;
+
+            <a href="tel:0732444187">
+              0732444187
+            </a>
+
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- HOTLINE -->
+      <div class="contact-row">
+
+        <div class="contact-icon">
+          ☎
+        </div>
+
+        <div>
+
+          <strong>
+            HOTLINE / AGENT LINE
+          </strong>
+
+          <span>
+
+            <a href="tel:0141976710">
+              0141 976710
+            </a>
+
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- EMAIL -->
+      <div class="contact-row">
+
+        <div class="contact-icon">
+          ✉
+        </div>
+
+        <div>
+
+          <strong>
+            EMAIL SUPPORT
+          </strong>
+
+          <span>
+
+            <a href="mailto:meshaqengineeringlimitedsupport@gmail.com">
+              meshaqengineeringlimitedsupport@gmail.com
+            </a>
+
+          </span>
+
+        </div>
+
+      </div>
+
+      <br>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+
+        <a href="tel:0712242050"
+           class="btn btn-gold">
+          📞 CALL OFFICE
+        </a>
+
+        <a href="tel:0141976710"
+           class="btn btn-dark">
+          ☎ CALL HOTLINE
+        </a>
+
+        <a href="mailto:meshaqengineeringlimitedsupport@gmail.com"
+           class="btn"
+           style="background:#fff;color:#07111f;border-color:#fff">
+          ✉ EMAIL SUPPORT
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="contact-card map reveal">
+
+      <div class="map-box">
+
+        <h3>
+          MESHAQ Engineering & Contractors
+        </h3>
+
+        <p>
+          Your final office address, Google Maps location and
+          working hours can be added here before publishing.
+        </p>
+
+        <a href="#application"
+           class="btn btn-dark">
+          SEND AN ENQUIRY →
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     FOOTER
+========================================================== -->
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="logo footer-logo">
+
+          <svg class="logo-mark"
+               viewBox="0 0 100 100"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+
+            <rect
+              x="3"
+              y="3"
+              width="94"
+              height="94"
+              rx="18"
+              fill="#F3A712"/>
+
+            <path
+              d="M18 75V28L31 42L44 25L57 42L70 28V75"
+              stroke="#07111F"
+              stroke-width="8"
+              stroke-linejoin="round"/>
+
+            <path
+              d="M18 75H82"
+              stroke="#07111F"
+              stroke-width="8"
+              stroke-linecap="round"/>
+
+            <path
+              d="M70 28V75"
+              stroke="#07111F"
+              stroke-width="8"/>
+
+          </svg>
+
+          <div class="logo-text">
+
+            <strong>
+              MESHAQ
+            </strong>
+
+            <small>
+              ENGINEERING & CONTRACTORS
+            </small>
+
+          </div>
+
+        </div>
+
+        <p class="footer-about">
+          Engineering and construction solutions built around
+          precision, quality, communication and responsible
+          project execution.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>
+          Company
+        </h3>
+
+        <div class="footer-links">
+
+          <a href="#about">
+            About MESHAQ
+          </a>
+
+          <a href="#services">
+            Our Services
+          </a>
+
+          <a href="#team">
+            Our Professionals
+          </a>
+
+          <a href="#projects">
+            Projects
+          </a>
+
+          <a href="#process">
+            How We Work
+          </a>
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <h3>
+          Services
+        </h3>
+
+        <div class="footer-links">
+
+          <a href="#services">
+            Construction
+          </a>
+
+          <a href="#services">
+            Civil Engineering
+          </a>
+
+          <a href="#services">
+            Structural Works
+          </a>
+
+          <a href="#designs">
+            House Design
+          </a>
+
+          <a href="#services">
+            Project Management
+          </a>
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <h3>
+          Contact MESHAQ
+        </h3>
+
+        <div class="footer-links">
+
+          <a href="tel:0712242050">
+            📞 0712242050
+          </a>
+
+          <a href="tel:0732444187">
+            📞 0732444187
+          </a>
+
+          <a href="tel:0141976710">
+            ☎ 0141 976710 — Hotline
+          </a>
+
+          <a href="mailto:meshaqengineeringlimitedsupport@gmail.com">
+            ✉ Email Support
+          </a>
+
+          <a href="#application">
+            Start a Project
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+
+      <span id="copyrightText">
+        © 2026 MESHAQ Engineering & Contractors.
+        All rights reserved.
+      </span>
+
+      <span>
+        Engineering Excellence. Building the Future.
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- ==========================================================
+     FLOATING CONTACT BUTTONS
+========================================================== -->
+<div class="floating">
+
+  <!-- WhatsApp number can be changed when the official
+       MESHAQ WhatsApp number is available -->
+  <a
+    class="float-btn float-wa"
+    href="https://wa.me/254712242050?text=Hello%20MESHAQ%2C%20I%20would%20like%20to%20discuss%20a%20project."
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp MESHAQ">
+    💬
+  </a>
+
+  <!-- MAIN OFFICE CALL -->
+  <a
+    class="float-btn float-call"
+    href="tel:0712242050"
+    aria-label="Call MESHAQ">
+    ☎
+  </a>
+
+</div>
+
+<!-- ==========================================================
+     SUCCESS MODAL
+========================================================== -->
+<div class="modal" id="successModal">
+
+  <div class="modal-box">
+
+    <button
+      class="modal-close"
+      id="closeModal"
+      aria-label="Close">
+      ×
+    </button>
+
+    <div class="success-icon">
+      ✓
+    </div>
+
+    <h2>
+      Application Received
+    </h2>
+
+    <p style="color:#667085;margin:12px 0 18px">
+      Your project enquiry has been captured by this website
+      interface. Connect the form to your real backend before
+      using it for production.
+    </p>
+
+    <div
+      style="background:#f4f7fa;padding:14px;border-radius:10px;margin-bottom:20px">
+
+      <small style="display:block;color:#667085">
+        REFERENCE NUMBER
+      </small>
+
+      <strong
+        id="referenceNumber"
+        style="font-size:22px;color:#07111f">
+      </strong>
+
+    </div>
+
+    <button
+      class="btn btn-dark"
+      id="doneBtn"
+      style="width:100%">
+      DONE
+    </button>
+
+  </div>
+
+</div>
+
+<!-- ==========================================================
+     JAVASCRIPT
+========================================================== -->
+<script>
+
+/* MOBILE MENU */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+
+});
+
+
+/* SCROLL REVEAL */
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("show");
+
+      observer.unobserve(entry.target);
+    }
+
+  });
+
+},{
+  threshold:.12
+});
+
+document.querySelectorAll(".reveal").forEach(el => {
+  observer.observe(el);
+});
+
+
+/* PROJECT APPLICATION */
+
+const projectForm =
+  document.getElementById("projectForm");
+
+const successModal =
+  document.getElementById("successModal");
+
+const referenceNumber =
+  document.getElementById("referenceNumber");
+
+
+function generateReference(){
+
+  const year = new Date().getFullYear();
+
+  const number =
+    Math.floor(100000 + Math.random() * 900000);
+
+  return `MES-${year}-${number}`;
+}
+
+
+projectForm.addEventListener("submit", function(event){
+
+  event.preventDefault();
+
+  const services =
+    [
+      ...document.querySelectorAll(
+        'input[name="services"]:checked'
+      )
+    ].map(item => item.value);
+
+
+  const application = {
+
+    reference:generateReference(),
+
+    name:
+      document.getElementById("name").value.trim(),
+
+    phone:
+      document.getElementById("phone").value.trim(),
+
+    email:
+      document.getElementById("email").value.trim(),
+
+    location:
+      document.getElementById("location").value.trim(),
+
+    projectType:
+      document.getElementById("projectType").value,
+
+    budget:
+      document.getElementById("budget").value,
+
+    services:services,
+
+    message:
+      document.getElementById("message").value.trim(),
+
+    startDate:
+      document.getElementById("startDate").value,
+
+    submittedAt:
+      new Date().toISOString()
+
+  };
+
+
+  /*
+    FRONT-END STORAGE ONLY.
+
+    For a real MESHAQ production website,
+    connect this form to a secure backend/database.
+
+    Example:
+
+    fetch("/api/applications", {
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify(application)
+    });
+  */
+
+
+  localStorage.setItem(
+    "meshaq_last_application",
+    JSON.stringify(application)
+  );
+
+
+  referenceNumber.textContent =
+    application.reference;
+
+
+  successModal.classList.add("active");
+
+
+  projectForm.reset();
+
+});
+
+
+/* CLOSE MODAL */
+
+function closeSuccessModal(){
+
+  successModal.classList.remove("active");
+
+}
+
+
+document
+  .getElementById("closeModal")
+  .addEventListener(
+    "click",
+    closeSuccessModal
+  );
+
+
+document
+  .getElementById("doneBtn")
+  .addEventListener(
+    "click",
+    closeSuccessModal
+  );
+
+
+successModal.addEventListener("click", function(event){
+
+  if(event.target === successModal){
+
+    closeSuccessModal();
+
+  }
+
+});
+
+
+/* CURRENT YEAR */
+
+document.getElementById("copyrightText").innerHTML =
+  `© ${new Date().getFullYear()} MESHAQ Engineering & Contractors. All rights reserved.`;
+
+</script>
+
+</body>
+  </html>

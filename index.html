@@ -4,31 +4,41 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#07111f">
-<meta name="description" content="MESHAQ Engineering & Contractors — Engineering excellence, construction, civil works, structural solutions, project management and modern building solutions.">
-<title>MESHAQ Engineering & Contractors | Engineering Excellence. Building the Future.</title>
+
+<title>MESHAQ Engineering & Contractors</title>
+
+<meta name="description"
+content="MESHAQ Engineering & Contractors — Engineering, construction, civil works, structural solutions and modern building design.">
 
 <style>
+
+/* =========================================================
+   MESHAQ — GLOBAL
+========================================================= */
+
 :root{
-  --navy:#07111f;
-  --navy2:#0b1c31;
-  --blue:#123a63;
-  --gold:#f3a712;
-  --gold2:#ffbf3c;
+  --navy:#06111f;
+  --navy2:#0b1d32;
+  --blue:#123d67;
+  --gold:#f4a900;
+  --gold2:#ffc34d;
   --white:#ffffff;
-  --soft:#f4f7fa;
-  --muted:#667085;
-  --dark:#111827;
-  --line:#e5e7eb;
-  --green:#159957;
+  --black:#101828;
+  --gray:#667085;
+  --light:#f5f7fa;
+  --line:#e4e7ec;
+  --green:#12a05c;
+  --whatsapp:#25d366;
+  --red:#d92d20;
   --shadow:0 20px 60px rgba(7,17,31,.12);
-  --radius:18px;
+  --radius:20px;
   --max:1240px;
 }
 
 *{
+  box-sizing:border-box;
   margin:0;
   padding:0;
-  box-sizing:border-box;
 }
 
 html{
@@ -36,27 +46,34 @@ html{
 }
 
 body{
-  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-  color:var(--dark);
+  margin:0;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  color:var(--black);
   background:#fff;
   line-height:1.65;
-  overflow-x:hidden;
 }
 
 a{
-  text-decoration:none;
   color:inherit;
+  text-decoration:none;
 }
 
 img{
-  max-width:100%;
+  width:100%;
   display:block;
 }
 
 button,
 input,
-textarea,
-select{
+select,
+textarea{
   font:inherit;
 }
 
@@ -70,22 +87,22 @@ select{
 }
 
 .soft{
-  background:var(--soft);
+  background:var(--light);
 }
 
-.center{
-  text-align:center;
-}
 
-/* TOP BAR */
+/* =========================================================
+   TOP BAR
+========================================================= */
+
 .topbar{
-  background:#030a13;
-  color:#d9e2ee;
-  font-size:13px;
+  background:#020811;
+  color:#c8d3df;
+  font-size:12px;
 }
 
 .topbar-inner{
-  min-height:38px;
+  min-height:40px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -94,7 +111,7 @@ select{
 
 .top-links{
   display:flex;
-  gap:22px;
+  gap:20px;
   flex-wrap:wrap;
 }
 
@@ -104,13 +121,21 @@ select{
   gap:7px;
 }
 
-/* HEADER */
+.top-links a:hover{
+  color:var(--gold2);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(7,17,31,.96);
-  backdrop-filter:blur(16px);
+  background:rgba(6,17,31,.96);
+  backdrop-filter:blur(18px);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
@@ -119,20 +144,19 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:30px;
+  gap:25px;
 }
 
 .logo{
   display:flex;
   align-items:center;
-  gap:12px;
-  color:white;
-  min-width:max-content;
+  gap:11px;
+  color:#fff;
 }
 
 .logo-mark{
-  width:48px;
-  height:48px;
+  width:47px;
+  height:47px;
   flex:none;
 }
 
@@ -145,23 +169,23 @@ header{
 
 .logo-text small{
   display:block;
-  color:#b8c5d4;
   font-size:8px;
-  letter-spacing:1.8px;
+  letter-spacing:1.5px;
+  color:#aebdcc;
   margin-top:5px;
 }
 
 .nav-links{
   display:flex;
   align-items:center;
-  gap:26px;
+  gap:22px;
 }
 
 .nav-links a{
-  color:#d9e2ee;
-  font-size:14px;
-  font-weight:600;
-  transition:.25s;
+  color:#d8e1ea;
+  font-size:13px;
+  font-weight:700;
+  transition:.2s;
 }
 
 .nav-links a:hover{
@@ -169,14 +193,10 @@ header{
 }
 
 .nav-cta{
-  padding:12px 18px!important;
   background:var(--gold);
   color:#111!important;
+  padding:12px 17px;
   border-radius:8px;
-}
-
-.nav-cta:hover{
-  background:var(--gold2);
 }
 
 .menu{
@@ -185,49 +205,43 @@ header{
   background:none;
   color:#fff;
   font-size:28px;
-  cursor:pointer;
 }
 
-/* HERO */
+
+/* =========================================================
+   HERO
+========================================================= */
+
 .hero{
-  min-height:calc(100vh - 120px);
-  position:relative;
+  min-height:calc(100vh - 122px);
   display:flex;
   align-items:center;
+  position:relative;
   color:#fff;
+
   background:
     linear-gradient(
       90deg,
-      rgba(3,10,19,.96) 0%,
-      rgba(3,10,19,.83) 42%,
-      rgba(3,10,19,.32) 100%
+      rgba(2,9,17,.97),
+      rgba(2,9,17,.82) 45%,
+      rgba(2,9,17,.25)
     ),
-    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=88")
-    center/cover no-repeat;
-}
-
-.hero:after{
-  content:"";
-  position:absolute;
-  inset:auto 0 0;
-  height:120px;
-  background:linear-gradient(transparent,var(--navy));
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=90")
+    center/cover;
 }
 
 .hero-content{
-  position:relative;
-  z-index:2;
-  width:min(780px,100%);
-  padding:90px 0 130px;
+  max-width:800px;
+  padding:90px 0 110px;
 }
 
 .eyebrow{
   display:inline-flex;
   align-items:center;
-  gap:9px;
+  gap:10px;
   color:var(--gold2);
-  font-weight:800;
-  font-size:13px;
+  font-size:12px;
+  font-weight:900;
   letter-spacing:2px;
   text-transform:uppercase;
   margin-bottom:20px;
@@ -235,14 +249,14 @@ header{
 
 .eyebrow:before{
   content:"";
-  width:34px;
+  width:35px;
   height:2px;
   background:var(--gold);
 }
 
 .hero h1{
   font-size:clamp(45px,7vw,86px);
-  line-height:1.02;
+  line-height:1;
   letter-spacing:-3px;
   margin-bottom:25px;
 }
@@ -252,29 +266,29 @@ header{
 }
 
 .hero p{
-  color:#dbe5ef;
+  max-width:680px;
+  color:#d3dde7;
   font-size:18px;
-  max-width:670px;
-  margin-bottom:35px;
+  margin-bottom:34px;
 }
 
 .hero-buttons{
   display:flex;
+  gap:12px;
   flex-wrap:wrap;
-  gap:13px;
 }
 
 .btn{
+  min-height:50px;
+  padding:0 21px;
+  border-radius:8px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
   gap:9px;
-  min-height:50px;
-  padding:0 21px;
-  border-radius:8px;
   border:1px solid transparent;
-  font-weight:800;
-  font-size:14px;
+  font-size:13px;
+  font-weight:900;
   cursor:pointer;
   transition:.25s;
 }
@@ -291,43 +305,29 @@ header{
 
 .btn-outline{
   border-color:rgba(255,255,255,.35);
-  color:white;
+  color:#fff;
 }
 
 .btn-outline:hover{
-  background:white;
+  background:#fff;
   color:var(--navy);
 }
 
-.btn-dark{
-  background:var(--navy);
+.btn-whatsapp{
+  background:var(--whatsapp);
   color:#fff;
 }
 
-.btn-green{
-  background:#159957;
-  color:#fff;
+.btn-whatsapp:hover{
+  background:#1ebe5d;
+  transform:translateY(-2px);
 }
 
-.hero-proof{
-  display:flex;
-  gap:35px;
-  margin-top:48px;
-  flex-wrap:wrap;
-}
 
-.proof strong{
-  display:block;
-  font-size:25px;
-  color:white;
-}
+/* =========================================================
+   TRUST
+========================================================= */
 
-.proof span{
-  font-size:12px;
-  color:#aebdcb;
-}
-
-/* TRUST */
 .trust{
   background:var(--navy);
   color:#fff;
@@ -337,14 +337,14 @@ header{
 .trust-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:20px;
+  gap:15px;
 }
 
 .trust-item{
   display:flex;
   gap:12px;
   align-items:center;
-  border-right:1px solid rgba(255,255,255,.12);
+  border-right:1px solid rgba(255,255,255,.1);
 }
 
 .trust-item:last-child{
@@ -355,11 +355,10 @@ header{
   width:40px;
   height:40px;
   border-radius:10px;
-  background:rgba(243,167,18,.12);
-  color:var(--gold2);
   display:grid;
   place-items:center;
-  font-size:19px;
+  background:rgba(244,169,0,.12);
+  color:var(--gold2);
 }
 
 .trust-item strong{
@@ -372,19 +371,24 @@ header{
   font-size:11px;
 }
 
-/* TITLES */
+
+/* =========================================================
+   SECTION HEAD
+========================================================= */
+
 .section-head{
-  max-width:760px;
+  max-width:750px;
   margin-bottom:50px;
 }
 
 .section-head.center{
+  text-align:center;
   margin-left:auto;
   margin-right:auto;
 }
 
 .section-kicker{
-  color:#b47400;
+  color:#a86d00;
   font-size:12px;
   font-weight:900;
   letter-spacing:2px;
@@ -393,89 +397,84 @@ header{
 }
 
 .section h2{
+  color:var(--navy);
   font-size:clamp(32px,4vw,52px);
   line-height:1.1;
   letter-spacing:-1.5px;
-  color:var(--navy);
 }
 
 .section-head p{
-  color:var(--muted);
-  margin-top:16px;
-  font-size:16px;
+  color:var(--gray);
+  margin-top:15px;
 }
 
-/* ABOUT */
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
 .about-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:75px;
+  gap:70px;
   align-items:center;
 }
 
 .about-image{
   position:relative;
-  border-radius:24px;
-  overflow:visible;
 }
 
 .about-image img{
-  width:100%;
-  height:600px;
+  height:580px;
   object-fit:cover;
   border-radius:24px;
 }
 
-.experience{
+.about-badge{
   position:absolute;
-  right:-25px;
-  bottom:35px;
-  width:185px;
-  padding:23px;
+  right:-20px;
+  bottom:30px;
+  width:180px;
   background:var(--gold);
   color:#111;
+  padding:23px;
   border-radius:16px;
   box-shadow:var(--shadow);
 }
 
-.experience strong{
+.about-badge strong{
   display:block;
-  font-size:38px;
+  font-size:34px;
   line-height:1;
 }
 
-.experience span{
-  font-weight:700;
-  font-size:12px;
-}
-
 .about-copy p{
-  color:var(--muted);
-  margin:18px 0;
+  color:var(--gray);
+  margin:17px 0;
 }
 
 .checks{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:13px;
-  margin:27px 0;
+  gap:12px;
+  margin:25px 0;
 }
 
 .check{
-  display:flex;
-  align-items:flex-start;
-  gap:9px;
-  font-size:14px;
+  font-size:13px;
   font-weight:700;
 }
 
-.check i{
+.check span{
   color:var(--green);
-  font-style:normal;
-  font-weight:900;
+  margin-right:7px;
 }
 
-/* SERVICES */
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
 .services-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -483,7 +482,7 @@ header{
 }
 
 .service-card{
-  background:white;
+  background:#fff;
   border:1px solid var(--line);
   border-radius:18px;
   overflow:hidden;
@@ -491,196 +490,65 @@ header{
 }
 
 .service-card:hover{
-  transform:translateY(-7px);
+  transform:translateY(-6px);
   box-shadow:var(--shadow);
 }
 
 .service-img{
-  height:215px;
+  height:210px;
   overflow:hidden;
 }
 
 .service-img img{
-  width:100%;
   height:100%;
   object-fit:cover;
   transition:.5s;
 }
 
-.service-card:hover .service-img img{
+.service-card:hover img{
   transform:scale(1.06);
 }
 
 .service-body{
-  padding:25px;
+  padding:24px;
 }
 
-.service-no{
-  color:#b47400;
+.service-number{
+  color:#a86d00;
+  font-size:11px;
   font-weight:900;
-  font-size:12px;
 }
 
 .service-body h3{
-  margin:6px 0 10px;
-  font-size:20px;
   color:var(--navy);
+  font-size:20px;
+  margin:5px 0 10px;
 }
 
 .service-body p{
-  font-size:14px;
-  color:var(--muted);
-  margin-bottom:16px;
+  color:var(--gray);
+  font-size:13px;
+  margin-bottom:17px;
 }
 
 .learn{
-  color:#a86b00;
-  font-size:13px;
+  color:#9b6500;
+  font-size:12px;
   font-weight:900;
 }
 
-/* TEAM */
-.team-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-}
 
-.team-card{
-  background:#fff;
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid var(--line);
-}
+/* =========================================================
+   PROCESS
+========================================================= */
 
-.team-photo{
-  height:330px;
-}
-
-.team-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.team-info{
-  padding:19px;
-}
-
-.team-info h3{
-  font-size:18px;
-  color:var(--navy);
-}
-
-.team-info p{
-  font-size:13px;
-  color:#a36b00;
-  font-weight:800;
-}
-
-/* MATERIALS */
-.material-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-
-.material{
-  position:relative;
-  height:260px;
-  border-radius:17px;
-  overflow:hidden;
-  color:#fff;
-}
-
-.material img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.4s;
-}
-
-.material:hover img{
-  transform:scale(1.07);
-}
-
-.material:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(transparent 35%,rgba(0,0,0,.88));
-}
-
-.material-info{
-  position:absolute;
-  z-index:2;
-  left:18px;
-  right:18px;
-  bottom:17px;
-}
-
-.material-info h3{
-  font-size:18px;
-}
-
-.material-info p{
-  font-size:12px;
-  color:#d5dde5;
-}
-
-/* TOOLS */
-.tools-grid{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:14px;
-}
-
-.tool{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:15px;
-  padding:25px 12px;
-  text-align:center;
-  transition:.25s;
-}
-
-.tool:hover{
-  border-color:#d9a32d;
-  transform:translateY(-4px);
-}
-
-.tool-icon{
-  width:54px;
-  height:54px;
-  margin:0 auto 13px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:#fff5dc;
-  color:#9a6500;
-  font-size:23px;
-}
-
-.tool h3{
-  font-size:13px;
-  color:var(--navy);
-}
-
-.tool p{
-  font-size:11px;
-  color:var(--muted);
-  margin-top:5px;
-}
-
-/* PROCESS */
 .process{
   background:var(--navy);
   color:#fff;
-  position:relative;
 }
 
 .process h2{
-  color:white;
+  color:#fff;
 }
 
 .process .section-head p{
@@ -690,23 +558,10 @@ header{
 .process-grid{
   display:grid;
   grid-template-columns:repeat(5,1fr);
-  gap:10px;
-  position:relative;
-}
-
-.process-grid:before{
-  content:"";
-  position:absolute;
-  top:34px;
-  left:8%;
-  right:8%;
-  height:1px;
-  background:rgba(255,255,255,.16);
+  gap:15px;
 }
 
 .step{
-  position:relative;
-  z-index:2;
   text-align:center;
 }
 
@@ -720,24 +575,26 @@ header{
   background:var(--gold);
   color:#111;
   font-weight:900;
-  border:8px solid var(--navy);
 }
 
 .step h3{
+  margin:17px 0 7px;
   font-size:16px;
-  margin:18px 0 8px;
 }
 
 .step p{
-  color:#91a2b5;
+  color:#94a6b8;
   font-size:12px;
-  padding:0 12px;
 }
 
-/* HOUSE DESIGNS */
+
+/* =========================================================
+   DESIGNS
+========================================================= */
+
 .house-grid{
   display:grid;
-  grid-template-columns:1.35fr .8fr .8fr;
+  grid-template-columns:1.4fr .8fr .8fr;
   grid-template-rows:250px 250px;
   gap:15px;
 }
@@ -753,7 +610,6 @@ header{
 }
 
 .house img{
-  width:100%;
   height:100%;
   object-fit:cover;
   transition:.5s;
@@ -767,163 +623,73 @@ header{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(transparent 40%,rgba(0,0,0,.85));
+  background:linear-gradient(
+    transparent 35%,
+    rgba(0,0,0,.85)
+  );
 }
 
 .house-label{
   position:absolute;
   z-index:2;
-  bottom:20px;
   left:20px;
+  bottom:18px;
   color:#fff;
 }
 
 .house-label small{
   color:var(--gold2);
-  font-weight:800;
+  font-weight:900;
 }
 
 .house-label h3{
-  font-size:21px;
+  font-size:19px;
 }
 
-/* FEATURE */
-.feature-dark{
-  background:linear-gradient(120deg,#07111f,#102c4b);
-  color:#fff;
-  border-radius:28px;
-  padding:55px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
-}
 
-.feature-dark h2{
-  color:#fff;
-}
+/* =========================================================
+   APPLICATION
+========================================================= */
 
-.feature-dark p{
-  color:#b7c5d4;
-  margin:18px 0;
-}
-
-.feature-list{
-  display:grid;
-  gap:14px;
-  margin-top:20px;
-}
-
-.feature-list div{
-  display:flex;
-  gap:12px;
-  align-items:flex-start;
-}
-
-.feature-list b{
-  color:var(--gold2);
-}
-
-.feature-photo{
-  height:500px;
-  border-radius:20px;
-  overflow:hidden;
-}
-
-.feature-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* PROJECTS */
-.projects-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.project{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:18px;
-  overflow:hidden;
-}
-
-.project-img{
-  height:270px;
-}
-
-.project-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.project-info{
-  padding:22px;
-}
-
-.project-tag{
-  font-size:11px;
-  font-weight:900;
-  color:#a56d00;
-  text-transform:uppercase;
-}
-
-.project h3{
-  margin:7px 0;
-  font-size:20px;
-  color:var(--navy);
-}
-
-.project p{
-  font-size:13px;
-  color:var(--muted);
-}
-
-/* APPLICATION */
 .application{
-  background:#f7f9fb;
+  background:#f5f7fa;
 }
 
-.app-wrap{
+.application-grid{
   display:grid;
   grid-template-columns:.7fr 1.3fr;
   gap:30px;
   align-items:start;
 }
 
-.app-intro{
-  background:var(--navy);
-  color:white;
-  padding:38px;
+.application-intro{
+  background:
+    linear-gradient(145deg,#06111f,#12365a);
+  color:#fff;
   border-radius:22px;
+  padding:38px;
   position:sticky;
   top:105px;
 }
 
-.app-intro h2{
-  color:white;
+.application-intro h2{
+  color:#fff;
   font-size:34px;
   line-height:1.15;
 }
 
-.app-intro p{
-  color:#b6c3d0;
-  margin:17px 0 25px;
+.application-intro p{
+  color:#b7c5d3;
+  margin:16px 0 25px;
 }
 
-.app-benefits{
+.application-benefits{
   display:grid;
   gap:13px;
-}
-
-.app-benefits div{
   font-size:13px;
 }
 
-.app-benefits span{
+.application-benefits span{
   color:var(--gold2);
   margin-right:7px;
 }
@@ -933,13 +699,22 @@ header{
   border:1px solid var(--line);
   border-radius:22px;
   padding:35px;
-  box-shadow:0 10px 40px rgba(7,17,31,.05);
+  box-shadow:0 12px 45px rgba(7,17,31,.05);
 }
 
-.form-card h3{
-  font-size:25px;
+.form-card-header{
+  margin-bottom:25px;
+}
+
+.form-card-header h3{
   color:var(--navy);
-  margin-bottom:22px;
+  font-size:26px;
+}
+
+.form-card-header p{
+  color:var(--gray);
+  font-size:13px;
+  margin-top:4px;
 }
 
 .form-grid{
@@ -954,26 +729,30 @@ header{
   gap:7px;
 }
 
-.field.full{
+.full{
   grid-column:1/-1;
 }
 
 .field label{
-  font-size:12px;
-  font-weight:800;
   color:#344054;
+  font-size:12px;
+  font-weight:900;
+}
+
+.required{
+  color:var(--red);
 }
 
 .field input,
 .field select,
 .field textarea{
   width:100%;
-  border:1px solid #d7dde5;
+  border:1px solid #d6dce4;
   border-radius:9px;
   padding:13px 14px;
   outline:none;
+  color:#101828;
   background:#fff;
-  color:#111827;
   transition:.2s;
 }
 
@@ -981,26 +760,74 @@ header{
 .field select:focus,
 .field textarea:focus{
   border-color:var(--gold);
-  box-shadow:0 0 0 3px rgba(243,167,18,.12);
+  box-shadow:0 0 0 3px rgba(244,169,0,.12);
 }
 
 .field textarea{
-  min-height:120px;
+  min-height:130px;
   resize:vertical;
 }
 
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.location-box{
+  grid-column:1/-1;
+  background:#f8fafc;
+  border:1px solid #e4e7ec;
+  border-radius:15px;
+  padding:20px;
+}
+
+.location-title{
+  color:var(--navy);
+  font-weight:900;
+  font-size:15px;
+}
+
+.location-description{
+  color:var(--gray);
+  font-size:12px;
+  margin:3px 0 17px;
+}
+
+.location-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.county-help{
+  color:var(--green);
+  font-size:11px;
+  font-weight:700;
+  margin-top:3px;
+}
+
+
+/* =========================================================
+   SERVICES CHECKBOXES
+========================================================= */
+
 .service-options{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:1fr 1fr;
   gap:9px;
 }
 
 .service-option{
-  border:1px solid #e0e5ea;
+  border:1px solid #e0e5eb;
   padding:11px;
   border-radius:9px;
-  font-size:12px;
   cursor:pointer;
+  font-size:12px;
+  transition:.2s;
+}
+
+.service-option:hover{
+  border-color:var(--gold);
 }
 
 .service-option input{
@@ -1008,13 +835,70 @@ header{
   margin-right:6px;
 }
 
-.form-note{
-  font-size:11px;
-  color:#7a8492;
-  margin:15px 0;
+
+/* =========================================================
+   WHATSAPP SUBMIT AREA
+========================================================= */
+
+.whatsapp-submit{
+  margin-top:20px;
+  padding:18px;
+  border-radius:14px;
+  background:#eafbf1;
+  border:1px solid #bdeecf;
 }
 
-/* CONTACT */
+.whatsapp-submit-title{
+  color:#087a42;
+  font-weight:900;
+  font-size:14px;
+}
+
+.whatsapp-submit-text{
+  color:#4b6356;
+  font-size:11px;
+  margin:4px 0 13px;
+}
+
+.whatsapp-button{
+  width:100%;
+  min-height:56px;
+  border:0;
+  border-radius:10px;
+  background:var(--whatsapp);
+  color:#fff;
+  font-size:14px;
+  font-weight:900;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  transition:.25s;
+}
+
+.whatsapp-button:hover{
+  background:#1ebe5d;
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(37,211,102,.25);
+}
+
+.whatsapp-icon{
+  font-size:23px;
+}
+
+.form-note{
+  color:#7a8492;
+  font-size:10px;
+  margin-top:13px;
+  line-height:1.5;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
 .contact-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -1022,67 +906,69 @@ header{
 }
 
 .contact-card{
-  border-radius:20px;
+  min-height:490px;
+  border-radius:22px;
   overflow:hidden;
-  min-height:480px;
 }
 
 .contact-info{
   background:var(--navy);
-  color:white;
-  padding:45px;
+  color:#fff;
+  padding:42px;
 }
 
 .contact-info h2{
-  color:white;
-  font-size:42px;
+  color:#fff;
+  font-size:40px;
   line-height:1.1;
 }
 
 .contact-info>p{
-  color:#adbdcc;
-  margin:17px 0 30px;
+  color:#acbdcd;
+  margin:17px 0 25px;
 }
 
 .contact-row{
   display:flex;
-  gap:15px;
-  padding:18px 0;
-  border-bottom:1px solid rgba(255,255,255,.1);
+  gap:13px;
+  padding:17px 0;
+  border-bottom:1px solid rgba(255,255,255,.09);
 }
 
 .contact-icon{
   width:42px;
   height:42px;
   border-radius:10px;
-  background:rgba(243,167,18,.12);
   display:grid;
   place-items:center;
   color:var(--gold2);
+  background:rgba(244,169,0,.12);
 }
 
 .contact-row strong{
-  font-size:13px;
   display:block;
-}
-
-.contact-row span{
-  color:#9eafbf;
   font-size:12px;
 }
 
-.contact-row a{
-  transition:.2s;
+.contact-row span{
+  color:#9fb0c0;
+  font-size:12px;
 }
 
 .contact-row a:hover{
   color:var(--gold2);
 }
 
-.map{
-  min-height:480px;
+.contact-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:22px;
+}
+
+.contact-map{
   background:
-    linear-gradient(rgba(7,17,31,.35),rgba(7,17,31,.35)),
+    linear-gradient(rgba(6,17,31,.25),rgba(6,17,31,.4)),
     url("https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=1400&q=85")
     center/cover;
   display:flex;
@@ -1090,27 +976,30 @@ header{
   padding:30px;
 }
 
-.map-box{
+.map-card{
   background:#fff;
-  padding:20px;
+  padding:21px;
   border-radius:15px;
-  max-width:330px;
-  box-shadow:var(--shadow);
+  max-width:350px;
 }
 
-.map-box h3{
+.map-card h3{
   color:var(--navy);
 }
 
-.map-box p{
+.map-card p{
+  color:var(--gray);
   font-size:12px;
-  color:var(--muted);
-  margin:5px 0 12px;
+  margin:5px 0 13px;
 }
 
-/* FOOTER */
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
 footer{
-  background:#030a13;
+  background:#020811;
   color:#a9b8c8;
   padding:65px 0 25px;
 }
@@ -1119,29 +1008,25 @@ footer{
   display:grid;
   grid-template-columns:1.5fr 1fr 1fr 1fr;
   gap:40px;
-  padding-bottom:45px;
+  padding-bottom:40px;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.footer-logo{
-  margin-bottom:18px;
-}
-
 .footer-about{
-  font-size:13px;
-  max-width:360px;
+  max-width:350px;
+  font-size:12px;
 }
 
 .footer h3{
-  color:white;
+  color:#fff;
   font-size:14px;
-  margin-bottom:17px;
+  margin-bottom:16px;
 }
 
 .footer-links{
   display:grid;
   gap:9px;
-  font-size:13px;
+  font-size:12px;
 }
 
 .footer-links a:hover{
@@ -1149,49 +1034,57 @@ footer{
 }
 
 .copyright{
+  padding-top:20px;
   display:flex;
   justify-content:space-between;
   gap:20px;
-  padding-top:20px;
-  font-size:11px;
+  font-size:10px;
 }
 
-/* FLOATING CONTACT */
+
+/* =========================================================
+   FLOATING BUTTONS
+========================================================= */
+
 .floating{
   position:fixed;
-  right:20px;
-  bottom:20px;
+  right:18px;
+  bottom:18px;
   z-index:900;
   display:flex;
   flex-direction:column;
   gap:10px;
 }
 
-.float-btn{
-  width:50px;
-  height:50px;
+.float{
+  width:52px;
+  height:52px;
   border-radius:50%;
   display:grid;
   place-items:center;
-  color:white;
-  font-size:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,.2);
+  color:#fff;
+  font-size:21px;
+  box-shadow:0 10px 30px rgba(0,0,0,.22);
+}
+
+.float-whatsapp{
+  background:var(--whatsapp);
 }
 
 .float-call{
   background:var(--navy);
 }
 
-.float-wa{
-  background:#159957;
-}
 
-/* MODAL */
+/* =========================================================
+   MODAL
+========================================================= */
+
 .modal{
   position:fixed;
   inset:0;
+  z-index:3000;
   background:rgba(0,0,0,.7);
-  z-index:2000;
   display:none;
   align-items:center;
   justify-content:center;
@@ -1204,18 +1097,17 @@ footer{
 
 .modal-box{
   background:#fff;
-  max-width:480px;
-  width:100%;
-  border-radius:20px;
+  width:min(500px,100%);
+  border-radius:22px;
   padding:35px;
   text-align:center;
   position:relative;
 }
 
-.modal-close{
+.close-modal{
   position:absolute;
-  right:15px;
   top:10px;
+  right:15px;
   border:0;
   background:none;
   font-size:28px;
@@ -1227,50 +1119,77 @@ footer{
   height:70px;
   border-radius:50%;
   background:#e7f8ef;
-  color:#159957;
+  color:var(--green);
   display:grid;
   place-items:center;
-  margin:0 auto 17px;
   font-size:32px;
+  margin:0 auto 16px;
 }
 
-/* REVEAL */
-.reveal{
-  opacity:0;
-  transform:translateY(25px);
-  transition:.7s ease;
+.reference{
+  margin:17px 0;
+  padding:15px;
+  background:#f5f7fa;
+  border-radius:10px;
 }
 
-.reveal.show{
-  opacity:1;
-  transform:none;
+.reference small{
+  color:var(--gray);
+  display:block;
 }
 
-/* RESPONSIVE */
-@media(max-width:1050px){
+.reference strong{
+  color:var(--navy);
+  font-size:22px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px){
 
   .nav-links{
-    gap:14px;
+    gap:12px;
   }
 
   .nav-links a{
-    font-size:12px;
+    font-size:11px;
   }
 
-  .tools-grid{
-    grid-template-columns:repeat(3,1fr);
+  .services-grid{
+    grid-template-columns:1fr 1fr;
   }
 
   .team-grid{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr 1fr;
   }
 
-  .material-grid{
-    grid-template-columns:repeat(2,1fr);
+  .trust-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .process-grid{
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+  }
+
+  .application-grid{
+    grid-template-columns:1fr;
+  }
+
+  .application-intro{
+    position:static;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
   }
 }
 
-@media(max-width:850px){
+
+@media(max-width:800px){
 
   .topbar{
     display:none;
@@ -1291,12 +1210,11 @@ footer{
     right:4%;
     top:72px;
     background:#081522;
-    padding:20px;
-    border-radius:0 0 15px 15px;
+    padding:15px;
     flex-direction:column;
     align-items:stretch;
     gap:0;
-    box-shadow:0 20px 40px rgba(0,0,0,.25);
+    border-radius:0 0 15px 15px;
   }
 
   .nav-links.active{
@@ -1304,58 +1222,18 @@ footer{
   }
 
   .nav-links a{
-    padding:13px 10px;
+    padding:12px 8px;
     border-bottom:1px solid rgba(255,255,255,.07);
-    font-size:14px;
-  }
-
-  .nav-cta{
-    text-align:center;
-  }
-
-  .hero{
-    min-height:700px;
-  }
-
-  .hero h1{
-    letter-spacing:-2px;
-  }
-
-  .trust-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .trust-item:nth-child(2){
-    border:0;
+    font-size:13px;
   }
 
   .about-grid,
-  .feature-dark,
-  .app-wrap,
   .contact-grid{
     grid-template-columns:1fr;
   }
 
   .about-image img{
-    height:480px;
-  }
-
-  .experience{
-    right:15px;
-  }
-
-  .services-grid,
-  .projects-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .process-grid{
-    grid-template-columns:1fr 1fr;
-    gap:35px;
-  }
-
-  .process-grid:before{
-    display:none;
+    height:470px;
   }
 
   .house-grid{
@@ -1364,18 +1242,11 @@ footer{
   }
 
   .house:first-child{
-    grid-row:auto;
     grid-column:span 2;
-  }
-
-  .app-intro{
-    position:static;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
+    grid-row:auto;
   }
 }
+
 
 @media(max-width:600px){
 
@@ -1383,12 +1254,8 @@ footer{
     padding:70px 0;
   }
 
-  .container{
-    width:91%;
-  }
-
-  .hero-content{
-    padding:70px 0 100px;
+  .hero{
+    min-height:700px;
   }
 
   .hero h1{
@@ -1399,68 +1266,44 @@ footer{
     font-size:15px;
   }
 
-  .hero-proof{
-    gap:20px;
-  }
-
-  .trust-grid{
+  .trust-grid,
+  .services-grid,
+  .team-grid,
+  .footer-grid{
     grid-template-columns:1fr;
   }
 
   .trust-item{
     border-right:0;
     border-bottom:1px solid rgba(255,255,255,.1);
-    padding-bottom:12px;
-  }
-
-  .services-grid,
-  .projects-grid,
-  .team-grid,
-  .material-grid{
-    grid-template-columns:1fr;
-  }
-
-  .tools-grid{
-    grid-template-columns:repeat(2,1fr);
+    padding-bottom:10px;
   }
 
   .checks,
-  .form-grid{
-    grid-template-columns:1fr;
-  }
-
-  .field.full{
-    grid-column:auto;
-  }
-
+  .form-grid,
+  .location-grid,
   .service-options{
     grid-template-columns:1fr;
   }
 
-  .feature-dark{
-    padding:30px 22px;
-  }
-
-  .feature-photo{
-    height:350px;
+  .full,
+  .location-box{
+    grid-column:auto;
   }
 
   .house-grid{
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows:280px 220px 220px 220px;
+    grid-template-rows:270px 220px 220px 220px;
   }
 
   .house:first-child{
     grid-column:auto;
   }
 
-  .app-intro{
-    padding:28px;
-  }
-
-  .form-card{
-    padding:22px;
+  .form-card,
+  .application-intro{
+    padding:23px;
   }
 
   .contact-info{
@@ -1471,36 +1314,22 @@ footer{
     font-size:34px;
   }
 
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
   .copyright{
     flex-direction:column;
   }
-
-  .floating{
-    right:12px;
-    bottom:12px;
-  }
 }
 
-@media(prefers-reduced-motion:reduce){
-
-  *{
-    scroll-behavior:auto!important;
-    transition:none!important;
-    animation:none!important;
-  }
-}
 </style>
 </head>
 
+
 <body>
 
-<!-- ==========================================================
-     TOP INFORMATION BAR
-========================================================== -->
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
 <div class="topbar">
 
   <div class="container topbar-inner">
@@ -1510,7 +1339,7 @@ footer{
       <span>📍 Kenya & East Africa</span>
 
       <span>
-        ✉️
+        ✉
         <a href="mailto:meshaqengineeringlimitedsupport@gmail.com">
           meshaqengineeringlimitedsupport@gmail.com
         </a>
@@ -1522,17 +1351,23 @@ footer{
 
       <span>
         ☎
-        <a href="tel:0712242050">0712242050</a>
+        <a href="tel:0712242050">
+          0712242050
+        </a>
       </span>
 
       <span>
         ☎
-        <a href="tel:0732444187">0732444187</a>
+        <a href="tel:0732444187">
+          0732444187
+        </a>
       </span>
 
       <span>
         ☎
-        <a href="tel:0141976710">0141 976710</a>
+        <a href="tel:0141976710">
+          0141 976710
+        </a>
       </span>
 
     </div>
@@ -1541,40 +1376,42 @@ footer{
 
 </div>
 
-<!-- ==========================================================
+
+<!-- =========================================================
      HEADER
-========================================================== -->
+========================================================= -->
+
 <header>
 
   <div class="container nav">
 
-    <a href="#home" class="logo" aria-label="MESHAQ Engineering & Contractors">
+    <a href="#home" class="logo">
 
-      <svg class="logo-mark"
-           viewBox="0 0 100 100"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg">
+      <svg
+        class="logo-mark"
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
 
-        <rect x="3"
-              y="3"
-              width="94"
-              height="94"
-              rx="18"
-              fill="#F3A712"/>
+        <rect
+          x="3"
+          y="3"
+          width="94"
+          height="94"
+          rx="18"
+          fill="#F4A900"/>
 
-        <path d="M18 75V28L31 42L44 25L57 42L70 28V75"
-              stroke="#07111F"
-              stroke-width="8"
-              stroke-linejoin="round"/>
+        <path
+          d="M18 75V28L31 42L44 25L57 42L70 28V75"
+          stroke="#06111F"
+          stroke-width="8"
+          stroke-linejoin="round"/>
 
-        <path d="M18 75H82"
-              stroke="#07111F"
-              stroke-width="8"
-              stroke-linecap="round"/>
-
-        <path d="M70 28V75"
-              stroke="#07111F"
-              stroke-width="8"/>
+        <path
+          d="M18 75H82"
+          stroke="#06111F"
+          stroke-width="8"
+          stroke-linecap="round"/>
 
       </svg>
 
@@ -1590,13 +1427,17 @@ footer{
 
     </a>
 
-    <button class="menu"
-            id="menuBtn"
-            aria-label="Open menu">
+
+    <button
+      class="menu"
+      id="menuBtn">
       ☰
     </button>
 
-    <nav class="nav-links" id="navLinks">
+
+    <nav
+      class="nav-links"
+      id="navLinks">
 
       <a href="#home">Home</a>
 
@@ -1604,15 +1445,15 @@ footer{
 
       <a href="#services">Services</a>
 
-      <a href="#projects">Projects</a>
-
       <a href="#designs">Designs</a>
 
       <a href="#process">How We Work</a>
 
       <a href="#contact">Contact</a>
 
-      <a href="#application" class="nav-cta">
+      <a
+        href="#application"
+        class="nav-cta">
         START A PROJECT
       </a>
 
@@ -1622,17 +1463,21 @@ footer{
 
 </header>
 
-<!-- ==========================================================
+
+<!-- =========================================================
      HERO
-========================================================== -->
-<section class="hero" id="home">
+========================================================= -->
+
+<section
+  class="hero"
+  id="home">
 
   <div class="container">
 
-    <div class="hero-content reveal">
+    <div class="hero-content">
 
       <div class="eyebrow">
-        Engineering • Construction • Infrastructure
+        ENGINEERING • CONSTRUCTION • DESIGN
       </div>
 
       <h1>
@@ -1642,42 +1487,24 @@ footer{
       </h1>
 
       <p>
-        MESHAQ Engineering & Contractors delivers professional
-        construction, civil engineering, structural solutions,
-        project management and modern building solutions with
-        precision, safety and quality at every stage.
+        Professional engineering, construction, civil works,
+        structural solutions, project management and modern
+        building design delivered around your vision.
       </p>
 
       <div class="hero-buttons">
 
-        <a href="#application"
-           class="btn btn-gold">
-          🏗️ START A PROJECT
+        <a
+          href="#application"
+          class="btn btn-gold">
+          🏗 START A PROJECT
         </a>
 
-        <a href="#services"
-           class="btn btn-outline">
-          EXPLORE OUR SERVICES
+        <a
+          href="tel:0712242050"
+          class="btn btn-outline">
+          ☎ CALL MESHAQ
         </a>
-
-      </div>
-
-      <div class="hero-proof">
-
-        <div class="proof">
-          <strong>01</strong>
-          <span>QUALITY FOCUSED</span>
-        </div>
-
-        <div class="proof">
-          <strong>02</strong>
-          <span>SAFETY DRIVEN</span>
-        </div>
-
-        <div class="proof">
-          <strong>03</strong>
-          <span>CLIENT CENTRED</span>
-        </div>
 
       </div>
 
@@ -1687,9 +1514,11 @@ footer{
 
 </section>
 
-<!-- ==========================================================
-     TRUST STRIP
-========================================================== -->
+
+<!-- =========================================================
+     TRUST
+========================================================= -->
+
 <section class="trust">
 
   <div class="container trust-grid">
@@ -1699,19 +1528,8 @@ footer{
       <div class="trust-icon">✓</div>
 
       <div>
-        <strong>Quality Workmanship</strong>
-        <span>Attention to every detail</span>
-      </div>
-
-    </div>
-
-    <div class="trust-item">
-
-      <div class="trust-icon">◈</div>
-
-      <div>
-        <strong>Technical Precision</strong>
-        <span>Engineering-led solutions</span>
+        <strong>Quality Focused</strong>
+        <span>Attention to detail</span>
       </div>
 
     </div>
@@ -1721,8 +1539,19 @@ footer{
       <div class="trust-icon">◆</div>
 
       <div>
-        <strong>Safety First</strong>
-        <span>Responsible site practices</span>
+        <strong>Engineering Led</strong>
+        <span>Technical approach</span>
+      </div>
+
+    </div>
+
+    <div class="trust-item">
+
+      <div class="trust-icon">◈</div>
+
+      <div>
+        <strong>Safety Conscious</strong>
+        <span>Responsible practices</span>
       </div>
 
     </div>
@@ -1732,8 +1561,8 @@ footer{
       <div class="trust-icon">↗</div>
 
       <div>
-        <strong>Project Focus</strong>
-        <span>From concept to completion</span>
+        <strong>Client Focused</strong>
+        <span>Clear communication</span>
       </div>
 
     </div>
@@ -1742,23 +1571,26 @@ footer{
 
 </section>
 
-<!-- ==========================================================
+
+<!-- =========================================================
      ABOUT
-========================================================== -->
-<section class="section" id="about">
+========================================================= -->
+
+<section
+  class="section"
+  id="about">
 
   <div class="container about-grid">
 
-    <div class="about-image reveal">
+    <div class="about-image">
 
       <img
         src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1300&q=88"
-        alt="Engineering professionals reviewing construction plans"
-        loading="lazy">
+        alt="Engineering professional">
 
-      <div class="experience">
+      <div class="about-badge">
 
-        <strong>M</strong>
+        <strong>MESHAQ</strong>
 
         <span>
           ENGINEERED WITH PURPOSE
@@ -1768,10 +1600,11 @@ footer{
 
     </div>
 
-    <div class="about-copy reveal">
+
+    <div>
 
       <div class="section-kicker">
-        Who We Are
+        ABOUT MESHAQ
       </div>
 
       <h2>
@@ -1779,55 +1612,54 @@ footer{
       </h2>
 
       <p>
-        MESHAQ Engineering & Contractors is a modern,
-        client-focused engineering and construction brand
-        delivering solutions across building, civil works,
-        structural projects, renovation and technical services.
+        MESHAQ Engineering & Contractors is focused on
+        construction, engineering, building design, project
+        coordination and technical solutions.
       </p>
 
       <p>
-        Our approach begins with understanding the client's
-        requirements, continues through careful planning and
-        technical coordination, and finishes with controlled
-        execution, quality checks and project handover.
+        Our approach combines planning, technical thinking,
+        quality workmanship and communication throughout the
+        project journey.
       </p>
 
       <div class="checks">
 
         <div class="check">
-          <i>✓</i>
+          <span>✓</span>
           Professional planning
         </div>
 
         <div class="check">
-          <i>✓</i>
+          <span>✓</span>
           Quality materials
         </div>
 
         <div class="check">
-          <i>✓</i>
+          <span>✓</span>
           Technical supervision
         </div>
 
         <div class="check">
-          <i>✓</i>
+          <span>✓</span>
           Safety-conscious work
         </div>
 
         <div class="check">
-          <i>✓</i>
+          <span>✓</span>
           Clear communication
         </div>
 
         <div class="check">
-          <i>✓</i>
-          Project documentation
+          <span>✓</span>
+          Project coordination
         </div>
 
       </div>
 
-      <a href="#application"
-         class="btn btn-dark">
+      <a
+        href="#application"
+        class="btn btn-gold">
         DISCUSS YOUR PROJECT →
       </a>
 
@@ -1837,83 +1669,87 @@ footer{
 
 </section>
 
-<!-- ==========================================================
+
+<!-- =========================================================
      SERVICES
-========================================================== -->
-<section class="section soft" id="services">
+========================================================= -->
+
+<section
+  class="section soft"
+  id="services">
 
   <div class="container">
 
     <div class="section-head center">
 
       <div class="section-kicker">
-        What We Do
+        OUR SERVICES
       </div>
 
       <h2>
-        Complete engineering & construction services.
+        Complete engineering & construction solutions.
       </h2>
 
       <p>
-        From the first idea to the final finish, MESHAQ brings
-        together technical planning, skilled workmanship,
-        project coordination and construction expertise.
+        From the first consultation to project completion,
+        MESHAQ provides a structured approach to your project.
       </p>
 
     </div>
 
+
     <div class="services-grid">
 
-      <article class="service-card reveal">
+
+      <article class="service-card">
 
         <div class="service-img">
 
           <img
             src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
-            alt="Construction site"
-            loading="lazy">
+            alt="Building construction">
 
         </div>
 
         <div class="service-body">
 
-          <span class="service-no">
+          <span class="service-number">
             01 / CONSTRUCTION
           </span>
 
           <h3>
-            Building & General Contracting
+            Building & Contracting
           </h3>
 
           <p>
-            Building solutions covering project preparation,
-            site works, structural construction, finishes and
-            coordinated completion.
+            Building construction, structural works,
+            finishes and general contracting solutions.
           </p>
 
-          <a href="#application"
-             class="learn">
-            REQUEST THIS SERVICE →
+          <a
+            href="#application"
+            class="learn">
+            REQUEST SERVICE →
           </a>
 
         </div>
 
       </article>
 
-      <article class="service-card reveal">
+
+      <article class="service-card">
 
         <div class="service-img">
 
           <img
             src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85"
-            alt="Civil construction"
-            loading="lazy">
+            alt="Civil engineering">
 
         </div>
 
         <div class="service-body">
 
-          <span class="service-no">
+          <span class="service-number">
             02 / CIVIL
           </span>
 
@@ -1922,34 +1758,34 @@ footer{
           </h3>
 
           <p>
-            Civil works and infrastructure solutions including
-            site development, drainage, earthworks and related
-            construction.
+            Site development, drainage, earthworks and
+            infrastructure-related solutions.
           </p>
 
-          <a href="#application"
-             class="learn">
-            REQUEST THIS SERVICE →
+          <a
+            href="#application"
+            class="learn">
+            REQUEST SERVICE →
           </a>
 
         </div>
 
       </article>
 
-      <article class="service-card reveal">
+
+      <article class="service-card">
 
         <div class="service-img">
 
           <img
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85"
-            alt="Architectural building design"
-            loading="lazy">
+            alt="Structural engineering">
 
         </div>
 
         <div class="service-body">
 
-          <span class="service-no">
+          <span class="service-number">
             03 / STRUCTURAL
           </span>
 
@@ -1958,34 +1794,34 @@ footer{
           </h3>
 
           <p>
-            Technical structural coordination and construction
-            solutions developed around project requirements and
-            applicable standards.
+            Technical structural coordination and
+            construction-oriented engineering solutions.
           </p>
 
-          <a href="#application"
-             class="learn">
-            REQUEST THIS SERVICE →
+          <a
+            href="#application"
+            class="learn">
+            REQUEST SERVICE →
           </a>
 
         </div>
 
       </article>
 
-      <article class="service-card reveal">
+
+      <article class="service-card">
 
         <div class="service-img">
 
           <img
-            src="https://images.unsplash.com/photo-1590725140246-20acdc7b5c0e?auto=format&fit=crop&w=1000&q=85"
-            alt="Modern residential construction"
-            loading="lazy">
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern house design">
 
         </div>
 
         <div class="service-body">
 
-          <span class="service-no">
+          <span class="service-number">
             04 / DESIGN
           </span>
 
@@ -1994,34 +1830,34 @@ footer{
           </h3>
 
           <p>
-            Modern residential concepts, space planning,
-            exterior ideas and construction-oriented design
-            coordination.
+            Modern residential concepts and
+            construction-oriented planning.
           </p>
 
-          <a href="#application"
-             class="learn">
-            DESIGN MY PROJECT →
+          <a
+            href="#application"
+            class="learn">
+            REQUEST SERVICE →
           </a>
 
         </div>
 
       </article>
 
-      <article class="service-card reveal">
+
+      <article class="service-card">
 
         <div class="service-img">
 
           <img
             src="https://images.unsplash.com/photo-1542621334-a254cf47733d?auto=format&fit=crop&w=1000&q=85"
-            alt="Engineering project plans"
-            loading="lazy">
+            alt="Project management">
 
         </div>
 
         <div class="service-body">
 
-          <span class="service-no">
+          <span class="service-number">
             05 / MANAGEMENT
           </span>
 
@@ -2030,50 +1866,50 @@ footer{
           </h3>
 
           <p>
-            Planning, coordination, scheduling, communication
-            and construction monitoring throughout the project
-            lifecycle.
+            Project planning, coordination, scheduling
+            and construction monitoring.
           </p>
 
-          <a href="#application"
-             class="learn">
-            MANAGE MY PROJECT →
+          <a
+            href="#application"
+            class="learn">
+            REQUEST SERVICE →
           </a>
 
         </div>
 
       </article>
 
-      <article class="service-card reveal">
+
+      <article class="service-card">
 
         <div class="service-img">
 
           <img
             src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=85"
-            alt="Engineer working with technical equipment"
-            loading="lazy">
+            alt="Engineering consultation">
 
         </div>
 
         <div class="service-body">
 
-          <span class="service-no">
-            06 / TECHNICAL
+          <span class="service-number">
+            06 / CONSULTANCY
           </span>
 
           <h3>
-            Consultancy & Site Services
+            Technical Consultancy
           </h3>
 
           <p>
-            Technical consultation, site assessment,
-            construction coordination and practical
-            project support.
+            Project consultation, site assessment and
+            technical support.
           </p>
 
-          <a href="#application"
-             class="learn">
-            TALK TO OUR TEAM →
+          <a
+            href="#application"
+            class="learn">
+            REQUEST SERVICE →
           </a>
 
         </div>
@@ -2086,551 +1922,117 @@ footer{
 
 </section>
 
-<!-- ==========================================================
-     ENGINEERING TEAM
-========================================================== -->
-<section class="section" id="team">
 
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="section-kicker">
-        Our Professionals
-      </div>
-
-      <h2>
-        The people behind the work.
-      </h2>
-
-      <p>
-        A strong engineering project depends on disciplined
-        coordination between technical professionals, site teams
-        and the client.
-      </p>
-
-    </div>
-
-    <div class="team-grid">
-
-      <article class="team-card reveal">
-
-        <div class="team-photo">
-
-          <img
-            src="https://images.unsplash.com/photo-1581091215367-59ab6f2a8d3a?auto=format&fit=crop&w=900&q=85"
-            alt="Engineering professional"
-            loading="lazy">
-
-        </div>
-
-        <div class="team-info">
-
-          <h3>
-            Project Engineer
-          </h3>
-
-          <p>
-            TECHNICAL COORDINATION
-          </p>
-
-        </div>
-
-      </article>
-
-      <article class="team-card reveal">
-
-        <div class="team-photo">
-
-          <img
-            src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=900&q=85"
-            alt="Engineer on construction site"
-            loading="lazy">
-
-        </div>
-
-        <div class="team-info">
-
-          <h3>
-            Site Engineer
-          </h3>
-
-          <p>
-            FIELD SUPERVISION
-          </p>
-
-        </div>
-
-      </article>
-
-      <article class="team-card reveal">
-
-        <div class="team-photo">
-
-          <img
-            src="https://images.unsplash.com/photo-1581092919535-7146ff1a590f?auto=format&fit=crop&w=900&q=85"
-            alt="Construction engineer"
-            loading="lazy">
-
-        </div>
-
-        <div class="team-info">
-
-          <h3>
-            Technical Specialist
-          </h3>
-
-          <p>
-            ENGINEERING SUPPORT
-          </p>
-
-        </div>
-
-      </article>
-
-      <article class="team-card reveal">
-
-        <div class="team-photo">
-
-          <img
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85"
-            alt="Professional project manager"
-            loading="lazy">
-
-        </div>
-
-        <div class="team-info">
-
-          <h3>
-            Project Coordinator
-          </h3>
-
-          <p>
-            CLIENT & PROJECT SUPPORT
-          </p>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ==========================================================
-     MATERIALS
-========================================================== -->
-<section class="section soft" id="materials">
-
-  <div class="container">
-
-    <div class="section-head center">
-
-      <div class="section-kicker">
-        Construction Materials
-      </div>
-
-      <h2>
-        Materials selected for the work.
-      </h2>
-
-      <p>
-        Construction quality depends on appropriate material
-        selection, correct application and controlled workmanship.
-      </p>
-
-    </div>
-
-    <div class="material-grid">
-
-      <div class="material reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=800&q=85"
-          alt="Concrete construction"
-          loading="lazy">
-
-        <div class="material-info">
-
-          <h3>
-            Concrete & Cement
-          </h3>
-
-          <p>
-            Structural and general construction applications.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="material reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=85"
-          alt="Construction bricks"
-          loading="lazy">
-
-        <div class="material-info">
-
-          <h3>
-            Masonry & Blocks
-          </h3>
-
-          <p>
-            Walling and building construction applications.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="material reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=85"
-          alt="Steel construction"
-          loading="lazy">
-
-        <div class="material-info">
-
-          <h3>
-            Steel & Reinforcement
-          </h3>
-
-          <p>
-            Structural and reinforced construction work.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="material reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=800&q=85"
-          alt="Construction timber"
-          loading="lazy">
-
-        <div class="material-info">
-
-          <h3>
-            Timber & Formwork
-          </h3>
-
-          <p>
-            Construction support and finishing applications.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="material reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=800&q=85"
-          alt="Construction finishing"
-          loading="lazy">
-
-        <div class="material-info">
-
-          <h3>
-            Tiles & Finishes
-          </h3>
-
-          <p>
-            Interior and exterior finishing solutions.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="material reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=85"
-          alt="Modern interior"
-          loading="lazy">
-
-        <div class="material-info">
-
-          <h3>
-            Interior Materials
-          </h3>
-
-          <p>
-            Materials supporting modern interior spaces.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="material reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=85"
-          alt="Glass building"
-          loading="lazy">
-
-        <div class="material-info">
-
-          <h3>
-            Glass & Aluminium
-          </h3>
-
-          <p>
-            Modern architectural applications.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="material reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1607400201515-c2c41c07fdb7?auto=format&fit=crop&w=800&q=85"
-          alt="Construction materials"
-          loading="lazy">
-
-        <div class="material-info">
-
-          <h3>
-            Roofing Systems
-          </h3>
-
-          <p>
-            Roof construction and finishing solutions.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ==========================================================
-     TOOLS
-========================================================== -->
-<section class="section" id="equipment">
-
-  <div class="container">
-
-    <div class="section-head center">
-
-      <div class="section-kicker">
-        Tools & Equipment
-      </div>
-
-      <h2>
-        Built with the right tools.
-      </h2>
-
-      <p>
-        Construction and engineering require the right equipment,
-        measurement tools, protective equipment and site resources.
-      </p>
-
-    </div>
-
-    <div class="tools-grid">
-
-      <div class="tool reveal">
-        <div class="tool-icon">📏</div>
-        <h3>Laser Level</h3>
-        <p>Precision alignment</p>
-      </div>
-
-      <div class="tool reveal">
-        <div class="tool-icon">📐</div>
-        <h3>Measuring Tools</h3>
-        <p>Site measurements</p>
-      </div>
-
-      <div class="tool reveal">
-        <div class="tool-icon">🔨</div>
-        <h3>Power Tools</h3>
-        <p>Construction work</p>
-      </div>
-
-      <div class="tool reveal">
-        <div class="tool-icon">⚙️</div>
-        <h3>Concrete Equipment</h3>
-        <p>Concrete operations</p>
-      </div>
-
-      <div class="tool reveal">
-        <div class="tool-icon">🚧</div>
-        <h3>Site Equipment</h3>
-        <p>Site preparation</p>
-      </div>
-
-      <div class="tool reveal">
-        <div class="tool-icon">🦺</div>
-        <h3>Safety Gear</h3>
-        <p>Site protection</p>
-      </div>
-
-      <div class="tool reveal">
-        <div class="tool-icon">🧱</div>
-        <h3>Masonry Tools</h3>
-        <p>Wall construction</p>
-      </div>
-
-      <div class="tool reveal">
-        <div class="tool-icon">🔧</div>
-        <h3>Hand Tools</h3>
-        <p>General works</p>
-      </div>
-
-      <div class="tool reveal">
-        <div class="tool-icon">🏗️</div>
-        <h3>Heavy Equipment</h3>
-        <p>Large site works</p>
-      </div>
-
-      <div class="tool reveal">
-        <div class="tool-icon">📊</div>
-        <h3>Survey Equipment</h3>
-        <p>Site information</p>
-      </div>
-
-      <div class="tool reveal">
-        <div class="tool-icon">💻</div>
-        <h3>Design Software</h3>
-        <p>Technical planning</p>
-      </div>
-
-      <div class="tool reveal">
-        <div class="tool-icon">🧰</div>
-        <h3>Site Kits</h3>
-        <p>Professional support</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ==========================================================
+<!-- =========================================================
      PROCESS
-========================================================== -->
-<section class="section process" id="process">
+========================================================= -->
+
+<section
+  class="section process"
+  id="process">
 
   <div class="container">
 
     <div class="section-head center">
 
       <div class="section-kicker">
-        Our Process
+        OUR PROCESS
       </div>
 
       <h2>
-        How MESHAQ works with you.
+        How we work with you.
       </h2>
 
       <p>
-        Every project starts with understanding. We then move
-        through planning, technical preparation, execution and
-        final review.
+        A structured project journey from consultation
+        through delivery.
       </p>
 
     </div>
+
 
     <div class="process-grid">
 
-      <div class="step reveal">
+      <div class="step">
 
         <div class="step-number">
           01
         </div>
 
         <h3>
-          Consult
+          Consultation
         </h3>
 
         <p>
-          We listen to your goals, budget, location and project
-          requirements.
+          Understand your goals and requirements.
         </p>
 
       </div>
 
-      <div class="step reveal">
+
+      <div class="step">
 
         <div class="step-number">
           02
         </div>
 
         <h3>
-          Assess
+          Assessment
         </h3>
 
         <p>
-          We review the site, available information, scope and
-          technical needs.
+          Review site, scope and technical needs.
         </p>
 
       </div>
 
-      <div class="step reveal">
+
+      <div class="step">
 
         <div class="step-number">
           03
         </div>
 
         <h3>
-          Plan
+          Planning
         </h3>
 
         <p>
-          We develop the project approach, programme and required
-          documentation.
+          Develop the project approach.
         </p>
 
       </div>
 
-      <div class="step reveal">
+
+      <div class="step">
 
         <div class="step-number">
           04
         </div>
 
         <h3>
-          Build
+          Construction
         </h3>
 
         <p>
-          Work is coordinated and executed with attention to
-          quality and safety.
+          Coordinate the work and execution.
         </p>
 
       </div>
 
-      <div class="step reveal">
+
+      <div class="step">
 
         <div class="step-number">
           05
         </div>
 
         <h3>
-          Deliver
+          Handover
         </h3>
 
         <p>
-          We review the completed work and coordinate the
-          handover process.
+          Review completed work and handover.
         </p>
 
       </div>
@@ -2641,44 +2043,47 @@ footer{
 
 </section>
 
-<!-- ==========================================================
+
+<!-- =========================================================
      HOUSE DESIGNS
-========================================================== -->
-<section class="section" id="designs">
+========================================================= -->
+
+<section
+  class="section"
+  id="designs">
 
   <div class="container">
 
     <div class="section-head">
 
       <div class="section-kicker">
-        House Designs
+        HOUSE DESIGNS
       </div>
 
       <h2>
-        Modern spaces designed around the way you live.
+        Modern homes designed around your lifestyle.
       </h2>
 
       <p>
-        Explore the type of residential design direction MESHAQ
-        can present to clients—from contemporary family homes
-        to premium architectural concepts.
+        Explore different architectural directions for
+        residential projects.
       </p>
 
     </div>
 
+
     <div class="house-grid">
 
-      <div class="house reveal">
+      <div class="house">
 
         <img
-          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=88"
-          alt="Luxury modern house"
-          loading="lazy">
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=88"
+          alt="Modern residence">
 
         <div class="house-label">
 
           <small>
-            FEATURED CONCEPT
+            RESIDENTIAL
           </small>
 
           <h3>
@@ -2689,75 +2094,33 @@ footer{
 
       </div>
 
-      <div class="house reveal">
 
-        <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=88"
-          alt="Contemporary home"
-          loading="lazy">
-
-        <div class="house-label">
-
-          <small>
-            RESIDENTIAL
-          </small>
-
-          <h3>
-            Contemporary Villa
-          </h3>
-
-        </div>
-
-      </div>
-
-      <div class="house reveal">
+      <div class="house">
 
         <img
           src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=88"
-          alt="Modern home exterior"
-          loading="lazy">
+          alt="Contemporary home">
 
         <div class="house-label">
 
           <small>
-            MODERN
+            CONTEMPORARY
           </small>
 
           <h3>
-            Urban Residence
+            Contemporary Home
           </h3>
 
         </div>
 
       </div>
 
-      <div class="house reveal">
 
-        <img
-          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=88"
-          alt="Premium home"
-          loading="lazy">
-
-        <div class="house-label">
-
-          <small>
-            PREMIUM
-          </small>
-
-          <h3>
-            Executive Home
-          </h3>
-
-        </div>
-
-      </div>
-
-      <div class="house reveal">
+      <div class="house">
 
         <img
           src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=88"
-          alt="Modern interior"
-          loading="lazy">
+          alt="Modern interior">
 
         <div class="house-label">
 
@@ -2766,98 +2129,52 @@ footer{
           </small>
 
           <h3>
-            Modern Living Space
+            Modern Interior
           </h3>
 
         </div>
 
       </div>
 
-    </div>
 
-  </div>
-
-</section>
-
-<!-- ==========================================================
-     ENGINEERING MINDSET
-========================================================== -->
-<section class="section soft">
-
-  <div class="container">
-
-    <div class="feature-dark reveal">
-
-      <div>
-
-        <div class="section-kicker">
-          Engineering Mindset
-        </div>
-
-        <h2>
-          From drawings and ideas to a finished structure.
-        </h2>
-
-        <p>
-          A successful project requires more than materials.
-          It requires communication, planning, coordination,
-          measurement, supervision and disciplined execution.
-        </p>
-
-        <div class="feature-list">
-
-          <div>
-            <b>01</b>
-            <span>
-              Understand the client's requirements and intended outcome.
-            </span>
-          </div>
-
-          <div>
-            <b>02</b>
-            <span>
-              Coordinate design, technical information and project scope.
-            </span>
-          </div>
-
-          <div>
-            <b>03</b>
-            <span>
-              Plan resources, materials, workforce and construction activities.
-            </span>
-          </div>
-
-          <div>
-            <b>04</b>
-            <span>
-              Monitor progress and communicate important project developments.
-            </span>
-          </div>
-
-          <div>
-            <b>05</b>
-            <span>
-              Review completed work before project handover.
-            </span>
-          </div>
-
-        </div>
-
-        <br>
-
-        <a href="#application"
-           class="btn btn-gold">
-          START YOUR PROJECT →
-        </a>
-
-      </div>
-
-      <div class="feature-photo">
+      <div class="house">
 
         <img
-          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1300&q=88"
-          alt="Construction team working on a project"
-          loading="lazy">
+          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=88"
+          alt="Executive house">
+
+        <div class="house-label">
+
+          <small>
+            PREMIUM
+          </small>
+
+          <h3>
+            Executive Residence
+          </h3>
+
+        </div>
+
+      </div>
+
+
+      <div class="house">
+
+        <img
+          src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=88"
+          alt="Luxury house">
+
+        <div class="house-label">
+
+          <small>
+            ARCHITECTURE
+          </small>
+
+          <h3>
+            Luxury Living Space
+          </h3>
+
+        </div>
 
       </div>
 
@@ -2867,137 +2184,24 @@ footer{
 
 </section>
 
-<!-- ==========================================================
-     PROJECTS
-========================================================== -->
-<section class="section" id="projects">
 
-  <div class="container">
+<!-- =========================================================
+     APPLICATION
+========================================================= -->
 
-    <div class="section-head center">
+<section
+  class="section application"
+  id="application">
 
-      <div class="section-kicker">
-        Project Portfolio
-      </div>
+  <div class="container application-grid">
 
-      <h2>
-        Spaces. Structures. Infrastructure.
-      </h2>
 
-      <p>
-        A portfolio area where MESHAQ can present completed and
-        ongoing work with project descriptions, photographs and
-        technical scope.
-      </p>
+    <!-- LEFT SIDE -->
 
-    </div>
-
-    <div class="projects-grid">
-
-      <article class="project reveal">
-
-        <div class="project-img">
-
-          <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1100&q=88"
-            alt="Commercial building"
-            loading="lazy">
-
-        </div>
-
-        <div class="project-info">
-
-          <span class="project-tag">
-            Commercial
-          </span>
-
-          <h3>
-            Commercial Development
-          </h3>
-
-          <p>
-            Concept example for a commercial building project portfolio.
-          </p>
-
-        </div>
-
-      </article>
-
-      <article class="project reveal">
-
-        <div class="project-img">
-
-          <img
-            src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1100&q=88"
-            alt="Residential project"
-            loading="lazy">
-
-        </div>
-
-        <div class="project-info">
-
-          <span class="project-tag">
-            Residential
-          </span>
-
-          <h3>
-            Modern Residential Project
-          </h3>
-
-          <p>
-            Concept example for a modern residential development.
-          </p>
-
-        </div>
-
-      </article>
-
-      <article class="project reveal">
-
-        <div class="project-img">
-
-          <img
-            src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1100&q=88"
-            alt="Infrastructure building"
-            loading="lazy">
-
-        </div>
-
-        <div class="project-info">
-
-          <span class="project-tag">
-            Infrastructure
-          </span>
-
-          <h3>
-            Architectural & Infrastructure Works
-          </h3>
-
-          <p>
-            Concept example for an infrastructure portfolio entry.
-          </p>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ==========================================================
-     PROJECT APPLICATION
-========================================================== -->
-<section class="section application" id="application">
-
-  <div class="container app-wrap">
-
-    <div class="app-intro reveal">
+    <div class="application-intro">
 
       <div class="section-kicker">
-        Start Your Project
+        START A PROJECT
       </div>
 
       <h2>
@@ -3005,36 +2209,40 @@ footer{
       </h2>
 
       <p>
-        Send us your project requirements. Our team can review
-        the information and determine the next appropriate
-        consultation or technical step.
+        Complete the application and send the project
+        information directly to the MESHAQ WhatsApp line.
       </p>
 
-      <div class="app-benefits">
+      <div class="application-benefits">
 
         <div>
           <span>✓</span>
-          Tell us about your project
+          Select your country
         </div>
 
         <div>
           <span>✓</span>
-          Select the services you need
+          Select your county if in Kenya
         </div>
 
         <div>
           <span>✓</span>
-          Provide your location and timeline
+          Describe your project
         </div>
 
         <div>
           <span>✓</span>
-          Explain your project requirements
+          Select required services
         </div>
 
         <div>
           <span>✓</span>
-          Receive an application reference
+          Provide your project location
+        </div>
+
+        <div>
+          <span>✓</span>
+          Send directly through WhatsApp
         </div>
 
       </div>
@@ -3042,84 +2250,104 @@ footer{
       <br>
 
       <p style="font-size:11px">
-        Do not upload passwords, payment PINs or other confidential
-        authentication credentials through this form.
+        Never enter passwords, M-PESA PINs, card PINs or
+        other confidential authentication information.
       </p>
 
     </div>
 
-    <div class="form-card reveal">
 
-      <h3>
-        Project Application
-      </h3>
+    <!-- RIGHT SIDE FORM -->
+
+    <div class="form-card">
+
+      <div class="form-card-header">
+
+        <h3>
+          Project Application
+        </h3>
+
+        <p>
+          Your information will be formatted into a WhatsApp
+          application message.
+        </p>
+
+      </div>
+
 
       <form id="projectForm">
 
+
         <div class="form-grid">
+
+
+          <!-- NAME -->
 
           <div class="field">
 
-            <label>
-              Full Name *
+            <label for="name">
+              Full Name
+              <span class="required">*</span>
             </label>
 
             <input
               id="name"
               type="text"
               required
-              placeholder="Your full name">
+              autocomplete="name"
+              placeholder="Enter your full name">
 
           </div>
 
+
+          <!-- PHONE -->
+
           <div class="field">
 
-            <label>
-              Phone Number *
+            <label for="phone">
+              Phone Number
+              <span class="required">*</span>
             </label>
 
             <input
               id="phone"
               type="tel"
               required
-              placeholder="+254 7XX XXX XXX">
+              autocomplete="tel"
+              placeholder="e.g. 0712345678">
 
           </div>
 
+
+          <!-- EMAIL -->
+
           <div class="field">
 
-            <label>
+            <label for="email">
               Email Address
             </label>
 
             <input
               id="email"
               type="email"
+              autocomplete="email"
               placeholder="you@example.com">
 
           </div>
 
-          <div class="field">
 
-            <label>
-              Project Location *
-            </label>
-
-            <input
-              id="location"
-              type="text"
-              required
-              placeholder="Town / County">
-
-          </div>
+          <!-- PROJECT TYPE -->
 
           <div class="field">
 
-            <label>
-              Project Type *
+            <label for="projectType">
+              Project Type
+              <span class="required">*</span>
             </label>
 
-            <select id="projectType" required>
+            <select
+              id="projectType"
+              required>
 
               <option value="">
                 Select project type
@@ -3157,16 +2385,148 @@ footer{
 
           </div>
 
+
+          <!-- LOCATION -->
+
+          <div class="location-box">
+
+            <div class="location-title">
+              📍 Your Current Location
+            </div>
+
+            <div class="location-description">
+
+              Select the country where you are currently located.
+              If you select Kenya, choose one of all 47 counties.
+
+            </div>
+
+
+            <div class="location-grid">
+
+
+              <!-- COUNTRY -->
+
+              <div class="field">
+
+                <label for="country">
+
+                  Country
+                  <span class="required">*</span>
+
+                </label>
+
+                <select
+                  id="country"
+                  required>
+
+                  <option value="">
+                    Select country
+                  </option>
+
+                  <option value="Kenya">
+                    🇰🇪 Kenya
+                  </option>
+
+                  <option value="Uganda">
+                    🇺🇬 Uganda
+                  </option>
+
+                  <option value="Tanzania">
+                    🇹🇿 Tanzania
+                  </option>
+
+                  <option value="Rwanda">
+                    🇷🇼 Rwanda
+                  </option>
+
+                  <option value="Burundi">
+                    🇧🇮 Burundi
+                  </option>
+
+                  <option value="South Sudan">
+                    🇸🇸 South Sudan
+                  </option>
+
+                  <option value="Ethiopia">
+                    🇪🇹 Ethiopia
+                  </option>
+
+                  <option value="Somalia">
+                    🇸🇴 Somalia
+                  </option>
+
+                  <option value="Other">
+                    🌍 Other Country
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <!-- COUNTY -->
+
+              <div class="field">
+
+                <label for="county">
+                  Kenya County
+                </label>
+
+                <select
+                  id="county"
+                  disabled>
+
+                  <option value="">
+                    Select country first
+                  </option>
+
+                </select>
+
+                <div
+                  class="county-help"
+                  id="countyHelp">
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- PROJECT LOCATION -->
+
           <div class="field">
 
-            <label>
+            <label for="projectLocation">
+
+              Project Town / Area
+              <span class="required">*</span>
+
+            </label>
+
+            <input
+              id="projectLocation"
+              type="text"
+              required
+              placeholder="e.g. Kabarnet, Nairobi, Kisumu">
+
+          </div>
+
+
+          <!-- BUDGET -->
+
+          <div class="field">
+
+            <label for="budget">
               Estimated Budget
             </label>
 
             <select id="budget">
 
               <option value="">
-                Select range
+                Select budget range
               </option>
 
               <option>
@@ -3197,6 +2557,9 @@ footer{
 
           </div>
 
+
+          <!-- SERVICES -->
+
           <div class="field full">
 
             <label>
@@ -3206,73 +2569,105 @@ footer{
             <div class="service-options">
 
               <label class="service-option">
+
                 <input
                   type="checkbox"
                   name="services"
-                  value="Construction">
+                  value="Construction & Contracting">
+
                 Construction & Contracting
+
               </label>
 
+
               <label class="service-option">
+
                 <input
                   type="checkbox"
                   name="services"
                   value="Civil Engineering">
+
                 Civil Engineering
+
               </label>
 
+
               <label class="service-option">
+
                 <input
                   type="checkbox"
                   name="services"
-                  value="Structural">
+                  value="Structural Solutions">
+
                 Structural Solutions
+
               </label>
 
+
               <label class="service-option">
+
                 <input
                   type="checkbox"
                   name="services"
                   value="House Design">
+
                 House Design
+
               </label>
 
+
               <label class="service-option">
+
                 <input
                   type="checkbox"
                   name="services"
                   value="Project Management">
+
                 Project Management
+
               </label>
 
+
               <label class="service-option">
+
                 <input
                   type="checkbox"
                   name="services"
                   value="Consultancy">
+
                 Consultancy
+
               </label>
 
             </div>
 
           </div>
 
+
+          <!-- MESSAGE -->
+
           <div class="field full">
 
-            <label>
-              Tell us about your project *
+            <label for="message">
+
+              Tell us about your project
+              <span class="required">*</span>
+
             </label>
 
             <textarea
               id="message"
               required
-              placeholder="Describe what you want to build, the current stage of your project, your requirements and any other useful information..."></textarea>
+              placeholder="Describe what you want to build, your requirements, project size, current stage or anything else we should know..."></textarea>
 
           </div>
 
+
+          <!-- START DATE -->
+
           <div class="field full">
 
-            <label>
+            <label for="startDate">
               Preferred Start Date
             </label>
 
@@ -3282,23 +2677,51 @@ footer{
 
           </div>
 
+
         </div>
 
-        <p class="form-note">
-          By submitting this form, you are requesting contact
-          regarding your project. Final scope, technical
-          requirements, pricing and contractual terms should
-          be confirmed separately.
-        </p>
 
-        <button
-          type="submit"
-          class="btn btn-dark"
-          style="width:100%">
+        <!-- WHATSAPP AREA -->
 
-          SUBMIT PROJECT APPLICATION →
+        <div class="whatsapp-submit">
 
-        </button>
+          <div class="whatsapp-submit-title">
+
+            💬 Send Application Directly to MESHAQ WhatsApp
+
+          </div>
+
+          <div class="whatsapp-submit-text">
+
+            After submitting, WhatsApp will open with your
+            complete application already formatted. Review it
+            and tap Send.
+
+          </div>
+
+          <button
+            type="submit"
+            class="whatsapp-button">
+
+            <span class="whatsapp-icon">
+              💬
+            </span>
+
+            SUBMIT APPLICATION VIA WHATSAPP
+
+          </button>
+
+        </div>
+
+
+        <div class="form-note">
+
+          Your application will be sent to the MESHAQ
+          WhatsApp receiving number. WhatsApp must be installed
+          or accessible on the device for direct app messaging.
+
+        </div>
+
 
       </form>
 
@@ -3308,30 +2731,34 @@ footer{
 
 </section>
 
-<!-- ==========================================================
+
+<!-- =========================================================
      CONTACT
-========================================================== -->
-<section class="section" id="contact">
+========================================================= -->
+
+<section
+  class="section"
+  id="contact">
 
   <div class="container contact-grid">
 
-    <div class="contact-card contact-info reveal">
+
+    <div class="contact-card contact-info">
 
       <div class="section-kicker">
-        Contact MESHAQ
+        CONTACT MESHAQ
       </div>
 
       <h2>
-        Let's talk about your next project.
+        Let's discuss your next project.
       </h2>
 
       <p>
-        Have a house to build, a commercial project to develop,
-        infrastructure work to discuss or an engineering question?
-        Contact the MESHAQ team.
+        Contact the MESHAQ team for construction,
+        engineering, design and project enquiries.
       </p>
 
-      <!-- OFFICE NUMBERS -->
+
       <div class="contact-row">
 
         <div class="contact-icon">
@@ -3350,7 +2777,7 @@ footer{
               0712242050
             </a>
 
-            &nbsp;/&nbsp;
+            &nbsp; / &nbsp;
 
             <a href="tel:0732444187">
               0732444187
@@ -3362,7 +2789,7 @@ footer{
 
       </div>
 
-      <!-- HOTLINE -->
+
       <div class="contact-row">
 
         <div class="contact-icon">
@@ -3387,7 +2814,7 @@ footer{
 
       </div>
 
-      <!-- EMAIL -->
+
       <div class="contact-row">
 
         <div class="contact-icon">
@@ -3402,8 +2829,11 @@ footer{
 
           <span>
 
-            <a href="mailto:meshaqengineeringlimitedsupport@gmail.com">
+            <a
+              href="mailto:meshaqengineeringlimitedsupport@gmail.com">
+
               meshaqengineeringlimitedsupport@gmail.com
+
             </a>
 
           </span>
@@ -3412,46 +2842,63 @@ footer{
 
       </div>
 
-      <br>
 
-      <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <div class="contact-buttons">
 
-        <a href="tel:0712242050"
-           class="btn btn-gold">
-          📞 CALL OFFICE
+        <a
+          href="tel:0712242050"
+          class="btn btn-gold">
+
+          ☎ CALL OFFICE
+
         </a>
 
-        <a href="tel:0141976710"
-           class="btn btn-dark">
-          ☎ CALL HOTLINE
+
+        <a
+          href="https://wa.me/254712242050"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-whatsapp">
+
+          💬 WHATSAPP
+
         </a>
 
-        <a href="mailto:meshaqengineeringlimitedsupport@gmail.com"
-           class="btn"
-           style="background:#fff;color:#07111f;border-color:#fff">
-          ✉ EMAIL SUPPORT
+
+        <a
+          href="mailto:meshaqengineeringlimitedsupport@gmail.com"
+          class="btn"
+          style="background:#fff;color:#07111f">
+
+          ✉ EMAIL
+
         </a>
 
       </div>
 
     </div>
 
-    <div class="contact-card map reveal">
 
-      <div class="map-box">
+    <div class="contact-card contact-map">
+
+      <div class="map-card">
 
         <h3>
           MESHAQ Engineering & Contractors
         </h3>
 
         <p>
-          Your final office address, Google Maps location and
-          working hours can be added here before publishing.
+          Ready to discuss your project?
+          Submit the project application and
+          contact the team directly.
         </p>
 
-        <a href="#application"
-           class="btn btn-dark">
-          SEND AN ENQUIRY →
+        <a
+          href="#application"
+          class="btn btn-gold">
+
+          START APPLICATION →
+
         </a>
 
       </div>
@@ -3462,23 +2909,26 @@ footer{
 
 </section>
 
-<!-- ==========================================================
+
+<!-- =========================================================
      FOOTER
-========================================================== -->
+========================================================= -->
+
 <footer>
 
   <div class="container">
 
     <div class="footer-grid">
 
+
       <div>
 
-        <div class="logo footer-logo">
+        <div class="logo">
 
-          <svg class="logo-mark"
-               viewBox="0 0 100 100"
-               fill="none"
-               xmlns="http://www.w3.org/2000/svg">
+          <svg
+            class="logo-mark"
+            viewBox="0 0 100 100"
+            fill="none">
 
             <rect
               x="3"
@@ -3486,23 +2936,16 @@ footer{
               width="94"
               height="94"
               rx="18"
-              fill="#F3A712"/>
+              fill="#F4A900"/>
 
             <path
               d="M18 75V28L31 42L44 25L57 42L70 28V75"
-              stroke="#07111F"
-              stroke-width="8"
-              stroke-linejoin="round"/>
+              stroke="#06111F"
+              stroke-width="8"/>
 
             <path
               d="M18 75H82"
-              stroke="#07111F"
-              stroke-width="8"
-              stroke-linecap="round"/>
-
-            <path
-              d="M70 28V75"
-              stroke="#07111F"
+              stroke="#06111F"
               stroke-width="8"/>
 
           </svg>
@@ -3522,12 +2965,15 @@ footer{
         </div>
 
         <p class="footer-about">
+
           Engineering and construction solutions built around
           precision, quality, communication and responsible
           project execution.
+
         </p>
 
       </div>
+
 
       <div>
 
@@ -3538,28 +2984,29 @@ footer{
         <div class="footer-links">
 
           <a href="#about">
-            About MESHAQ
+            About
           </a>
 
           <a href="#services">
-            Our Services
+            Services
           </a>
 
-          <a href="#team">
-            Our Professionals
-          </a>
-
-          <a href="#projects">
-            Projects
+          <a href="#designs">
+            Designs
           </a>
 
           <a href="#process">
             How We Work
           </a>
 
+          <a href="#application">
+            Start Project
+          </a>
+
         </div>
 
       </div>
+
 
       <div>
 
@@ -3581,56 +3028,68 @@ footer{
             Structural Works
           </a>
 
-          <a href="#designs">
+          <a href="#services">
             House Design
           </a>
 
           <a href="#services">
-            Project Management
+            Consultancy
           </a>
 
         </div>
 
       </div>
 
+
       <div>
 
         <h3>
-          Contact MESHAQ
+          Contact
         </h3>
 
         <div class="footer-links">
 
           <a href="tel:0712242050">
-            📞 0712242050
+            ☎ 0712242050
           </a>
 
           <a href="tel:0732444187">
-            📞 0732444187
+            ☎ 0732444187
           </a>
 
           <a href="tel:0141976710">
-            ☎ 0141 976710 — Hotline
+            ☎ 0141 976710
           </a>
 
-          <a href="mailto:meshaqengineeringlimitedsupport@gmail.com">
+          <a
+            href="mailto:meshaqengineeringlimitedsupport@gmail.com">
+
             ✉ Email Support
+
           </a>
 
-          <a href="#application">
-            Start a Project
+          <a
+            href="https://wa.me/254712242050"
+            target="_blank"
+            rel="noopener">
+
+            💬 WhatsApp
+
           </a>
 
         </div>
 
       </div>
 
+
     </div>
+
 
     <div class="copyright">
 
-      <span id="copyrightText">
-        © 2026 MESHAQ Engineering & Contractors.
+      <span>
+        © <span id="year"></span>
+        MESHAQ Engineering & Contractors.
         All rights reserved.
       </span>
 
@@ -3644,43 +3103,50 @@ footer{
 
 </footer>
 
-<!-- ==========================================================
-     FLOATING CONTACT BUTTONS
-========================================================== -->
+
+<!-- =========================================================
+     FLOATING WHATSAPP / CALL
+========================================================= -->
+
 <div class="floating">
 
-  <!-- WhatsApp number can be changed when the official
-       MESHAQ WhatsApp number is available -->
   <a
-    class="float-btn float-wa"
-    href="https://wa.me/254712242050?text=Hello%20MESHAQ%2C%20I%20would%20like%20to%20discuss%20a%20project."
+    href="https://wa.me/254712242050"
     target="_blank"
     rel="noopener"
+    class="float float-whatsapp"
     aria-label="WhatsApp MESHAQ">
+
     💬
+
   </a>
 
-  <!-- MAIN OFFICE CALL -->
+
   <a
-    class="float-btn float-call"
     href="tel:0712242050"
+    class="float float-call"
     aria-label="Call MESHAQ">
+
     ☎
+
   </a>
 
 </div>
 
-<!-- ==========================================================
+
+<!-- =========================================================
      SUCCESS MODAL
-========================================================== -->
-<div class="modal" id="successModal">
+========================================================= -->
+
+<div
+  class="modal"
+  id="successModal">
 
   <div class="modal-box">
 
     <button
-      class="modal-close"
-      id="closeModal"
-      aria-label="Close">
+      class="close-modal"
+      id="closeModal">
       ×
     </button>
 
@@ -3689,234 +3155,717 @@ footer{
     </div>
 
     <h2>
-      Application Received
+      Application Prepared
     </h2>
 
-    <p style="color:#667085;margin:12px 0 18px">
-      Your project enquiry has been captured by this website
-      interface. Connect the form to your real backend before
-      using it for production.
+    <p style="color:#667085;margin-top:8px">
+
+      WhatsApp is being opened with your
+      project application.
+
     </p>
 
-    <div
-      style="background:#f4f7fa;padding:14px;border-radius:10px;margin-bottom:20px">
+    <div class="reference">
 
-      <small style="display:block;color:#667085">
-        REFERENCE NUMBER
+      <small>
+        APPLICATION REFERENCE
       </small>
 
-      <strong
-        id="referenceNumber"
-        style="font-size:22px;color:#07111f">
+      <strong id="referenceNumber">
       </strong>
 
     </div>
 
+    <p
+      style="font-size:12px;color:#667085;margin-bottom:18px">
+
+      Once WhatsApp opens, review the application
+      and tap <strong>Send</strong>.
+
+    </p>
+
     <button
-      class="btn btn-dark"
       id="doneBtn"
+      class="btn btn-whatsapp"
       style="width:100%">
-      DONE
+
+      OPENED / DONE
+
     </button>
 
   </div>
 
 </div>
 
-<!-- ==========================================================
-     JAVASCRIPT
-========================================================== -->
+
 <script>
 
-/* MOBILE MENU */
+/* =========================================================
+   MESHAQ WHATSAPP RECEIVING NUMBER
+========================================================= */
 
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
+/*
+   This is the number that receives applications.
+
+   0712242050
+   Kenya international format:
+   254712242050
+*/
+
+const MESHAQ_WHATSAPP =
+  "254712242050";
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn =
+  document.getElementById("menuBtn");
+
+const navLinks =
+  document.getElementById("navLinks");
+
 
 menuBtn.addEventListener("click", () => {
+
   navLinks.classList.toggle("active");
+
 });
 
-document.querySelectorAll(".nav-links a").forEach(link => {
 
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
+document
+  .querySelectorAll(".nav-links a")
+  .forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      navLinks.classList.remove("active");
+
+    });
+
   });
 
-});
+
+/* =========================================================
+   ALL 47 KENYA COUNTIES
+========================================================= */
+
+const counties = [
+
+  "Baringo",
+  "Bomet",
+  "Bungoma",
+  "Busia",
+  "Elgeyo-Marakwet",
+  "Embu",
+  "Garissa",
+  "Homa Bay",
+  "Isiolo",
+  "Kajiado",
+  "Kakamega",
+  "Kericho",
+  "Kiambu",
+  "Kilifi",
+  "Kirinyaga",
+  "Kisii",
+  "Kisumu",
+  "Kitui",
+  "Kwale",
+  "Laikipia",
+  "Lamu",
+  "Machakos",
+  "Makueni",
+  "Mandera",
+  "Marsabit",
+  "Meru",
+  "Migori",
+  "Mombasa",
+  "Murang'a",
+  "Nairobi City",
+  "Nakuru",
+  "Nandi",
+  "Narok",
+  "Nyamira",
+  "Nyandarua",
+  "Nyeri",
+  "Samburu",
+  "Siaya",
+  "Taita-Taveta",
+  "Tana River",
+  "Tharaka-Nithi",
+  "Trans Nzoia",
+  "Turkana",
+  "Uasin Gishu",
+  "Vihiga",
+  "Wajir",
+  "West Pokot"
+
+];
 
 
-/* SCROLL REVEAL */
+/* =========================================================
+   COUNTRY / COUNTY
+========================================================= */
 
-const observer = new IntersectionObserver((entries) => {
+const country =
+  document.getElementById("country");
 
-  entries.forEach(entry => {
+const county =
+  document.getElementById("county");
 
-    if(entry.isIntersecting){
+const countyHelp =
+  document.getElementById("countyHelp");
 
-      entry.target.classList.add("show");
 
-      observer.unobserve(entry.target);
+country.addEventListener(
+  "change",
+  function(){
+
+    county.innerHTML = "";
+
+    if(this.value === "Kenya"){
+
+      county.disabled = false;
+      county.required = true;
+
+      const first =
+        document.createElement("option");
+
+      first.value = "";
+
+      first.textContent =
+        "Select your county";
+
+      county.appendChild(first);
+
+
+      counties.forEach(
+        (countyName, index) => {
+
+          const option =
+            document.createElement("option");
+
+          option.value =
+            countyName;
+
+          option.textContent =
+            `${String(index + 1).padStart(2,"0")} — ${countyName}`;
+
+          county.appendChild(option);
+
+        }
+      );
+
+
+      countyHelp.textContent =
+        "✓ All 47 Kenya counties are available.";
+
+
+    }else{
+
+      county.disabled = true;
+      county.required = false;
+
+      const option =
+        document.createElement("option");
+
+      option.value = "";
+
+      option.textContent =
+        "County not required";
+
+      county.appendChild(option);
+
+      countyHelp.textContent = "";
+
     }
 
-  });
-
-},{
-  threshold:.12
-});
-
-document.querySelectorAll(".reveal").forEach(el => {
-  observer.observe(el);
-});
+  }
+);
 
 
-/* PROJECT APPLICATION */
-
-const projectForm =
-  document.getElementById("projectForm");
-
-const successModal =
-  document.getElementById("successModal");
-
-const referenceNumber =
-  document.getElementById("referenceNumber");
-
+/* =========================================================
+   GENERATE APPLICATION REFERENCE
+========================================================= */
 
 function generateReference(){
 
-  const year = new Date().getFullYear();
+  const now =
+    new Date();
 
-  const number =
-    Math.floor(100000 + Math.random() * 900000);
+  const year =
+    now.getFullYear();
 
-  return `MES-${year}-${number}`;
+  const random =
+    Math.floor(
+      100000 +
+      Math.random() * 900000
+    );
+
+  return `MES-${year}-${random}`;
+
 }
 
 
-projectForm.addEventListener("submit", function(event){
+/* =========================================================
+   GET SELECTED SERVICES
+========================================================= */
 
-  event.preventDefault();
+function getSelectedServices(){
 
-  const services =
-    [
-      ...document.querySelectorAll(
-        'input[name="services"]:checked'
+  return [
+    ...document.querySelectorAll(
+      'input[name="services"]:checked'
+    )
+  ].map(
+    item => item.value
+  );
+
+}
+
+
+/* =========================================================
+   CLEAN TEXT FOR WHATSAPP
+========================================================= */
+
+function cleanText(value){
+
+  return String(value || "")
+    .trim();
+
+}
+
+
+/* =========================================================
+   FORM SUBMISSION
+========================================================= */
+
+const form =
+  document.getElementById("projectForm");
+
+
+form.addEventListener(
+  "submit",
+  function(event){
+
+    event.preventDefault();
+
+
+    /* -----------------------------------------------------
+       READ FORM
+    ----------------------------------------------------- */
+
+    const name =
+      cleanText(
+        document.getElementById("name").value
+      );
+
+
+    const phone =
+      cleanText(
+        document.getElementById("phone").value
+      );
+
+
+    const email =
+      cleanText(
+        document.getElementById("email").value
+      );
+
+
+    const countryValue =
+      cleanText(
+        document.getElementById("country").value
+      );
+
+
+    const countyValue =
+      cleanText(
+        document.getElementById("county").value
+      );
+
+
+    const projectLocation =
+      cleanText(
+        document.getElementById("projectLocation").value
+      );
+
+
+    const projectType =
+      cleanText(
+        document.getElementById("projectType").value
+      );
+
+
+    const budget =
+      cleanText(
+        document.getElementById("budget").value
+      );
+
+
+    const message =
+      cleanText(
+        document.getElementById("message").value
+      );
+
+
+    const startDate =
+      cleanText(
+        document.getElementById("startDate").value
+      );
+
+
+    const services =
+      getSelectedServices();
+
+
+    /* -----------------------------------------------------
+       VALIDATION
+    ----------------------------------------------------- */
+
+    if(!name){
+
+      alert(
+        "Please enter your full name."
+      );
+
+      document
+        .getElementById("name")
+        .focus();
+
+      return;
+
+    }
+
+
+    if(!phone){
+
+      alert(
+        "Please enter your phone number."
+      );
+
+      document
+        .getElementById("phone")
+        .focus();
+
+      return;
+
+    }
+
+
+    if(!countryValue){
+
+      alert(
+        "Please select your country."
+      );
+
+      country.focus();
+
+      return;
+
+    }
+
+
+    if(
+      countryValue === "Kenya" &&
+      !countyValue
+    ){
+
+      alert(
+        "Please select your Kenya county."
+      );
+
+      county.focus();
+
+      return;
+
+    }
+
+
+    if(!projectLocation){
+
+      alert(
+        "Please enter your project town or area."
+      );
+
+      document
+        .getElementById("projectLocation")
+        .focus();
+
+      return;
+
+    }
+
+
+    if(!projectType){
+
+      alert(
+        "Please select your project type."
+      );
+
+      document
+        .getElementById("projectType")
+        .focus();
+
+      return;
+
+    }
+
+
+    if(!message){
+
+      alert(
+        "Please describe your project."
+      );
+
+      document
+        .getElementById("message")
+        .focus();
+
+      return;
+
+    }
+
+
+    /* -----------------------------------------------------
+       REFERENCE
+    ----------------------------------------------------- */
+
+    const reference =
+      generateReference();
+
+
+    /* -----------------------------------------------------
+       LOCATION DISPLAY
+    ----------------------------------------------------- */
+
+    let locationText =
+      countryValue;
+
+
+    if(countryValue === "Kenya"){
+
+      locationText =
+        `${countyValue}, Kenya`;
+
+    }
+
+
+    /* -----------------------------------------------------
+       SERVICES DISPLAY
+    ----------------------------------------------------- */
+
+    const servicesText =
+      services.length
+      ? services.join(", ")
+      : "Not specified";
+
+
+    /* -----------------------------------------------------
+       WHATSAPP MESSAGE
+    ----------------------------------------------------- */
+
+    const whatsappMessage =
+
+`🏗️ *MESHAQ ENGINEERING & CONTRACTORS*
+
+━━━━━━━━━━━━━━━━━━━━
+📋 *NEW PROJECT APPLICATION*
+━━━━━━━━━━━━━━━━━━━━
+
+🔖 *Application Reference*
+${reference}
+
+👤 *CLIENT INFORMATION*
+Name: ${name}
+Phone: ${phone}
+Email: ${email || "Not provided"}
+
+📍 *CLIENT LOCATION*
+Country: ${countryValue}
+${countryValue === "Kenya"
+  ? `County: ${countyValue}`
+  : ""}
+
+🏗️ *PROJECT INFORMATION*
+Project Area: ${projectLocation}
+Project Type: ${projectType}
+Estimated Budget: ${budget || "Not specified"}
+
+🛠️ *SERVICES REQUIRED*
+${servicesText}
+
+📝 *PROJECT DESCRIPTION*
+${message}
+
+📅 *PREFERRED START DATE*
+${startDate || "Not specified"}
+
+━━━━━━━━━━━━━━━━━━━━
+📌 *SUBMITTED THROUGH*
+MESHAQ Website
+
+🔖 Reference:
+${reference}
+
+━━━━━━━━━━━━━━━━━━━━
+
+Please review this client application and contact the client for the next step.
+
+— MESHAQ Engineering & Contractors`;
+
+
+    /* -----------------------------------------------------
+       CREATE WHATSAPP URL
+    ----------------------------------------------------- */
+
+    const whatsappURL =
+      "https://wa.me/" +
+      MESHAQ_WHATSAPP +
+      "?text=" +
+      encodeURIComponent(
+        whatsappMessage
+      );
+
+
+    /* -----------------------------------------------------
+       SAVE COPY LOCALLY
+    ----------------------------------------------------- */
+
+    const applicationData = {
+
+      reference,
+      name,
+      phone,
+      email,
+      country:countryValue,
+      county:
+        countryValue === "Kenya"
+        ? countyValue
+        : "",
+      projectLocation,
+      projectType,
+      budget,
+      services,
+      message,
+      startDate,
+      submittedAt:
+        new Date().toISOString()
+
+    };
+
+
+    localStorage.setItem(
+      "meshaq_last_application",
+      JSON.stringify(
+        applicationData
       )
-    ].map(item => item.value);
+    );
 
 
-  const application = {
+    /* -----------------------------------------------------
+       SHOW SUCCESS MODAL
+    ----------------------------------------------------- */
 
-    reference:generateReference(),
-
-    name:
-      document.getElementById("name").value.trim(),
-
-    phone:
-      document.getElementById("phone").value.trim(),
-
-    email:
-      document.getElementById("email").value.trim(),
-
-    location:
-      document.getElementById("location").value.trim(),
-
-    projectType:
-      document.getElementById("projectType").value,
-
-    budget:
-      document.getElementById("budget").value,
-
-    services:services,
-
-    message:
-      document.getElementById("message").value.trim(),
-
-    startDate:
-      document.getElementById("startDate").value,
-
-    submittedAt:
-      new Date().toISOString()
-
-  };
+    document
+      .getElementById(
+        "referenceNumber"
+      )
+      .textContent =
+      reference;
 
 
-  /*
-    FRONT-END STORAGE ONLY.
-
-    For a real MESHAQ production website,
-    connect this form to a secure backend/database.
-
-    Example:
-
-    fetch("/api/applications", {
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify(application)
-    });
-  */
+    document
+      .getElementById(
+        "successModal"
+      )
+      .classList.add("active");
 
 
-  localStorage.setItem(
-    "meshaq_last_application",
-    JSON.stringify(application)
-  );
+    /* -----------------------------------------------------
+       OPEN WHATSAPP
+    ----------------------------------------------------- */
 
+    setTimeout(() => {
 
-  referenceNumber.textContent =
-    application.reference;
+      window.location.href =
+        whatsappURL;
 
+    },350);
 
-  successModal.classList.add("active");
-
-
-  projectForm.reset();
-
-});
-
-
-/* CLOSE MODAL */
-
-function closeSuccessModal(){
-
-  successModal.classList.remove("active");
-
-}
-
-
-document
-  .getElementById("closeModal")
-  .addEventListener(
-    "click",
-    closeSuccessModal
-  );
-
-
-document
-  .getElementById("doneBtn")
-  .addEventListener(
-    "click",
-    closeSuccessModal
-  );
-
-
-successModal.addEventListener("click", function(event){
-
-  if(event.target === successModal){
-
-    closeSuccessModal();
 
   }
+);
 
-});
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+const modal =
+  document.getElementById(
+    "successModal"
+  );
 
 
-/* CURRENT YEAR */
+document
+  .getElementById(
+    "closeModal"
+  )
+  .addEventListener(
+    "click",
+    () => {
 
-document.getElementById("copyrightText").innerHTML =
-  `© ${new Date().getFullYear()} MESHAQ Engineering & Contractors. All rights reserved.`;
+      modal.classList.remove(
+        "active"
+      );
+
+    }
+  );
+
+
+document
+  .getElementById(
+    "doneBtn"
+  )
+  .addEventListener(
+    "click",
+    () => {
+
+      modal.classList.remove(
+        "active"
+      );
+
+    }
+  );
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+document
+  .getElementById("year")
+  .textContent =
+  new Date().getFullYear();
+
+
+/* =========================================================
+   PREVENT OLD FORM DATA
+========================================================= */
+
+window.addEventListener(
+  "pageshow",
+  () => {
+
+    /*
+      The form remains blank when the page
+      is loaded normally.
+    */
+
+  }
+);
 
 </script>
 

@@ -1,48 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#071A2B">
 
-<title>MESHAQ Engineering & Contractors | Kenya</title>
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+      content="#071A2B">
+
+<title>
+MESHAQ Engineering & Contractors | Kenya
+</title>
 
 <meta name="description"
 content="MESHAQ Engineering & Contractors — Professional engineering, construction, civil works, structural solutions, house design and project management in Kenya.">
 
+<!-- =========================================================
+     LEAFLET REAL MAP
+     OpenStreetMap + Leaflet
+========================================================= -->
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+>
+
 <style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
 :root{
+
   --navy:#071A2B;
   --navy2:#0B2942;
   --navy3:#103C5D;
+
   --gold:#DFAF35;
   --gold2:#F4CC68;
+
   --white:#fff;
   --black:#101828;
+
   --gray:#667085;
   --gray2:#98A2B3;
+
   --light:#F4F7FA;
   --line:#E4E7EC;
+
   --green:#12B76A;
   --whatsapp:#25D366;
+
   --red:#D92D20;
   --blue:#1677FF;
-  --shadow:0 24px 70px rgba(7,26,43,.12);
+
+  --shadow:
+    0 24px 70px rgba(7,26,43,.12);
+
   --radius:20px;
+
   --max:1240px;
+
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
+
   box-sizing:border-box;
+
   margin:0;
+
   padding:0;
+
 }
+
 
 html{
+
   scroll-behavior:smooth;
+
 }
 
+
 body{
+
   font-family:
     Inter,
     system-ui,
@@ -51,43 +100,71 @@ body{
     "Segoe UI",
     Arial,
     sans-serif;
+
   color:var(--black);
+
   background:#fff;
+
   line-height:1.65;
+
 }
+
 
 a{
+
   color:inherit;
+
   text-decoration:none;
+
 }
 
+
 img{
+
   width:100%;
+
   display:block;
+
 }
+
 
 button,
 input,
 select,
 textarea{
+
   font:inherit;
+
 }
+
 
 button{
+
   cursor:pointer;
+
 }
+
 
 .container{
+
   width:min(var(--max),92%);
+
   margin:auto;
+
 }
+
 
 .section{
+
   padding:100px 0;
+
 }
 
+
 .soft{
+
   background:var(--light);
+
 }
 
 
@@ -96,34 +173,59 @@ button{
 ========================================================= */
 
 .topbar{
+
   background:#03101C;
+
   color:#B9C7D5;
+
   font-size:12px;
+
 }
+
 
 .topbar-inner{
+
   min-height:40px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
+
   gap:20px;
+
 }
+
 
 .top-links{
+
   display:flex;
+
   align-items:center;
+
   gap:20px;
+
   flex-wrap:wrap;
+
 }
+
 
 .top-links span{
+
   display:flex;
+
   align-items:center;
+
   gap:7px;
+
 }
 
+
 .top-links a:hover{
+
   color:var(--gold2);
+
 }
 
 
@@ -132,84 +234,153 @@ button{
 ========================================================= */
 
 header{
+
   position:sticky;
+
   top:0;
+
   z-index:1000;
+
   background:rgba(7,26,43,.97);
+
   backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(255,255,255,.08);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
+
 }
+
 
 .nav{
+
   height:82px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
+
   gap:25px;
+
 }
+
 
 .logo{
+
   display:flex;
+
   align-items:center;
+
   gap:11px;
+
   color:#fff;
+
 }
+
 
 .logo-mark{
+
   width:47px;
+
   height:47px;
+
   flex:none;
+
 }
+
 
 .logo-text strong{
+
   display:block;
+
   font-size:22px;
+
   letter-spacing:2px;
+
   line-height:1;
+
 }
+
 
 .logo-text small{
+
   display:block;
+
   font-size:8px;
+
   letter-spacing:1.5px;
+
   color:#AEBECD;
+
   margin-top:5px;
+
 }
+
 
 .nav-links{
+
   display:flex;
+
   align-items:center;
+
   gap:22px;
+
 }
+
 
 .nav-links a{
+
   color:#D8E1EA;
+
   font-size:13px;
+
   font-weight:800;
+
   transition:.2s;
+
 }
+
 
 .nav-links a:hover{
+
   color:var(--gold2);
+
 }
+
 
 .nav-cta{
+
   background:var(--gold);
+
   color:#101010!important;
+
   padding:12px 17px;
+
   border-radius:8px;
+
 }
+
 
 .nav-cta:hover{
+
   background:var(--gold2);
+
 }
 
+
 .menu{
+
   display:none;
+
   border:0;
+
   background:none;
+
   color:#fff;
+
   font-size:28px;
+
 }
 
 
@@ -218,10 +389,15 @@ header{
 ========================================================= */
 
 .hero{
+
   min-height:calc(100vh - 122px);
+
   display:flex;
+
   align-items:center;
+
   position:relative;
+
   color:#fff;
 
   background:
@@ -233,99 +409,179 @@ header{
     ),
     url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=90")
     center/cover;
+
 }
+
 
 .hero-content{
+
   max-width:820px;
+
   padding:90px 0 110px;
+
 }
+
 
 .eyebrow{
+
   display:inline-flex;
+
   align-items:center;
+
   gap:10px;
+
   color:var(--gold2);
+
   font-size:12px;
+
   font-weight:900;
+
   letter-spacing:2px;
+
   text-transform:uppercase;
+
   margin-bottom:20px;
+
 }
+
 
 .eyebrow:before{
+
   content:"";
+
   width:35px;
+
   height:2px;
+
   background:var(--gold);
+
 }
+
 
 .hero h1{
+
   font-size:clamp(45px,7vw,86px);
+
   line-height:1;
+
   letter-spacing:-3px;
+
   margin-bottom:25px;
+
 }
+
 
 .hero h1 span{
+
   color:var(--gold);
+
 }
+
 
 .hero p{
+
   max-width:680px;
+
   color:#D3DDE7;
+
   font-size:18px;
+
   margin-bottom:34px;
+
 }
+
 
 .hero-buttons{
+
   display:flex;
+
   gap:12px;
+
   flex-wrap:wrap;
+
 }
+
 
 .btn{
+
   min-height:50px;
+
   padding:0 21px;
+
   border-radius:8px;
+
   display:inline-flex;
+
   align-items:center;
+
   justify-content:center;
+
   gap:9px;
+
   border:1px solid transparent;
+
   font-size:13px;
+
   font-weight:900;
+
   cursor:pointer;
+
   transition:.25s;
+
 }
+
 
 .btn-gold{
+
   background:var(--gold);
+
   color:#111;
+
 }
+
 
 .btn-gold:hover{
+
   background:var(--gold2);
+
   transform:translateY(-2px);
+
 }
+
 
 .btn-outline{
+
   border-color:rgba(255,255,255,.35);
+
   color:#fff;
+
 }
+
 
 .btn-outline:hover{
+
   background:#fff;
+
   color:var(--navy);
+
 }
+
 
 .btn-whatsapp{
+
   background:var(--whatsapp);
+
   color:#fff;
+
 }
 
+
 .btn-whatsapp:hover{
+
   background:#1ebe5d;
+
   transform:translateY(-2px);
+
 }
 
 
@@ -334,46 +590,82 @@ header{
 ========================================================= */
 
 .trust{
+
   background:var(--navy);
+
   color:#fff;
+
   padding:22px 0;
+
 }
+
 
 .trust-grid{
+
   display:grid;
+
   grid-template-columns:repeat(4,1fr);
+
   gap:15px;
+
 }
+
 
 .trust-item{
+
   display:flex;
+
   gap:12px;
+
   align-items:center;
-  border-right:1px solid rgba(255,255,255,.1);
+
+  border-right:
+    1px solid rgba(255,255,255,.1);
+
 }
+
 
 .trust-item:last-child{
+
   border:0;
+
 }
+
 
 .trust-icon{
+
   width:40px;
+
   height:40px;
+
   border-radius:10px;
+
   display:grid;
+
   place-items:center;
+
   background:rgba(223,175,53,.12);
+
   color:var(--gold2);
+
 }
+
 
 .trust-item strong{
+
   font-size:13px;
+
 }
 
+
 .trust-item span{
+
   display:block;
+
   color:#91A2B5;
+
   font-size:11px;
+
 }
 
 
@@ -382,35 +674,61 @@ header{
 ========================================================= */
 
 .section-head{
+
   max-width:750px;
+
   margin-bottom:50px;
+
 }
+
 
 .section-head.center{
+
   text-align:center;
+
   margin-left:auto;
+
   margin-right:auto;
+
 }
+
 
 .section-kicker{
+
   color:#A36F00;
+
   font-size:12px;
+
   font-weight:900;
+
   letter-spacing:2px;
+
   text-transform:uppercase;
+
   margin-bottom:10px;
+
 }
+
 
 .section h2{
+
   color:var(--navy);
+
   font-size:clamp(32px,4vw,52px);
+
   line-height:1.1;
+
   letter-spacing:-1.5px;
+
 }
 
+
 .section-head p{
+
   color:var(--gray);
+
   margin-top:15px;
+
 }
 
 
@@ -419,67 +737,120 @@ header{
 ========================================================= */
 
 .about-grid{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:70px;
+
   align-items:center;
+
 }
+
 
 .about-image{
+
   position:relative;
+
 }
+
 
 .about-image img{
+
   height:580px;
+
   object-fit:cover;
+
   border-radius:24px;
+
 }
+
 
 .about-badge{
+
   position:absolute;
+
   right:-20px;
+
   bottom:30px;
+
   width:180px;
+
   background:var(--gold);
+
   color:#111;
+
   padding:23px;
+
   border-radius:16px;
+
   box-shadow:var(--shadow);
+
 }
+
 
 .about-badge strong{
+
   display:block;
+
   font-size:28px;
+
   line-height:1;
+
 }
+
 
 .about-badge span{
+
   display:block;
+
   font-size:11px;
+
   font-weight:800;
+
   margin-top:6px;
+
 }
+
 
 .about-copy p{
+
   color:var(--gray);
+
   margin:17px 0;
+
 }
+
 
 .checks{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:12px;
+
   margin:25px 0;
+
 }
+
 
 .check{
+
   font-size:13px;
+
   font-weight:700;
+
 }
 
+
 .check span{
+
   color:var(--green);
+
   margin-right:7px;
+
 }
 
 
@@ -488,65 +859,115 @@ header{
 ========================================================= */
 
 .services-grid{
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:20px;
+
 }
+
 
 .service-card{
+
   background:#fff;
+
   border:1px solid var(--line);
+
   border-radius:18px;
+
   overflow:hidden;
+
   transition:.3s;
+
 }
+
 
 .service-card:hover{
+
   transform:translateY(-6px);
+
   box-shadow:var(--shadow);
+
 }
+
 
 .service-img{
+
   height:210px;
+
   overflow:hidden;
+
 }
+
 
 .service-img img{
+
   height:100%;
+
   object-fit:cover;
+
   transition:.5s;
+
 }
+
 
 .service-card:hover img{
+
   transform:scale(1.06);
+
 }
+
 
 .service-body{
+
   padding:24px;
+
 }
+
 
 .service-number{
+
   color:#A36F00;
+
   font-size:11px;
+
   font-weight:900;
+
 }
+
 
 .service-body h3{
+
   color:var(--navy);
+
   font-size:20px;
+
   margin:5px 0 10px;
+
 }
+
 
 .service-body p{
+
   color:var(--gray);
+
   font-size:13px;
+
   margin-bottom:17px;
+
 }
 
+
 .learn{
+
   color:#986600;
+
   font-size:12px;
+
   font-weight:900;
+
 }
 
 
@@ -555,107 +976,185 @@ header{
 ========================================================= */
 
 .process{
+
   background:var(--navy);
+
   color:#fff;
+
 }
+
 
 .process h2{
+
   color:#fff;
+
 }
+
 
 .process .section-head p{
+
   color:#AEBCCD;
+
 }
+
 
 .process-grid{
+
   display:grid;
+
   grid-template-columns:repeat(5,1fr);
+
   gap:15px;
+
 }
+
 
 .step{
+
   text-align:center;
+
 }
+
 
 .step-number{
+
   width:68px;
+
   height:68px;
+
   margin:auto;
+
   display:grid;
+
   place-items:center;
+
   border-radius:50%;
+
   background:var(--gold);
+
   color:#111;
+
   font-weight:900;
+
 }
+
 
 .step h3{
+
   margin:17px 0 7px;
+
   font-size:16px;
+
 }
 
+
 .step p{
+
   color:#94A6B8;
+
   font-size:12px;
+
 }
 
 
 /* =========================================================
-   DESIGNS
+   HOUSE DESIGNS
 ========================================================= */
 
 .house-grid{
+
   display:grid;
+
   grid-template-columns:1.4fr .8fr .8fr;
+
   grid-template-rows:250px 250px;
+
   gap:15px;
+
 }
+
 
 .house{
+
   position:relative;
+
   overflow:hidden;
+
   border-radius:18px;
+
 }
+
 
 .house:first-child{
+
   grid-row:span 2;
+
 }
+
 
 .house img{
+
   height:100%;
+
   object-fit:cover;
+
   transition:.5s;
+
 }
+
 
 .house:hover img{
+
   transform:scale(1.05);
+
 }
+
 
 .house:after{
+
   content:"";
+
   position:absolute;
+
   inset:0;
-  background:linear-gradient(
-    transparent 35%,
-    rgba(0,0,0,.85)
-  );
+
+  background:
+    linear-gradient(
+      transparent 35%,
+      rgba(0,0,0,.85)
+    );
+
 }
+
 
 .house-label{
+
   position:absolute;
+
   z-index:2;
+
   left:20px;
+
   bottom:18px;
+
   color:#fff;
+
 }
+
 
 .house-label small{
+
   color:var(--gold2);
+
   font-weight:900;
+
 }
 
+
 .house-label h3{
+
   font-size:19px;
+
 }
 
 
@@ -664,219 +1163,397 @@ header{
 ========================================================= */
 
 .application{
+
   background:#F4F7FA;
+
 }
+
 
 .application-grid{
+
   display:grid;
+
   grid-template-columns:.7fr 1.3fr;
+
   gap:30px;
+
   align-items:start;
+
 }
+
 
 .application-intro{
+
   background:
-    linear-gradient(145deg,#061522,#103C5D);
+    linear-gradient(
+      145deg,
+      #061522,
+      #103C5D
+    );
+
   color:#fff;
+
   border-radius:22px;
+
   padding:38px;
+
   position:sticky;
+
   top:105px;
+
   box-shadow:var(--shadow);
+
 }
+
 
 .application-intro h2{
+
   color:#fff;
+
   font-size:34px;
+
   line-height:1.15;
+
 }
+
 
 .application-intro p{
+
   color:#B7C5D3;
+
   margin:16px 0 25px;
+
 }
+
 
 .application-benefits{
+
   display:grid;
+
   gap:13px;
+
   font-size:13px;
+
 }
+
 
 .application-benefits span{
+
   color:var(--gold2);
+
   margin-right:7px;
+
 }
+
 
 .form-card{
+
   background:#fff;
+
   border:1px solid var(--line);
+
   border-radius:22px;
+
   padding:35px;
-  box-shadow:0 12px 45px rgba(7,17,31,.05);
+
+  box-shadow:
+    0 12px 45px rgba(7,17,31,.05);
+
 }
+
 
 .form-card-header{
+
   margin-bottom:25px;
+
 }
+
 
 .form-card-header h3{
+
   color:var(--navy);
+
   font-size:26px;
+
 }
+
 
 .form-card-header p{
+
   color:var(--gray);
+
   font-size:13px;
+
   margin-top:4px;
+
 }
+
 
 .form-grid{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:16px;
+
 }
+
 
 .field{
+
   display:flex;
+
   flex-direction:column;
+
   gap:7px;
+
 }
+
 
 .full{
+
   grid-column:1/-1;
+
 }
+
 
 .field label{
+
   color:#344054;
+
   font-size:12px;
+
   font-weight:900;
+
 }
 
+
 .required{
+
   color:var(--red);
+
 }
+
 
 .field input,
 .field select,
 .field textarea{
+
   width:100%;
-  border:1px solid #D6DCE4;
+
+  border:
+    1px solid #D6DCE4;
+
   border-radius:9px;
+
   padding:13px 14px;
+
   outline:none;
+
   color:#101828;
+
   background:#fff;
+
   transition:.2s;
+
 }
+
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus{
+
   border-color:var(--gold);
-  box-shadow:0 0 0 3px rgba(223,175,53,.14);
+
+  box-shadow:
+    0 0 0 3px rgba(223,175,53,.14);
+
 }
 
+
 .field textarea{
+
   min-height:130px;
+
   resize:vertical;
+
 }
 
 
 /* =========================================================
-   PHONE FIELD
+   PHONE
 ========================================================= */
 
 .phone-wrapper{
+
   position:relative;
+
 }
+
 
 .phone-prefix{
+
   position:absolute;
+
   left:1px;
+
   top:1px;
+
   bottom:1px;
+
   width:57px;
+
   border-radius:8px 0 0 8px;
+
   background:#F4F6F8;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   color:var(--navy);
+
   font-size:12px;
+
   font-weight:900;
-  border-right:1px solid #D6DCE4;
+
+  border-right:
+    1px solid #D6DCE4;
+
   pointer-events:none;
+
 }
+
 
 .phone-wrapper input{
+
   padding-left:68px;
+
 }
+
 
 .input-status{
+
   font-size:10px;
+
   font-weight:800;
+
   min-height:15px;
+
 }
+
 
 .input-valid{
+
   border-color:var(--green)!important;
-  box-shadow:0 0 0 3px rgba(18,183,106,.08)!important;
+
+  box-shadow:
+    0 0 0 3px rgba(18,183,106,.08)!important;
+
 }
 
+
 .input-invalid{
+
   border-color:var(--red)!important;
-  box-shadow:0 0 0 3px rgba(217,45,32,.08)!important;
+
+  box-shadow:
+    0 0 0 3px rgba(217,45,32,.08)!important;
+
 }
 
 
 /* =========================================================
-   KENYA LOCATION
+   KENYA LOCATION FORM
 ========================================================= */
 
 .location-box{
+
   grid-column:1/-1;
+
   background:#F8FAFC;
-  border:1px solid #E4E7EC;
+
+  border:
+    1px solid #E4E7EC;
+
   border-radius:15px;
+
   padding:20px;
+
 }
+
 
 .location-title{
+
   color:var(--navy);
+
   font-weight:900;
+
   font-size:15px;
+
 }
+
 
 .location-description{
+
   color:var(--gray);
+
   font-size:12px;
+
   margin:3px 0 17px;
+
 }
+
 
 .location-grid{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:15px;
+
 }
+
 
 .kenya-badge{
+
   display:inline-flex;
+
   align-items:center;
+
   gap:7px;
+
   background:#EAFBF1;
+
   color:#087A42;
+
   padding:6px 10px;
+
   border-radius:999px;
+
   font-size:10px;
+
   font-weight:900;
+
   margin-bottom:12px;
+
 }
 
+
 .county-help{
+
   color:var(--green);
+
   font-size:11px;
+
   font-weight:700;
+
   margin-top:3px;
+
 }
 
 
@@ -885,28 +1562,49 @@ header{
 ========================================================= */
 
 .service-options{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:9px;
+
 }
+
 
 .service-option{
-  border:1px solid #E0E5EB;
+
+  border:
+    1px solid #E0E5EB;
+
   padding:11px;
+
   border-radius:9px;
+
   cursor:pointer;
+
   font-size:12px;
+
   transition:.2s;
+
 }
+
 
 .service-option:hover{
+
   border-color:var(--gold);
+
   background:#FFFCF4;
+
 }
 
+
 .service-option input{
+
   width:auto;
+
   margin-right:6px;
+
 }
 
 
@@ -915,57 +1613,105 @@ header{
 ========================================================= */
 
 .whatsapp-submit{
+
   margin-top:20px;
+
   padding:18px;
+
   border-radius:14px;
+
   background:#EAFBF1;
-  border:1px solid #BDEECF;
+
+  border:
+    1px solid #BDEECF;
+
 }
+
 
 .whatsapp-submit-title{
+
   color:#087A42;
+
   font-weight:900;
+
   font-size:14px;
+
 }
+
 
 .whatsapp-submit-text{
+
   color:#4B6356;
+
   font-size:11px;
+
   margin:4px 0 13px;
+
 }
+
 
 .whatsapp-button{
+
   width:100%;
+
   min-height:56px;
+
   border:0;
+
   border-radius:10px;
+
   background:var(--whatsapp);
+
   color:#fff;
+
   font-size:14px;
+
   font-weight:900;
+
   cursor:pointer;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   gap:10px;
+
   transition:.25s;
+
 }
+
 
 .whatsapp-button:hover{
+
   background:#1EBE5D;
+
   transform:translateY(-2px);
-  box-shadow:0 10px 25px rgba(37,211,102,.25);
+
+  box-shadow:
+    0 10px 25px rgba(37,211,102,.25);
+
 }
+
 
 .whatsapp-icon{
+
   font-size:23px;
+
 }
 
+
 .form-note{
+
   color:#7A8492;
+
   font-size:10px;
+
   margin-top:13px;
+
   line-height:1.5;
+
 }
 
 
@@ -974,97 +1720,382 @@ header{
 ========================================================= */
 
 .contact-grid{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:25px;
+
 }
+
 
 .contact-card{
+
   min-height:490px;
+
   border-radius:22px;
+
   overflow:hidden;
+
 }
+
 
 .contact-info{
+
   background:var(--navy);
+
   color:#fff;
+
   padding:42px;
+
 }
+
 
 .contact-info h2{
+
   color:#fff;
+
   font-size:40px;
+
   line-height:1.1;
+
 }
+
 
 .contact-info>p{
+
   color:#ACBDCD;
+
   margin:17px 0 25px;
+
 }
+
 
 .contact-row{
+
   display:flex;
+
   gap:13px;
+
   padding:17px 0;
-  border-bottom:1px solid rgba(255,255,255,.09);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.09);
+
 }
+
 
 .contact-icon{
+
   width:42px;
+
   height:42px;
+
   border-radius:10px;
+
   display:grid;
+
   place-items:center;
+
   color:var(--gold2);
-  background:rgba(223,175,53,.12);
+
+  background:
+    rgba(223,175,53,.12);
+
 }
+
 
 .contact-row strong{
+
   display:block;
+
   font-size:12px;
+
 }
+
 
 .contact-row span{
+
   color:#9FB0C0;
+
   font-size:12px;
+
 }
+
 
 .contact-row a:hover{
+
   color:var(--gold2);
+
 }
+
 
 .contact-buttons{
+
   display:flex;
+
   flex-wrap:wrap;
+
   gap:9px;
+
   margin-top:22px;
+
 }
+
+
+/* =========================================================
+   REAL KISUMU MAP
+========================================================= */
 
 .contact-map{
-  background:
-    linear-gradient(rgba(6,17,31,.25),rgba(6,17,31,.4)),
-    url("https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=1400&q=85")
-    center/cover;
-  display:flex;
-  align-items:flex-end;
-  padding:30px;
+
+  position:relative;
+
+  min-height:490px;
+
+  background:#E9EEF2;
+
+  padding:0;
+
+  overflow:hidden;
+
 }
+
+
+#meshaqMap{
+
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+
+  height:100%;
+
+  min-height:490px;
+
+  z-index:1;
+
+}
+
+
+/* =========================================================
+   MAP INFORMATION CARD
+========================================================= */
 
 .map-card{
-  background:#fff;
-  padding:21px;
-  border-radius:15px;
-  max-width:350px;
+
+  position:absolute;
+
+  z-index:500;
+
+  left:22px;
+
+  bottom:22px;
+
+  width:min(390px,calc(100% - 44px));
+
+  background:rgba(255,255,255,.97);
+
+  backdrop-filter:blur(12px);
+
+  padding:22px;
+
+  border-radius:17px;
+
+  box-shadow:
+    0 15px 45px rgba(0,0,0,.20);
+
+  border:
+    1px solid rgba(255,255,255,.8);
+
 }
+
+
+.map-badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:7px;
+
+  background:#EAFBF1;
+
+  color:#087A42;
+
+  padding:6px 10px;
+
+  border-radius:999px;
+
+  font-size:10px;
+
+  font-weight:900;
+
+  margin-bottom:9px;
+
+}
+
 
 .map-card h3{
+
   color:var(--navy);
+
+  font-size:19px;
+
+  line-height:1.25;
+
+  margin-bottom:5px;
+
 }
 
-.map-card p{
-  color:var(--gray);
+
+.map-address{
+
+  color:#475467;
+
   font-size:12px;
-  margin:5px 0 13px;
+
+  line-height:1.6;
+
+  margin-bottom:15px;
+
+}
+
+
+.map-address strong{
+
+  color:var(--navy);
+
+}
+
+
+.map-actions{
+
+  display:flex;
+
+  gap:8px;
+
+  flex-wrap:wrap;
+
+}
+
+
+.map-actions .btn{
+
+  min-height:43px;
+
+  padding:0 15px;
+
+  font-size:11px;
+
+}
+
+
+/* =========================================================
+   CUSTOM MAP MARKER
+========================================================= */
+
+.meshaq-marker{
+
+  width:48px;
+
+  height:48px;
+
+  border-radius:
+    50% 50% 50% 0;
+
+  background:var(--gold);
+
+  border:4px solid #fff;
+
+  box-shadow:
+    0 7px 22px rgba(0,0,0,.30);
+
+  transform:rotate(-45deg);
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+}
+
+
+.meshaq-marker-inner{
+
+  transform:rotate(45deg);
+
+  font-size:19px;
+
+}
+
+
+/* =========================================================
+   MAP POPUP
+========================================================= */
+
+.leaflet-popup-content-wrapper{
+
+  border-radius:14px;
+
+}
+
+
+.leaflet-popup-content{
+
+  margin:14px 16px;
+
+}
+
+
+.office-popup{
+
+  min-width:220px;
+
+}
+
+
+.office-popup strong{
+
+  display:block;
+
+  color:var(--navy);
+
+  font-size:14px;
+
+  margin-bottom:5px;
+
+}
+
+
+.office-popup span{
+
+  display:block;
+
+  color:#667085;
+
+  font-size:11px;
+
+  line-height:1.6;
+
+}
+
+
+.office-popup a{
+
+  display:inline-block;
+
+  margin-top:10px;
+
+  color:#A36F00;
+
+  font-size:11px;
+
+  font-weight:900;
+
 }
 
 
@@ -1073,47 +2104,84 @@ header{
 ========================================================= */
 
 footer{
+
   background:#020811;
+
   color:#A9B8C8;
+
   padding:65px 0 25px;
+
 }
+
 
 .footer-grid{
+
   display:grid;
+
   grid-template-columns:1.5fr 1fr 1fr 1fr;
+
   gap:40px;
+
   padding-bottom:40px;
-  border-bottom:1px solid rgba(255,255,255,.08);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
+
 }
+
 
 .footer-about{
+
   max-width:350px;
+
   font-size:12px;
+
   margin-top:16px;
+
 }
+
 
 .footer h3{
+
   color:#fff;
+
   font-size:14px;
+
   margin-bottom:16px;
+
 }
+
 
 .footer-links{
+
   display:grid;
+
   gap:9px;
+
   font-size:12px;
+
 }
+
 
 .footer-links a:hover{
+
   color:var(--gold2);
+
 }
 
+
 .copyright{
+
   padding-top:20px;
+
   display:flex;
+
   justify-content:space-between;
+
   gap:20px;
+
   font-size:10px;
+
 }
 
 
@@ -1122,32 +2190,57 @@ footer{
 ========================================================= */
 
 .floating{
+
   position:fixed;
+
   right:18px;
+
   bottom:18px;
+
   z-index:900;
+
   display:flex;
+
   flex-direction:column;
+
   gap:10px;
+
 }
+
 
 .float{
+
   width:52px;
+
   height:52px;
+
   border-radius:50%;
+
   display:grid;
+
   place-items:center;
+
   color:#fff;
+
   font-size:21px;
-  box-shadow:0 10px 30px rgba(0,0,0,.22);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.22);
+
 }
+
 
 .float-whatsapp{
+
   background:var(--whatsapp);
+
 }
 
+
 .float-call{
+
   background:var(--navy);
+
 }
 
 
@@ -1156,65 +2249,118 @@ footer{
 ========================================================= */
 
 .modal{
+
   position:fixed;
+
   inset:0;
+
   z-index:3000;
+
   background:rgba(0,0,0,.7);
+
   display:none;
+
   align-items:center;
+
   justify-content:center;
+
   padding:20px;
+
 }
+
 
 .modal.active{
+
   display:flex;
+
 }
+
 
 .modal-box{
+
   background:#fff;
+
   width:min(500px,100%);
+
   border-radius:22px;
+
   padding:35px;
+
   text-align:center;
+
   position:relative;
+
 }
+
 
 .close-modal{
+
   position:absolute;
+
   top:10px;
+
   right:15px;
+
   border:0;
+
   background:none;
+
   font-size:28px;
+
 }
+
 
 .success-icon{
+
   width:70px;
+
   height:70px;
+
   border-radius:50%;
+
   background:#E7F8EF;
+
   color:var(--green);
+
   display:grid;
+
   place-items:center;
+
   font-size:32px;
+
   margin:0 auto 16px;
+
 }
+
 
 .reference{
+
   margin:17px 0;
+
   padding:15px;
+
   background:#F5F7FA;
+
   border-radius:10px;
+
 }
+
 
 .reference small{
+
   color:var(--gray);
+
   display:block;
+
 }
 
+
 .reference strong{
+
   color:var(--navy);
+
   font-size:22px;
+
 }
 
 
@@ -1225,170 +2371,288 @@ footer{
 @media(max-width:1000px){
 
   .nav-links{
+
     gap:12px;
+
   }
 
   .nav-links a{
+
     font-size:11px;
+
   }
 
   .services-grid{
+
     grid-template-columns:1fr 1fr;
+
   }
 
   .trust-grid{
+
     grid-template-columns:1fr 1fr;
+
   }
 
   .process-grid{
+
     grid-template-columns:1fr 1fr;
+
     gap:35px;
+
   }
 
   .application-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .application-intro{
+
     position:static;
+
   }
 
   .footer-grid{
+
     grid-template-columns:1fr 1fr;
+
   }
+
 }
 
 
 @media(max-width:800px){
 
   .topbar{
+
     display:none;
+
   }
 
   .nav{
+
     height:72px;
+
   }
 
   .menu{
+
     display:block;
+
   }
 
   .nav-links{
+
     display:none;
+
     position:absolute;
+
     left:4%;
+
     right:4%;
+
     top:72px;
+
     background:#081522;
+
     padding:15px;
+
     flex-direction:column;
+
     align-items:stretch;
+
     gap:0;
-    border-radius:0 0 15px 15px;
+
+    border-radius:
+      0 0 15px 15px;
+
   }
 
   .nav-links.active{
+
     display:flex;
+
   }
 
   .nav-links a{
+
     padding:12px 8px;
-    border-bottom:1px solid rgba(255,255,255,.07);
+
+    border-bottom:
+      1px solid rgba(255,255,255,.07);
+
     font-size:13px;
+
   }
 
   .about-grid,
   .contact-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .about-image img{
+
     height:470px;
+
   }
 
   .house-grid{
+
     grid-template-columns:1fr 1fr;
-    grid-template-rows:250px 250px 250px;
+
+    grid-template-rows:
+      250px 250px 250px;
+
   }
 
   .house:first-child{
+
     grid-column:span 2;
+
     grid-row:auto;
+
   }
+
 }
 
 
 @media(max-width:600px){
 
   .section{
+
     padding:70px 0;
+
   }
 
   .hero{
+
     min-height:700px;
+
   }
 
   .hero h1{
+
     font-size:48px;
+
   }
 
   .hero p{
+
     font-size:15px;
+
   }
 
   .trust-grid,
   .services-grid,
   .footer-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .trust-item{
+
     border-right:0;
-    border-bottom:1px solid rgba(255,255,255,.1);
+
+    border-bottom:
+      1px solid rgba(255,255,255,.1);
+
     padding-bottom:10px;
+
   }
 
   .checks,
   .form-grid,
   .location-grid,
   .service-options{
+
     grid-template-columns:1fr;
+
   }
 
   .full,
   .location-box{
+
     grid-column:auto;
+
   }
 
   .house-grid{
+
     display:grid;
+
     grid-template-columns:1fr;
-    grid-template-rows:270px 220px 220px 220px;
+
+    grid-template-rows:
+      270px 220px 220px 220px;
+
   }
 
   .house:first-child{
+
     grid-column:auto;
+
   }
 
   .form-card,
   .application-intro{
+
     padding:23px;
+
   }
 
   .contact-info{
+
     padding:30px;
+
   }
 
   .contact-info h2{
+
     font-size:34px;
+
   }
 
   .copyright{
+
     flex-direction:column;
+
   }
+
+  .contact-map{
+
+    min-height:560px;
+
+  }
+
+  #meshaqMap{
+
+    min-height:560px;
+
+  }
+
+  .map-card{
+
+    left:14px;
+
+    bottom:14px;
+
+    width:calc(100% - 28px);
+
+    padding:18px;
+
+  }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
@@ -1398,41 +2662,63 @@ footer{
 ========================================================= -->
 
 <div class="topbar">
+
   <div class="container topbar-inner">
 
     <div class="top-links">
 
-      <span>📍 Kenya</span>
+      <span>
+        📍 Kenya • Kisumu
+      </span>
 
       <span>
+
         ✉
+
         <a href="mailto:meshaqengineeringlimitedsupport@gmail.com">
+
           meshaqengineeringlimitedsupport@gmail.com
+
         </a>
+
       </span>
 
     </div>
 
+
     <div class="top-links">
 
       <span>
+
         ☎
+
         <a href="tel:+254712242050">
+
           +254 712 242050
+
         </a>
+
       </span>
 
+
       <span>
+
         ☎
+
         <a href="tel:+254732444187">
+
           +254 732 444187
+
         </a>
+
       </span>
 
     </div>
 
   </div>
+
 </div>
+
 
 
 <!-- =========================================================
@@ -1473,11 +2759,16 @@ footer{
 
       </svg>
 
+
       <div class="logo-text">
 
-        <strong>MESHAQ</strong>
+        <strong>
+          MESHAQ
+        </strong>
 
-        <small>ENGINEERING & CONTRACTORS</small>
+        <small>
+          ENGINEERING & CONTRACTORS
+        </small>
 
       </div>
 
@@ -1498,15 +2789,36 @@ footer{
       class="nav-links"
       id="navLinks">
 
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#designs">Designs</a>
-      <a href="#process">How We Work</a>
-      <a href="#contact">Contact</a>
+      <a href="#home">
+        Home
+      </a>
 
-      <a href="#application" class="nav-cta">
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#designs">
+        Designs
+      </a>
+
+      <a href="#process">
+        How We Work
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+      <a
+        href="#application"
+        class="nav-cta">
+
         START A PROJECT
+
       </a>
 
     </nav>
@@ -1516,40 +2828,65 @@ footer{
 </header>
 
 
+
 <!-- =========================================================
      HERO
 ========================================================= -->
 
-<section class="hero" id="home">
+<section
+  class="hero"
+  id="home">
 
   <div class="container">
 
     <div class="hero-content">
 
       <div class="eyebrow">
+
         ENGINEERING • CONSTRUCTION • DESIGN
+
       </div>
 
+
       <h1>
+
         ENGINEERING<br>
-        <span>EXCELLENCE.</span><br>
+
+        <span>
+          EXCELLENCE.
+        </span><br>
+
         BUILDING THE FUTURE.
+
       </h1>
 
+
       <p>
+
         Professional engineering, construction, civil works,
         structural solutions, project management and modern
         building design delivered around your vision.
+
       </p>
+
 
       <div class="hero-buttons">
 
-        <a href="#application" class="btn btn-gold">
+        <a
+          href="#application"
+          class="btn btn-gold">
+
           🏗 START A PROJECT
+
         </a>
 
-        <a href="tel:+254712242050" class="btn btn-outline">
+
+        <a
+          href="tel:+254712242050"
+          class="btn btn-outline">
+
           ☎ CALL MESHAQ
+
         </a>
 
       </div>
@@ -1559,6 +2896,7 @@ footer{
   </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -1570,35 +2908,86 @@ footer{
   <div class="container trust-grid">
 
     <div class="trust-item">
-      <div class="trust-icon">✓</div>
-      <div>
-        <strong>Quality Focused</strong>
-        <span>Attention to detail</span>
+
+      <div class="trust-icon">
+        ✓
       </div>
+
+      <div>
+
+        <strong>
+          Quality Focused
+        </strong>
+
+        <span>
+          Attention to detail
+        </span>
+
+      </div>
+
     </div>
 
-    <div class="trust-item">
-      <div class="trust-icon">◆</div>
-      <div>
-        <strong>Engineering Led</strong>
-        <span>Technical approach</span>
-      </div>
-    </div>
 
     <div class="trust-item">
-      <div class="trust-icon">◈</div>
-      <div>
-        <strong>Safety Conscious</strong>
-        <span>Responsible practices</span>
+
+      <div class="trust-icon">
+        ◆
       </div>
+
+      <div>
+
+        <strong>
+          Engineering Led
+        </strong>
+
+        <span>
+          Technical approach
+        </span>
+
+      </div>
+
     </div>
 
+
     <div class="trust-item">
-      <div class="trust-icon">↗</div>
-      <div>
-        <strong>Client Focused</strong>
-        <span>Clear communication</span>
+
+      <div class="trust-icon">
+        ◈
       </div>
+
+      <div>
+
+        <strong>
+          Safety Conscious
+        </strong>
+
+        <span>
+          Responsible practices
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="trust-item">
+
+      <div class="trust-icon">
+        ↗
+      </div>
+
+      <div>
+
+        <strong>
+          Client Focused
+        </strong>
+
+        <span>
+          Clear communication
+        </span>
+
+      </div>
+
     </div>
 
   </div>
@@ -1606,13 +2995,17 @@ footer{
 </section>
 
 
+
 <!-- =========================================================
      ABOUT
 ========================================================= -->
 
-<section class="section" id="about">
+<section
+  class="section"
+  id="about">
 
   <div class="container about-grid">
+
 
     <div class="about-image">
 
@@ -1621,8 +3014,15 @@ footer{
         alt="Engineering professional">
 
       <div class="about-badge">
-        <strong>MESHAQ</strong>
-        <span>ENGINEERED WITH PURPOSE</span>
+
+        <strong>
+          MESHAQ
+        </strong>
+
+        <span>
+          ENGINEERED WITH PURPOSE
+        </span>
+
       </div>
 
     </div>
@@ -1631,38 +3031,78 @@ footer{
     <div>
 
       <div class="section-kicker">
+
         ABOUT MESHAQ
+
       </div>
 
+
       <h2>
+
         Engineering solutions built around your vision.
+
       </h2>
 
+
       <p class="about-copy">
+
         MESHAQ Engineering & Contractors is focused on
         construction, engineering, building design, project
         coordination and technical solutions across Kenya.
+
       </p>
 
+
       <p class="about-copy">
+
         Our approach combines planning, technical thinking,
         quality workmanship and communication throughout the
         project journey.
+
       </p>
+
 
       <div class="checks">
 
-        <div class="check"><span>✓</span>Professional planning</div>
-        <div class="check"><span>✓</span>Quality materials</div>
-        <div class="check"><span>✓</span>Technical supervision</div>
-        <div class="check"><span>✓</span>Safety-conscious work</div>
-        <div class="check"><span>✓</span>Clear communication</div>
-        <div class="check"><span>✓</span>Project coordination</div>
+        <div class="check">
+          <span>✓</span>
+          Professional planning
+        </div>
+
+        <div class="check">
+          <span>✓</span>
+          Quality materials
+        </div>
+
+        <div class="check">
+          <span>✓</span>
+          Technical supervision
+        </div>
+
+        <div class="check">
+          <span>✓</span>
+          Safety-conscious work
+        </div>
+
+        <div class="check">
+          <span>✓</span>
+          Clear communication
+        </div>
+
+        <div class="check">
+          <span>✓</span>
+          Project coordination
+        </div>
 
       </div>
 
-      <a href="#application" class="btn btn-gold">
+
+      <a
+        href="#application"
+        class="btn btn-gold">
+
         DISCUSS YOUR PROJECT →
+
       </a>
 
     </div>
@@ -1672,11 +3112,14 @@ footer{
 </section>
 
 
+
 <!-- =========================================================
      SERVICES
 ========================================================= -->
 
-<section class="section soft" id="services">
+<section
+  class="section soft"
+  id="services">
 
   <div class="container">
 
@@ -1700,12 +3143,15 @@ footer{
 
     <div class="services-grid">
 
+
       <article class="service-card">
 
         <div class="service-img">
+
           <img
             src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
             alt="Building construction">
+
         </div>
 
         <div class="service-body">
@@ -1714,15 +3160,21 @@ footer{
             01 / CONSTRUCTION
           </span>
 
-          <h3>Building & Contracting</h3>
+          <h3>
+            Building & Contracting
+          </h3>
 
           <p>
             Building construction, structural works,
             finishes and general contracting solutions.
           </p>
 
-          <a href="#application" class="learn">
+          <a
+            href="#application"
+            class="learn">
+
             REQUEST SERVICE →
+
           </a>
 
         </div>
@@ -1733,9 +3185,11 @@ footer{
       <article class="service-card">
 
         <div class="service-img">
+
           <img
             src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85"
             alt="Civil engineering">
+
         </div>
 
         <div class="service-body">
@@ -1744,15 +3198,21 @@ footer{
             02 / CIVIL
           </span>
 
-          <h3>Civil Engineering</h3>
+          <h3>
+            Civil Engineering
+          </h3>
 
           <p>
             Site development, drainage, earthworks and
             infrastructure-related solutions.
           </p>
 
-          <a href="#application" class="learn">
+          <a
+            href="#application"
+            class="learn">
+
             REQUEST SERVICE →
+
           </a>
 
         </div>
@@ -1763,9 +3223,11 @@ footer{
       <article class="service-card">
 
         <div class="service-img">
+
           <img
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85"
             alt="Structural engineering">
+
         </div>
 
         <div class="service-body">
@@ -1774,15 +3236,21 @@ footer{
             03 / STRUCTURAL
           </span>
 
-          <h3>Structural Solutions</h3>
+          <h3>
+            Structural Solutions
+          </h3>
 
           <p>
             Technical structural coordination and
             construction-oriented engineering solutions.
           </p>
 
-          <a href="#application" class="learn">
+          <a
+            href="#application"
+            class="learn">
+
             REQUEST SERVICE →
+
           </a>
 
         </div>
@@ -1793,9 +3261,11 @@ footer{
       <article class="service-card">
 
         <div class="service-img">
+
           <img
             src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
             alt="Modern house design">
+
         </div>
 
         <div class="service-body">
@@ -1804,15 +3274,21 @@ footer{
             04 / DESIGN
           </span>
 
-          <h3>House Design & Planning</h3>
+          <h3>
+            House Design & Planning
+          </h3>
 
           <p>
             Modern residential concepts and
             construction-oriented planning.
           </p>
 
-          <a href="#application" class="learn">
+          <a
+            href="#application"
+            class="learn">
+
             REQUEST SERVICE →
+
           </a>
 
         </div>
@@ -1823,9 +3299,11 @@ footer{
       <article class="service-card">
 
         <div class="service-img">
+
           <img
             src="https://images.unsplash.com/photo-1542621334-a254cf47733d?auto=format&fit=crop&w=1000&q=85"
             alt="Project management">
+
         </div>
 
         <div class="service-body">
@@ -1834,15 +3312,21 @@ footer{
             05 / MANAGEMENT
           </span>
 
-          <h3>Project Management</h3>
+          <h3>
+            Project Management
+          </h3>
 
           <p>
             Project planning, coordination, scheduling
             and construction monitoring.
           </p>
 
-          <a href="#application" class="learn">
+          <a
+            href="#application"
+            class="learn">
+
             REQUEST SERVICE →
+
           </a>
 
         </div>
@@ -1853,9 +3337,11 @@ footer{
       <article class="service-card">
 
         <div class="service-img">
+
           <img
             src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=85"
             alt="Engineering consultation">
+
         </div>
 
         <div class="service-body">
@@ -1864,15 +3350,21 @@ footer{
             06 / CONSULTANCY
           </span>
 
-          <h3>Technical Consultancy</h3>
+          <h3>
+            Technical Consultancy
+          </h3>
 
           <p>
             Project consultation, site assessment and
             technical support.
           </p>
 
-          <a href="#application" class="learn">
+          <a
+            href="#application"
+            class="learn">
+
             REQUEST SERVICE →
+
           </a>
 
         </div>
@@ -1886,11 +3378,14 @@ footer{
 </section>
 
 
+
 <!-- =========================================================
      PROCESS
 ========================================================= -->
 
-<section class="section process" id="process">
+<section
+  class="section process"
+  id="process">
 
   <div class="container">
 
@@ -1915,33 +3410,87 @@ footer{
     <div class="process-grid">
 
       <div class="step">
-        <div class="step-number">01</div>
-        <h3>Consultation</h3>
-        <p>Understand your goals and requirements.</p>
+
+        <div class="step-number">
+          01
+        </div>
+
+        <h3>
+          Consultation
+        </h3>
+
+        <p>
+          Understand your goals and requirements.
+        </p>
+
       </div>
 
-      <div class="step">
-        <div class="step-number">02</div>
-        <h3>Assessment</h3>
-        <p>Review site, scope and technical needs.</p>
-      </div>
 
       <div class="step">
-        <div class="step-number">03</div>
-        <h3>Planning</h3>
-        <p>Develop the project approach.</p>
+
+        <div class="step-number">
+          02
+        </div>
+
+        <h3>
+          Assessment
+        </h3>
+
+        <p>
+          Review site, scope and technical needs.
+        </p>
+
       </div>
 
-      <div class="step">
-        <div class="step-number">04</div>
-        <h3>Construction</h3>
-        <p>Coordinate the work and execution.</p>
-      </div>
 
       <div class="step">
-        <div class="step-number">05</div>
-        <h3>Handover</h3>
-        <p>Review completed work and handover.</p>
+
+        <div class="step-number">
+          03
+        </div>
+
+        <h3>
+          Planning
+        </h3>
+
+        <p>
+          Develop the project approach.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          04
+        </div>
+
+        <h3>
+          Construction
+        </h3>
+
+        <p>
+          Coordinate the work and execution.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          05
+        </div>
+
+        <h3>
+          Handover
+        </h3>
+
+        <p>
+          Review completed work and handover.
+        </p>
+
       </div>
 
     </div>
@@ -1951,11 +3500,14 @@ footer{
 </section>
 
 
+
 <!-- =========================================================
      HOUSE DESIGNS
 ========================================================= -->
 
-<section class="section" id="designs">
+<section
+  class="section"
+  id="designs">
 
   <div class="container">
 
@@ -1979,6 +3531,7 @@ footer{
 
     <div class="house-grid">
 
+
       <div class="house">
 
         <img
@@ -1986,8 +3539,15 @@ footer{
           alt="Modern residence">
 
         <div class="house-label">
-          <small>RESIDENTIAL</small>
-          <h3>Modern Family Residence</h3>
+
+          <small>
+            RESIDENTIAL
+          </small>
+
+          <h3>
+            Modern Family Residence
+          </h3>
+
         </div>
 
       </div>
@@ -2000,8 +3560,15 @@ footer{
           alt="Contemporary home">
 
         <div class="house-label">
-          <small>CONTEMPORARY</small>
-          <h3>Contemporary Home</h3>
+
+          <small>
+            CONTEMPORARY
+          </small>
+
+          <h3>
+            Contemporary Home
+          </h3>
+
         </div>
 
       </div>
@@ -2014,8 +3581,15 @@ footer{
           alt="Modern interior">
 
         <div class="house-label">
-          <small>INTERIOR</small>
-          <h3>Modern Interior</h3>
+
+          <small>
+            INTERIOR
+          </small>
+
+          <h3>
+            Modern Interior
+          </h3>
+
         </div>
 
       </div>
@@ -2028,8 +3602,15 @@ footer{
           alt="Executive house">
 
         <div class="house-label">
-          <small>PREMIUM</small>
-          <h3>Executive Residence</h3>
+
+          <small>
+            PREMIUM
+          </small>
+
+          <h3>
+            Executive Residence
+          </h3>
+
         </div>
 
       </div>
@@ -2042,8 +3623,15 @@ footer{
           alt="Luxury house">
 
         <div class="house-label">
-          <small>ARCHITECTURE</small>
-          <h3>Luxury Living Space</h3>
+
+          <small>
+            ARCHITECTURE
+          </small>
+
+          <h3>
+            Luxury Living Space
+          </h3>
+
         </div>
 
       </div>
@@ -2055,11 +3643,14 @@ footer{
 </section>
 
 
+
 <!-- =========================================================
      APPLICATION
 ========================================================= -->
 
-<section class="section application" id="application">
+<section
+  class="section application"
+  id="application">
 
   <div class="container application-grid">
 
@@ -2079,32 +3670,63 @@ footer{
         information directly to the MESHAQ WhatsApp line.
       </p>
 
+
       <div class="application-benefits">
 
-        <div><span>✓</span> Kenya-based application</div>
-        <div><span>✓</span> Choose from all 47 counties</div>
-        <div><span>✓</span> Describe your project</div>
-        <div><span>✓</span> Select required services</div>
-        <div><span>✓</span> Provide project location</div>
-        <div><span>✓</span> Send directly through WhatsApp</div>
+        <div>
+          <span>✓</span>
+          Kenya-based application
+        </div>
+
+        <div>
+          <span>✓</span>
+          Choose from all 47 counties
+        </div>
+
+        <div>
+          <span>✓</span>
+          Describe your project
+        </div>
+
+        <div>
+          <span>✓</span>
+          Select required services
+        </div>
+
+        <div>
+          <span>✓</span>
+          Provide project location
+        </div>
+
+        <div>
+          <span>✓</span>
+          Send directly through WhatsApp
+        </div>
 
       </div>
 
+
       <br>
 
+
       <p style="font-size:11px">
+
         Never enter passwords, M-PESA PINs, card PINs or
         other confidential authentication information.
+
       </p>
 
     </div>
+
 
 
     <div class="form-card">
 
       <div class="form-card-header">
 
-        <h3>Project Application</h3>
+        <h3>
+          Project Application
+        </h3>
 
         <p>
           Complete the form below. Your application will be
@@ -2114,7 +3736,10 @@ footer{
       </div>
 
 
-      <form id="projectForm" novalidate>
+      <form
+        id="projectForm"
+        novalidate>
+
 
         <div class="form-grid">
 
@@ -2124,7 +3749,10 @@ footer{
           <div class="field">
 
             <label for="name">
-              Full Name <span class="required">*</span>
+
+              Full Name
+              <span class="required">*</span>
+
             </label>
 
             <input
@@ -2137,12 +3765,16 @@ footer{
           </div>
 
 
+
           <!-- PHONE -->
 
           <div class="field">
 
             <label for="phone">
-              Kenyan Phone Number <span class="required">*</span>
+
+              Kenyan Phone Number
+              <span class="required">*</span>
+
             </label>
 
             <div class="phone-wrapper">
@@ -2170,6 +3802,7 @@ footer{
           </div>
 
 
+
           <!-- EMAIL -->
 
           <div class="field">
@@ -2187,31 +3820,58 @@ footer{
           </div>
 
 
+
           <!-- PROJECT TYPE -->
 
           <div class="field">
 
             <label for="projectType">
-              Project Type <span class="required">*</span>
+
+              Project Type
+              <span class="required">*</span>
+
             </label>
 
-            <select id="projectType" required>
+            <select
+              id="projectType"
+              required>
 
               <option value="">
                 Select project type
               </option>
 
-              <option>Residential House</option>
-              <option>Commercial Building</option>
-              <option>Industrial Project</option>
-              <option>Renovation</option>
-              <option>Civil Works</option>
-              <option>Infrastructure</option>
-              <option>Other</option>
+              <option>
+                Residential House
+              </option>
+
+              <option>
+                Commercial Building
+              </option>
+
+              <option>
+                Industrial Project
+              </option>
+
+              <option>
+                Renovation
+              </option>
+
+              <option>
+                Civil Works
+              </option>
+
+              <option>
+                Infrastructure
+              </option>
+
+              <option>
+                Other
+              </option>
 
             </select>
 
           </div>
+
 
 
           <!-- KENYA LOCATION -->
@@ -2237,15 +3897,15 @@ footer{
             <div class="location-grid">
 
 
-              <!-- COUNTRY -->
-
               <div class="field">
 
                 <label for="country">
                   Country
                 </label>
 
-                <select id="country" required>
+                <select
+                  id="country"
+                  required>
 
                   <option value="Kenya">
                     🇰🇪 Kenya
@@ -2256,15 +3916,19 @@ footer{
               </div>
 
 
-              <!-- COUNTY -->
 
               <div class="field">
 
                 <label for="county">
-                  County <span class="required">*</span>
+
+                  County
+                  <span class="required">*</span>
+
                 </label>
 
-                <select id="county" required>
+                <select
+                  id="county"
+                  required>
 
                   <option value="">
                     Select your county
@@ -2284,12 +3948,16 @@ footer{
           </div>
 
 
+
           <!-- PROJECT AREA -->
 
           <div class="field">
 
             <label for="projectLocation">
-              Project Town / Area <span class="required">*</span>
+
+              Project Town / Area
+              <span class="required">*</span>
+
             </label>
 
             <input
@@ -2299,6 +3967,7 @@ footer{
               placeholder="e.g. Kabarnet, Nairobi, Kisumu">
 
           </div>
+
 
 
           <!-- BUDGET -->
@@ -2315,16 +3984,34 @@ footer{
                 Select budget range
               </option>
 
-              <option>Below KSh 500,000</option>
-              <option>KSh 500,000 – 1M</option>
-              <option>KSh 1M – 5M</option>
-              <option>KSh 5M – 10M</option>
-              <option>Above KSh 10M</option>
-              <option>Not yet determined</option>
+              <option>
+                Below KSh 500,000
+              </option>
+
+              <option>
+                KSh 500,000 – 1M
+              </option>
+
+              <option>
+                KSh 1M – 5M
+              </option>
+
+              <option>
+                KSh 5M – 10M
+              </option>
+
+              <option>
+                Above KSh 10M
+              </option>
+
+              <option>
+                Not yet determined
+              </option>
 
             </select>
 
           </div>
+
 
 
           <!-- SERVICES -->
@@ -2335,59 +4022,86 @@ footer{
               Services Required
             </label>
 
+
             <div class="service-options">
 
+
               <label class="service-option">
+
                 <input
                   type="checkbox"
                   name="services"
                   value="Construction & Contracting">
+
                 Construction & Contracting
+
               </label>
 
+
               <label class="service-option">
+
                 <input
                   type="checkbox"
                   name="services"
                   value="Civil Engineering">
+
                 Civil Engineering
+
               </label>
 
+
               <label class="service-option">
+
                 <input
                   type="checkbox"
                   name="services"
                   value="Structural Solutions">
+
                 Structural Solutions
+
               </label>
 
+
               <label class="service-option">
+
                 <input
                   type="checkbox"
                   name="services"
                   value="House Design">
+
                 House Design
+
               </label>
 
+
               <label class="service-option">
+
                 <input
                   type="checkbox"
                   name="services"
                   value="Project Management">
+
                 Project Management
+
               </label>
 
+
               <label class="service-option">
+
                 <input
                   type="checkbox"
                   name="services"
                   value="Consultancy">
+
                 Consultancy
+
               </label>
+
 
             </div>
 
           </div>
+
 
 
           <!-- MESSAGE -->
@@ -2395,8 +4109,11 @@ footer{
           <div class="field full">
 
             <label for="message">
+
               Tell us about your project
+
               <span class="required">*</span>
+
             </label>
 
             <textarea
@@ -2407,12 +4124,15 @@ footer{
           </div>
 
 
+
           <!-- START DATE -->
 
           <div class="field full">
 
             <label for="startDate">
+
               Preferred Start Date
+
             </label>
 
             <input
@@ -2425,12 +4145,15 @@ footer{
         </div>
 
 
+
         <!-- WHATSAPP -->
 
         <div class="whatsapp-submit">
 
           <div class="whatsapp-submit-title">
+
             💬 Send Application Directly to MESHAQ WhatsApp
+
           </div>
 
           <div class="whatsapp-submit-text">
@@ -2445,7 +4168,9 @@ footer{
             type="submit"
             class="whatsapp-button">
 
-            <span class="whatsapp-icon">💬</span>
+            <span class="whatsapp-icon">
+              💬
+            </span>
 
             SUBMIT APPLICATION VIA WHATSAPP
 
@@ -2462,6 +4187,7 @@ footer{
 
         </div>
 
+
       </form>
 
     </div>
@@ -2471,13 +4197,19 @@ footer{
 </section>
 
 
+
 <!-- =========================================================
      CONTACT
 ========================================================= -->
 
-<section class="section" id="contact">
+<section
+  class="section"
+  id="contact">
 
   <div class="container contact-grid">
+
+
+    <!-- CONTACT INFORMATION -->
 
     <div class="contact-card contact-info">
 
@@ -2495,13 +4227,19 @@ footer{
       </p>
 
 
+      <!-- OFFICE -->
+
       <div class="contact-row">
 
-        <div class="contact-icon">☎</div>
+        <div class="contact-icon">
+          ☎
+        </div>
 
         <div>
 
-          <strong>OFFICE NUMBERS</strong>
+          <strong>
+            OFFICE NUMBERS
+          </strong>
 
           <span>
 
@@ -2522,18 +4260,27 @@ footer{
       </div>
 
 
+
+      <!-- HOTLINE -->
+
       <div class="contact-row">
 
-        <div class="contact-icon">☎</div>
+        <div class="contact-icon">
+          ☎
+        </div>
 
         <div>
 
-          <strong>HOTLINE / AGENT LINE</strong>
+          <strong>
+            HOTLINE / AGENT LINE
+          </strong>
 
           <span>
+
             <a href="tel:+254141976710">
               +254 141 976710
             </a>
+
           </span>
 
         </div>
@@ -2541,18 +4288,27 @@ footer{
       </div>
 
 
+
+      <!-- EMAIL -->
+
       <div class="contact-row">
 
-        <div class="contact-icon">✉</div>
+        <div class="contact-icon">
+          ✉
+        </div>
 
         <div>
 
-          <strong>EMAIL SUPPORT</strong>
+          <strong>
+            EMAIL SUPPORT
+          </strong>
 
           <span>
 
             <a href="mailto:meshaqengineeringlimitedsupport@gmail.com">
+
               meshaqengineeringlimitedsupport@gmail.com
+
             </a>
 
           </span>
@@ -2560,6 +4316,31 @@ footer{
         </div>
 
       </div>
+
+
+
+      <!-- LOCATION -->
+
+      <div class="contact-row">
+
+        <div class="contact-icon">
+          📍
+        </div>
+
+        <div>
+
+          <strong>
+            OFFICE LOCATION
+          </strong>
+
+          <span>
+            Kisumu, Kenya • 5th Floor
+          </span>
+
+        </div>
+
+      </div>
+
 
 
       <div class="contact-buttons">
@@ -2572,6 +4353,7 @@ footer{
 
         </a>
 
+
         <a
           href="https://wa.me/254712242050"
           target="_blank"
@@ -2581,6 +4363,7 @@ footer{
           💬 WHATSAPP
 
         </a>
+
 
         <a
           href="mailto:meshaqengineeringlimitedsupport@gmail.com"
@@ -2596,31 +4379,78 @@ footer{
     </div>
 
 
+
+    <!-- REAL MAP -->
+
     <div class="contact-card contact-map">
 
+      <div id="meshaqMap"></div>
+
+
       <div class="map-card">
+
+        <div class="map-badge">
+
+          📍 OFFICE LOCATION
+
+        </div>
+
 
         <h3>
           MESHAQ Engineering & Contractors
         </h3>
 
-        <p>
-          Ready to discuss your project?
-          Submit the project application and
-          contact the team directly.
-        </p>
 
-        <a href="#application" class="btn btn-gold">
-          START APPLICATION →
-        </a>
+        <div class="map-address">
+
+          <strong>
+            Kenya, Kisumu
+          </strong>
+
+          <br>
+
+          5th Floor
+
+          <br>
+
+          Kisumu, Kenya
+
+        </div>
+
+
+        <div class="map-actions">
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=MESHAQ+Engineering+%26+Contractors+Kisumu+Kenya"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-gold">
+
+            📍 GET DIRECTIONS
+
+          </a>
+
+
+          <a
+            href="#application"
+            class="btn"
+            style="background:var(--navy);color:#fff">
+
+            START PROJECT
+
+          </a>
+
+        </div>
 
       </div>
 
     </div>
 
+
   </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -2632,6 +4462,7 @@ footer{
   <div class="container">
 
     <div class="footer-grid">
+
 
       <div>
 
@@ -2662,15 +4493,21 @@ footer{
 
           </svg>
 
+
           <div class="logo-text">
 
-            <strong>MESHAQ</strong>
+            <strong>
+              MESHAQ
+            </strong>
 
-            <small>ENGINEERING & CONTRACTORS</small>
+            <small>
+              ENGINEERING & CONTRACTORS
+            </small>
 
           </div>
 
         </div>
+
 
         <p class="footer-about">
 
@@ -2683,43 +4520,80 @@ footer{
       </div>
 
 
+
       <div>
 
-        <h3>Company</h3>
+        <h3>
+          Company
+        </h3>
 
         <div class="footer-links">
 
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#designs">Designs</a>
-          <a href="#process">How We Work</a>
-          <a href="#application">Start Project</a>
+          <a href="#about">
+            About
+          </a>
+
+          <a href="#services">
+            Services
+          </a>
+
+          <a href="#designs">
+            Designs
+          </a>
+
+          <a href="#process">
+            How We Work
+          </a>
+
+          <a href="#application">
+            Start Project
+          </a>
 
         </div>
 
       </div>
 
 
+
       <div>
 
-        <h3>Services</h3>
+        <h3>
+          Services
+        </h3>
 
         <div class="footer-links">
 
-          <a href="#services">Construction</a>
-          <a href="#services">Civil Engineering</a>
-          <a href="#services">Structural Works</a>
-          <a href="#services">House Design</a>
-          <a href="#services">Consultancy</a>
+          <a href="#services">
+            Construction
+          </a>
+
+          <a href="#services">
+            Civil Engineering
+          </a>
+
+          <a href="#services">
+            Structural Works
+          </a>
+
+          <a href="#services">
+            House Design
+          </a>
+
+          <a href="#services">
+            Consultancy
+          </a>
 
         </div>
 
       </div>
 
 
+
       <div>
 
-        <h3>Contact</h3>
+        <h3>
+          Contact
+        </h3>
 
         <div class="footer-links">
 
@@ -2758,13 +4632,21 @@ footer{
     <div class="copyright">
 
       <span>
-        © <span id="year"></span>
+
+        ©
+        <span id="year"></span>
+
         MESHAQ Engineering & Contractors.
+
         All rights reserved.
+
       </span>
 
+
       <span>
+
         Engineering Excellence. Building the Future.
+
       </span>
 
     </div>
@@ -2774,11 +4656,13 @@ footer{
 </footer>
 
 
+
 <!-- =========================================================
      FLOATING BUTTONS
 ========================================================= -->
 
 <div class="floating">
+
 
   <a
     href="https://wa.me/254712242050"
@@ -2791,6 +4675,7 @@ footer{
 
   </a>
 
+
   <a
     href="tel:+254712242050"
     class="float float-call"
@@ -2800,16 +4685,21 @@ footer{
 
   </a>
 
+
 </div>
+
 
 
 <!-- =========================================================
      SUCCESS MODAL
 ========================================================= -->
 
-<div class="modal" id="successModal">
+<div
+  class="modal"
+  id="successModal">
 
   <div class="modal-box">
+
 
     <button
       class="close-modal"
@@ -2820,20 +4710,25 @@ footer{
 
     </button>
 
+
     <div class="success-icon">
       ✓
     </div>
+
 
     <h2>
       Application Prepared
     </h2>
 
-    <p style="color:#667085;margin-top:8px">
+
+    <p
+      style="color:#667085;margin-top:8px">
 
       WhatsApp is being opened with your
       project application.
 
     </p>
+
 
     <div class="reference">
 
@@ -2841,9 +4736,12 @@ footer{
         APPLICATION REFERENCE
       </small>
 
-      <strong id="referenceNumber"></strong>
+      <strong
+        id="referenceNumber">
+      </strong>
 
     </div>
+
 
     <p
       style="font-size:12px;color:#667085;margin-bottom:18px">
@@ -2852,6 +4750,7 @@ footer{
       and tap <strong>Send</strong>.
 
     </p>
+
 
     <button
       id="doneBtn"
@@ -2867,13 +4766,26 @@ footer{
 </div>
 
 
+
+<!-- =========================================================
+     LEAFLET MAP LIBRARY
+========================================================= -->
+
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+
+
 <script>
 
 /* =========================================================
    MESHAQ WHATSAPP NUMBER
 ========================================================= */
 
-const MESHAQ_WHATSAPP = "254712242050";
+const MESHAQ_WHATSAPP =
+  "254712242050";
+
 
 
 /* =========================================================
@@ -2886,19 +4798,36 @@ const menuBtn =
 const navLinks =
   document.getElementById("navLinks");
 
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+
+menuBtn.addEventListener(
+  "click",
+  () => {
+
+    navLinks.classList.toggle(
+      "active"
+    );
+
+  }
+);
+
 
 document
   .querySelectorAll(".nav-links a")
   .forEach(link => {
 
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
-    });
+    link.addEventListener(
+      "click",
+      () => {
+
+        navLinks.classList.remove(
+          "active"
+        );
+
+      }
+    );
 
   });
+
 
 
 /* =========================================================
@@ -2906,6 +4835,7 @@ document
 ========================================================= */
 
 const counties = [
+
   "Baringo",
   "Bomet",
   "Bungoma",
@@ -2953,7 +4883,9 @@ const counties = [
   "Vihiga",
   "Wajir",
   "West Pokot"
+
 ];
+
 
 
 /* =========================================================
@@ -2966,26 +4898,32 @@ const county =
 const countyHelp =
   document.getElementById("countyHelp");
 
-counties.forEach((countyName,index) => {
 
-  const option =
-    document.createElement("option");
+counties.forEach(
+  (countyName,index) => {
 
-  option.value = countyName;
+    const option =
+      document.createElement("option");
 
-  option.textContent =
-    `${String(index + 1).padStart(2,"0")} — ${countyName}`;
+    option.value =
+      countyName;
 
-  county.appendChild(option);
+    option.textContent =
+      `${String(index + 1).padStart(2,"0")} — ${countyName}`;
 
-});
+    county.appendChild(option);
+
+  }
+);
+
 
 countyHelp.textContent =
   "✓ All 47 Kenya counties are available.";
 
 
+
 /* =========================================================
-   PHONE NUMBER ELEMENTS
+   PHONE NUMBER
 ========================================================= */
 
 const phoneInput =
@@ -2995,27 +4933,6 @@ const phoneStatus =
   document.getElementById("phoneStatus");
 
 
-/* =========================================================
-   NORMALIZE KENYAN PHONE NUMBER
-=========================================================
-
-   Accepted examples:
-
-   0712345678
-   0112345678
-   712345678
-   112345678
-   +254712345678
-   +254112345678
-   254712345678
-   254112345678
-
-   Final result:
-
-   +254712345678
-   +254112345678
-
-========================================================= */
 
 function normalizeKenyanPhone(value){
 
@@ -3023,32 +4940,43 @@ function normalizeKenyanPhone(value){
     String(value || "")
       .replace(/\D/g,"");
 
+
   if(digits.startsWith("254")){
-    digits = digits.substring(3);
+
+    digits =
+      digits.substring(3);
+
   }
 
+
   if(digits.startsWith("0")){
-    digits = digits.substring(1);
+
+    digits =
+      digits.substring(1);
+
   }
+
 
   if(
     !/^[17]\d{8}$/.test(digits)
   ){
+
     return null;
+
   }
 
+
   return "+254" + digits;
+
 }
 
 
-/* =========================================================
-   PHONE VALIDATION
-========================================================= */
 
 function validatePhone(){
 
   const raw =
     phoneInput.value.trim();
+
 
   if(!raw){
 
@@ -3060,6 +4988,7 @@ function validatePhone(){
     );
 
     return false;
+
   }
 
 
@@ -3103,6 +5032,7 @@ function validatePhone(){
     "Enter a valid Kenyan number starting with 7 or 1.";
 
   return false;
+
 }
 
 
@@ -3117,8 +5047,9 @@ phoneInput.addEventListener(
 );
 
 
+
 /* =========================================================
-   GENERATE APPLICATION REFERENCE
+   APPLICATION REFERENCE
 ========================================================= */
 
 function generateReference(){
@@ -3136,24 +5067,29 @@ function generateReference(){
     );
 
   return `MES-${year}-${random}`;
+
 }
 
 
+
 /* =========================================================
-   GET SELECTED SERVICES
+   SELECTED SERVICES
 ========================================================= */
 
 function getSelectedServices(){
 
   return [
+
     ...document.querySelectorAll(
       'input[name="services"]:checked'
     )
+
   ].map(
     item => item.value
   );
 
 }
+
 
 
 /* =========================================================
@@ -3168,12 +5104,15 @@ function cleanText(value){
 }
 
 
+
 /* =========================================================
    FORM
 ========================================================= */
 
 const form =
-  document.getElementById("projectForm");
+  document.getElementById(
+    "projectForm"
+  );
 
 
 form.addEventListener(
@@ -3182,10 +5121,6 @@ form.addEventListener(
 
     event.preventDefault();
 
-
-    /* -----------------------------------------------------
-       READ VALUES
-    ----------------------------------------------------- */
 
     const name =
       cleanText(
@@ -3200,7 +5135,9 @@ form.addEventListener(
 
 
     const normalizedPhone =
-      normalizeKenyanPhone(phoneRaw);
+      normalizeKenyanPhone(
+        phoneRaw
+      );
 
 
     const email =
@@ -3249,9 +5186,10 @@ form.addEventListener(
       getSelectedServices();
 
 
-    /* -----------------------------------------------------
+
+    /* =====================================================
        VALIDATION
-    ----------------------------------------------------- */
+    ===================================================== */
 
     if(!name){
 
@@ -3264,6 +5202,7 @@ form.addEventListener(
         .focus();
 
       return;
+
     }
 
 
@@ -3278,6 +5217,7 @@ form.addEventListener(
       validatePhone();
 
       return;
+
     }
 
 
@@ -3292,6 +5232,7 @@ form.addEventListener(
         .focus();
 
       return;
+
     }
 
 
@@ -3306,6 +5247,7 @@ form.addEventListener(
         .focus();
 
       return;
+
     }
 
 
@@ -3320,6 +5262,7 @@ form.addEventListener(
         .focus();
 
       return;
+
     }
 
 
@@ -3334,20 +5277,23 @@ form.addEventListener(
         .focus();
 
       return;
+
     }
 
 
-    /* -----------------------------------------------------
+
+    /* =====================================================
        REFERENCE
-    ----------------------------------------------------- */
+    ===================================================== */
 
     const reference =
       generateReference();
 
 
-    /* -----------------------------------------------------
+
+    /* =====================================================
        SERVICES
-    ----------------------------------------------------- */
+    ===================================================== */
 
     const servicesText =
       services.length
@@ -3355,9 +5301,10 @@ form.addEventListener(
       : "Not specified";
 
 
-    /* -----------------------------------------------------
-       DATE
-    ----------------------------------------------------- */
+
+    /* =====================================================
+       SUBMISSION DATE
+    ===================================================== */
 
     const submittedAt =
       new Date();
@@ -3373,9 +5320,10 @@ form.addEventListener(
       );
 
 
-    /* -----------------------------------------------------
+
+    /* =====================================================
        WHATSAPP MESSAGE
-    ----------------------------------------------------- */
+    ===================================================== */
 
     const whatsappMessage =
 
@@ -3435,9 +5383,10 @@ Please review this project application and contact the client for the next step.
 — *MESHAQ Engineering & Contractors*`;
 
 
-    /* -----------------------------------------------------
+
+    /* =====================================================
        WHATSAPP URL
-    ----------------------------------------------------- */
+    ===================================================== */
 
     const whatsappURL =
       "https://wa.me/" +
@@ -3448,9 +5397,10 @@ Please review this project application and contact the client for the next step.
       );
 
 
-    /* -----------------------------------------------------
+
+    /* =====================================================
        SAVE LOCAL COPY
-    ----------------------------------------------------- */
+    ===================================================== */
 
     const applicationData = {
 
@@ -3503,34 +5453,46 @@ Please review this project application and contact the client for the next step.
     }
 
 
-    /* -----------------------------------------------------
-       SHOW MODAL
-    ----------------------------------------------------- */
+
+    /* =====================================================
+       SHOW SUCCESS MODAL
+    ===================================================== */
 
     document
-      .getElementById("referenceNumber")
+      .getElementById(
+        "referenceNumber"
+      )
       .textContent =
       reference;
 
 
     document
-      .getElementById("successModal")
-      .classList.add("active");
+      .getElementById(
+        "successModal"
+      )
+      .classList.add(
+        "active"
+      );
 
 
-    /* -----------------------------------------------------
+
+    /* =====================================================
        OPEN WHATSAPP
-    ----------------------------------------------------- */
+    ===================================================== */
 
-    setTimeout(() => {
+    setTimeout(
+      () => {
 
-      window.location.href =
-        whatsappURL;
+        window.location.href =
+          whatsappURL;
 
-    },350);
+      },
+      350
+    );
 
   }
 );
+
 
 
 /* =========================================================
@@ -3544,7 +5506,9 @@ const modal =
 
 
 document
-  .getElementById("closeModal")
+  .getElementById(
+    "closeModal"
+  )
   .addEventListener(
     "click",
     () => {
@@ -3558,7 +5522,9 @@ document
 
 
 document
-  .getElementById("doneBtn")
+  .getElementById(
+    "doneBtn"
+  )
   .addEventListener(
     "click",
     () => {
@@ -3587,6 +5553,7 @@ modal.addEventListener(
 );
 
 
+
 /* =========================================================
    YEAR
 ========================================================= */
@@ -3596,7 +5563,257 @@ document
   .textContent =
   new Date().getFullYear();
 
+
+
+/* =========================================================
+   REAL KISUMU MAP
+   OpenStreetMap + Leaflet
+========================================================= */
+
+/*
+  Kisumu city coordinates.
+
+  IMPORTANT:
+  This is currently a city-level marker because
+  the exact building/street has not been supplied.
+*/
+
+const KISUMU_LAT =
+  -0.1022;
+
+const KISUMU_LNG =
+  34.7617;
+
+
+
+function initializeMeshaqMap(){
+
+  const mapElement =
+    document.getElementById(
+      "meshaqMap"
+    );
+
+
+  if(!mapElement){
+
+    return;
+
+  }
+
+
+  /* =====================================================
+     CREATE MAP
+  ===================================================== */
+
+  const map =
+    L.map(
+      "meshaqMap",
+      {
+
+        scrollWheelZoom:false,
+
+        zoomControl:true
+
+      }
+    ).setView(
+      [
+        KISUMU_LAT,
+        KISUMU_LNG
+      ],
+      13
+    );
+
+
+
+  /* =====================================================
+     OPENSTREETMAP TILE LAYER
+  ===================================================== */
+
+  L.tileLayer(
+
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+
+    {
+
+      maxZoom:19,
+
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+
+    }
+
+  ).addTo(map);
+
+
+
+  /* =====================================================
+     CUSTOM MESHAQ MARKER
+  ===================================================== */
+
+  const meshaqIcon =
+
+    L.divIcon({
+
+      className:"",
+
+      html:`
+
+        <div class="meshaq-marker">
+
+          <div class="meshaq-marker-inner">
+
+            🏗️
+
+          </div>
+
+        </div>
+
+      `,
+
+      iconSize:[
+        48,
+        48
+      ],
+
+      iconAnchor:[
+        24,
+        48
+      ],
+
+      popupAnchor:[
+        0,
+        -45
+      ]
+
+    });
+
+
+
+  /* =====================================================
+     CREATE OFFICE MARKER
+  ===================================================== */
+
+  const marker =
+
+    L.marker(
+
+      [
+        KISUMU_LAT,
+        KISUMU_LNG
+      ],
+
+      {
+
+        icon:
+          meshaqIcon
+
+      }
+
+    ).addTo(map);
+
+
+
+  /* =====================================================
+     OFFICE POPUP
+  ===================================================== */
+
+  marker.bindPopup(`
+
+    <div class="office-popup">
+
+      <strong>
+        MESHAQ Engineering & Contractors
+      </strong>
+
+      <span>
+        📍 Kisumu, Kenya
+      </span>
+
+      <span>
+        🏢 5th Floor
+      </span>
+
+      <span>
+        Engineering • Construction • Design
+      </span>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=MESHAQ+Engineering+%26+Contractors+Kisumu+Kenya"
+        target="_blank"
+        rel="noopener">
+
+        GET DIRECTIONS →
+
+      </a>
+
+    </div>
+
+  `);
+
+
+
+  /* =====================================================
+     OPEN OFFICE POPUP
+  ===================================================== */
+
+  marker.openPopup();
+
+
+
+  /* =====================================================
+     FIX MAP SIZE
+  ===================================================== */
+
+  setTimeout(
+    () => {
+
+      map.invalidateSize();
+
+    },
+    400
+  );
+
+
+
+  /* =====================================================
+     ENABLE MAP ZOOM AFTER USER FOCUSES MAP
+  ===================================================== */
+
+  map.on(
+    "focus",
+    () => {
+
+      map.scrollWheelZoom.enable();
+
+    }
+  );
+
+
+  map.on(
+    "blur",
+    () => {
+
+      map.scrollWheelZoom.disable();
+
+    }
+  );
+
+}
+
+
+
+/* =========================================================
+   START MAP
+========================================================= */
+
+window.addEventListener(
+  "load",
+  initializeMeshaqMap
+);
+
 </script>
 
+
 </body>
-   </html>
+
+  </html>

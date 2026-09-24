@@ -1,1519 +1,2717 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#06111f">
 
-<title>MESHAQ Connection Limited | Engineering & Construction Kenya</title>
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+      content="#071A2B">
+
+<title>
+MESHAQ Engineering & Contractors | Kenya
+</title>
 
 <meta name="description"
-content="MESHAQ Connection Limited — Engineering, construction, civil works, structural solutions, house design and project support in Kendule, Kisumu, Kenya. Open 24/7.">
+content="MESHAQ Engineering & Contractors — Professional engineering, construction, civil works, structural solutions, house design and project management in Kenya.">
 
-<meta name="keywords"
-content="MESHAQ Connection Limited, MESHAQ Kisumu, Kendule construction, construction Kisumu, engineering Kisumu, contractors Kenya, house designs Kenya, civil engineering">
+<!-- =========================================================
+     LEAFLET REAL MAP
+     OpenStreetMap + Leaflet
+========================================================= -->
 
-<meta name="author" content="MESHAQ Connection Limited">
-
-<meta property="og:title" content="MESHAQ Connection Limited">
-<meta property="og:description" content="Engineering, construction, house design, civil works and project support in Kenya. Open 24/7.">
-<meta property="og:type" content="website">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+>
 
 <style>
 
 /* =========================================================
-   MESHAQ CONNECTION LIMITED
-   STABLE PROFESSIONAL WEBSITE
+   ROOT
 ========================================================= */
 
 :root{
-  --navy:#06111f;
-  --navy2:#0b1d32;
-  --blue:#123d67;
-  --blue2:#1d5d91;
-  --gold:#f4a900;
-  --gold2:#ffc34d;
-  --white:#ffffff;
+
+  --navy:#071A2B;
+  --navy2:#0B2942;
+  --navy3:#103C5D;
+
+  --gold:#DFAF35;
+  --gold2:#F4CC68;
+
+  --white:#fff;
   --black:#101828;
+
   --gray:#667085;
-  --light:#f5f7fa;
-  --line:#e4e7ec;
-  --green:#12a05c;
-  --whatsapp:#25d366;
-  --red:#d92d20;
-  --shadow:0 18px 50px rgba(7,17,31,.10);
+  --gray2:#98A2B3;
+
+  --light:#F4F7FA;
+  --line:#E4E7EC;
+
+  --green:#12B76A;
+  --whatsapp:#25D366;
+
+  --red:#D92D20;
+  --blue:#1677FF;
+
+  --shadow:
+    0 24px 70px rgba(7,26,43,.12);
+
   --radius:20px;
+
   --max:1240px;
+
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
-  margin:0;
-  padding:0;
+
   box-sizing:border-box;
+
+  margin:0;
+
+  padding:0;
+
 }
+
 
 html{
+
   scroll-behavior:smooth;
-  scroll-padding-top:90px;
+
 }
+
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
   color:var(--black);
+
   background:#fff;
-  line-height:1.6;
-  overflow-x:hidden;
+
+  line-height:1.65;
+
 }
 
-img{
-  max-width:100%;
-  display:block;
-}
 
 a{
+
   color:inherit;
+
   text-decoration:none;
+
 }
+
+
+img{
+
+  width:100%;
+
+  display:block;
+
+}
+
 
 button,
 input,
 select,
 textarea{
+
   font:inherit;
+
 }
+
 
 button{
+
   cursor:pointer;
+
 }
+
 
 .container{
-  width:min(var(--max),calc(100% - 32px));
+
+  width:min(var(--max),92%);
+
   margin:auto;
+
 }
+
 
 .section{
-  padding:90px 0;
+
+  padding:100px 0;
+
 }
 
-.section-light{
+
+.soft{
+
   background:var(--light);
+
 }
 
-.section-dark{
-  background:var(--navy);
-  color:#fff;
-}
-
-.section-head{
-  max-width:780px;
-  margin:0 auto 50px;
-  text-align:center;
-}
-
-.eyebrow{
-  color:var(--gold);
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:12px;
-  margin-bottom:10px;
-}
-
-.section-head h2{
-  font-size:clamp(32px,4vw,52px);
-  line-height:1.08;
-  margin-bottom:15px;
-}
-
-.section-head p{
-  color:var(--gray);
-  font-size:16px;
-}
-
-.section-dark .section-head p{
-  color:#b8c3d1;
-}
 
 /* =========================================================
    TOP BAR
 ========================================================= */
 
 .topbar{
-  background:#030b14;
-  color:#dce5ef;
+
+  background:#03101C;
+
+  color:#B9C7D5;
+
   font-size:12px;
+
 }
+
 
 .topbar-inner{
+
   min-height:40px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
+
   gap:20px;
+
 }
 
-.topbar-links{
+
+.top-links{
+
   display:flex;
+
   align-items:center;
+
   gap:20px;
+
   flex-wrap:wrap;
+
 }
 
-.topbar a:hover{
-  color:var(--gold2);
+
+.top-links span{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:7px;
+
 }
+
+
+.top-links a:hover{
+
+  color:var(--gold2);
+
+}
+
 
 /* =========================================================
    HEADER
 ========================================================= */
 
 header{
+
   position:sticky;
+
   top:0;
+
   z-index:1000;
-  background:rgba(255,255,255,.98);
-  border-bottom:1px solid var(--line);
+
+  background:rgba(7,26,43,.97);
+
+  backdrop-filter:blur(18px);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
+
 }
+
 
 .nav{
-  min-height:78px;
+
+  height:82px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
-  gap:20px;
+
+  gap:25px;
+
 }
+
 
 .logo{
+
   display:flex;
+
   align-items:center;
+
   gap:11px;
-  flex-shrink:0;
+
+  color:#fff;
+
 }
+
 
 .logo-mark{
-  width:45px;
-  height:45px;
-  border-radius:11px;
-  background:var(--navy);
-  color:var(--gold2);
-  display:grid;
-  place-items:center;
-  font-weight:900;
-  font-size:18px;
+
+  width:47px;
+
+  height:47px;
+
+  flex:none;
+
 }
 
-.logo-text{
-  line-height:1.05;
-}
 
 .logo-text strong{
+
   display:block;
-  font-size:18px;
-  letter-spacing:.5px;
+
+  font-size:22px;
+
+  letter-spacing:2px;
+
+  line-height:1;
+
 }
 
-.logo-text span{
+
+.logo-text small{
+
   display:block;
-  color:var(--gray);
-  font-size:9px;
+
+  font-size:8px;
+
   letter-spacing:1.5px;
-  margin-top:4px;
+
+  color:#AEBECD;
+
+  margin-top:5px;
+
 }
+
 
 .nav-links{
+
   display:flex;
+
   align-items:center;
-  gap:21px;
+
+  gap:22px;
+
 }
+
 
 .nav-links a{
+
+  color:#D8E1EA;
+
   font-size:13px;
+
   font-weight:800;
-  color:#344054;
+
+  transition:.2s;
+
 }
+
 
 .nav-links a:hover{
-  color:var(--gold);
+
+  color:var(--gold2);
+
 }
+
 
 .nav-cta{
-  background:var(--navy);
-  color:#fff!important;
-  padding:11px 16px;
-  border-radius:10px;
+
+  background:var(--gold);
+
+  color:#101010!important;
+
+  padding:12px 17px;
+
+  border-radius:8px;
+
 }
 
-.menu-btn{
-  display:none;
-  border:0;
-  background:var(--navy);
-  color:#fff;
-  width:44px;
-  height:44px;
-  border-radius:10px;
+
+.nav-cta:hover{
+
+  background:var(--gold2);
+
 }
+
+
+.menu{
+
+  display:none;
+
+  border:0;
+
+  background:none;
+
+  color:#fff;
+
+  font-size:28px;
+
+}
+
 
 /* =========================================================
    HERO
 ========================================================= */
 
 .hero{
-  min-height:690px;
+
+  min-height:calc(100vh - 122px);
+
   display:flex;
+
   align-items:center;
-  background:
-    linear-gradient(90deg,rgba(3,12,22,.94),rgba(3,12,22,.68),rgba(3,12,22,.35)),
-    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=85")
-    center/cover no-repeat;
+
+  position:relative;
+
   color:#fff;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2,9,17,.98),
+      rgba(2,9,17,.84) 46%,
+      rgba(2,9,17,.25)
+    ),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=90")
+    center/cover;
+
 }
+
 
 .hero-content{
-  max-width:800px;
-  padding:90px 0;
+
+  max-width:820px;
+
+  padding:90px 0 110px;
+
 }
 
-.badge{
+
+.eyebrow{
+
   display:inline-flex;
-  background:rgba(244,169,0,.14);
-  border:1px solid rgba(255,195,77,.45);
+
+  align-items:center;
+
+  gap:10px;
+
   color:var(--gold2);
-  padding:8px 13px;
-  border-radius:999px;
-  font-weight:800;
-  font-size:11px;
+
+  font-size:12px;
+
+  font-weight:900;
+
+  letter-spacing:2px;
+
   text-transform:uppercase;
-  letter-spacing:1.1px;
+
   margin-bottom:20px;
+
 }
+
+
+.eyebrow:before{
+
+  content:"";
+
+  width:35px;
+
+  height:2px;
+
+  background:var(--gold);
+
+}
+
 
 .hero h1{
-  font-size:clamp(42px,7vw,80px);
-  line-height:.99;
+
+  font-size:clamp(45px,7vw,86px);
+
+  line-height:1;
+
   letter-spacing:-3px;
-  margin-bottom:23px;
+
+  margin-bottom:25px;
+
 }
+
 
 .hero h1 span{
-  color:var(--gold2);
+
+  color:var(--gold);
+
 }
+
 
 .hero p{
-  color:#dbe4ee;
+
+  max-width:680px;
+
+  color:#D3DDE7;
+
   font-size:18px;
-  max-width:700px;
-  margin-bottom:30px;
+
+  margin-bottom:34px;
+
 }
 
-.hero-actions{
+
+.hero-buttons{
+
   display:flex;
+
   gap:12px;
+
   flex-wrap:wrap;
+
 }
+
 
 .btn{
+
+  min-height:50px;
+
+  padding:0 21px;
+
+  border-radius:8px;
+
   display:inline-flex;
+
   align-items:center;
+
   justify-content:center;
-  gap:8px;
-  border:0;
-  padding:14px 20px;
-  border-radius:11px;
-  font-weight:800;
+
+  gap:9px;
+
+  border:1px solid transparent;
+
+  font-size:13px;
+
+  font-weight:900;
+
+  cursor:pointer;
+
+  transition:.25s;
+
 }
+
 
 .btn-gold{
+
   background:var(--gold);
+
   color:#111;
+
 }
 
-.btn-dark{
-  background:var(--navy);
+
+.btn-gold:hover{
+
+  background:var(--gold2);
+
+  transform:translateY(-2px);
+
+}
+
+
+.btn-outline{
+
+  border-color:rgba(255,255,255,.35);
+
   color:#fff;
+
 }
 
-.btn-white{
+
+.btn-outline:hover{
+
   background:#fff;
+
   color:var(--navy);
+
 }
+
 
 .btn-whatsapp{
+
   background:var(--whatsapp);
+
   color:#fff;
+
 }
 
-.hero-mini{
-  display:flex;
-  gap:25px;
-  flex-wrap:wrap;
-  margin-top:40px;
+
+.btn-whatsapp:hover{
+
+  background:#1ebe5d;
+
+  transform:translateY(-2px);
+
 }
 
-.hero-mini div{
-  padding-left:14px;
-  border-left:2px solid var(--gold);
-}
-
-.hero-mini strong{
-  display:block;
-  font-size:21px;
-}
-
-.hero-mini span{
-  color:#bfcbd8;
-  font-size:11px;
-}
-
-/* =========================================================
-   24/7 STATUS
-========================================================= */
-
-.open-status{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  background:#eaf8ef;
-  color:#087443;
-  border:1px solid #b8e5c8;
-  border-radius:999px;
-  padding:7px 12px;
-  font-size:12px;
-  font-weight:900;
-}
-
-.open-dot{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:#12a05c;
-}
 
 /* =========================================================
    TRUST
 ========================================================= */
 
 .trust{
-  background:#fff;
-  box-shadow:var(--shadow);
-  position:relative;
-  z-index:5;
-  margin-top:-35px;
-  border-radius:18px;
+
+  background:var(--navy);
+
+  color:#fff;
+
+  padding:22px 0;
+
 }
+
 
 .trust-grid{
+
   display:grid;
+
   grid-template-columns:repeat(4,1fr);
+
+  gap:15px;
+
 }
+
 
 .trust-item{
-  padding:24px 15px;
-  border-right:1px solid var(--line);
-  text-align:center;
+
+  display:flex;
+
+  gap:12px;
+
+  align-items:center;
+
+  border-right:
+    1px solid rgba(255,255,255,.1);
+
 }
+
 
 .trust-item:last-child{
-  border-right:0;
+
+  border:0;
+
 }
+
 
 .trust-icon{
-  font-size:24px;
-  margin-bottom:7px;
+
+  width:40px;
+
+  height:40px;
+
+  border-radius:10px;
+
+  display:grid;
+
+  place-items:center;
+
+  background:rgba(223,175,53,.12);
+
+  color:var(--gold2);
+
 }
+
 
 .trust-item strong{
-  display:block;
-  font-size:14px;
+
+  font-size:13px;
+
 }
 
+
 .trust-item span{
-  color:var(--gray);
+
+  display:block;
+
+  color:#91A2B5;
+
   font-size:11px;
+
 }
+
+
+/* =========================================================
+   SECTION HEAD
+========================================================= */
+
+.section-head{
+
+  max-width:750px;
+
+  margin-bottom:50px;
+
+}
+
+
+.section-head.center{
+
+  text-align:center;
+
+  margin-left:auto;
+
+  margin-right:auto;
+
+}
+
+
+.section-kicker{
+
+  color:#A36F00;
+
+  font-size:12px;
+
+  font-weight:900;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  margin-bottom:10px;
+
+}
+
+
+.section h2{
+
+  color:var(--navy);
+
+  font-size:clamp(32px,4vw,52px);
+
+  line-height:1.1;
+
+  letter-spacing:-1.5px;
+
+}
+
+
+.section-head p{
+
+  color:var(--gray);
+
+  margin-top:15px;
+
+}
+
 
 /* =========================================================
    ABOUT
 ========================================================= */
 
 .about-grid{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
-  gap:65px;
+
+  gap:70px;
+
   align-items:center;
+
 }
+
 
 .about-image{
+
   position:relative;
+
 }
+
 
 .about-image img{
-  width:100%;
-  height:550px;
+
+  height:580px;
+
   object-fit:cover;
-  border-radius:25px;
-  box-shadow:var(--shadow);
+
+  border-radius:24px;
+
 }
 
-.about-card{
+
+.about-badge{
+
   position:absolute;
-  right:20px;
-  bottom:20px;
-  background:#fff;
-  padding:20px;
+
+  right:-20px;
+
+  bottom:30px;
+
+  width:180px;
+
+  background:var(--gold);
+
+  color:#111;
+
+  padding:23px;
+
   border-radius:16px;
+
   box-shadow:var(--shadow);
+
 }
 
-.about-card strong{
+
+.about-badge strong{
+
   display:block;
-  color:var(--navy);
-  font-size:21px;
+
+  font-size:28px;
+
+  line-height:1;
+
 }
 
-.about-card span{
+
+.about-badge span{
+
+  display:block;
+
+  font-size:11px;
+
+  font-weight:800;
+
+  margin-top:6px;
+
+}
+
+
+.about-copy p{
+
   color:var(--gray);
-  font-size:12px;
+
+  margin:17px 0;
+
 }
 
-.about-content h2{
-  font-size:clamp(34px,4vw,52px);
-  line-height:1.08;
-  margin:10px 0 18px;
-}
 
-.about-content>p{
-  color:var(--gray);
-  font-size:16px;
-  margin-bottom:23px;
-}
+.checks{
 
-.check-list{
   display:grid;
-  gap:14px;
-  margin-bottom:25px;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:12px;
+
+  margin:25px 0;
+
 }
+
 
 .check{
-  display:flex;
-  gap:11px;
-  align-items:flex-start;
+
+  font-size:13px;
+
+  font-weight:700;
+
 }
 
-.check-icon{
-  min-width:23px;
-  height:23px;
-  border-radius:50%;
-  background:#e9f8ef;
+
+.check span{
+
   color:var(--green);
-  display:grid;
-  place-items:center;
-  font-size:12px;
-  font-weight:900;
+
+  margin-right:7px;
+
 }
+
 
 /* =========================================================
    SERVICES
 ========================================================= */
 
 .services-grid{
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:20px;
+
 }
+
 
 .service-card{
+
   background:#fff;
+
   border:1px solid var(--line);
+
   border-radius:18px;
+
   overflow:hidden;
+
+  transition:.3s;
+
 }
 
-.service-card img{
-  width:100%;
-  height:210px;
-  object-fit:cover;
+
+.service-card:hover{
+
+  transform:translateY(-6px);
+
+  box-shadow:var(--shadow);
+
 }
+
+
+.service-img{
+
+  height:210px;
+
+  overflow:hidden;
+
+}
+
+
+.service-img img{
+
+  height:100%;
+
+  object-fit:cover;
+
+  transition:.5s;
+
+}
+
+
+.service-card:hover img{
+
+  transform:scale(1.06);
+
+}
+
 
 .service-body{
-  padding:23px;
+
+  padding:24px;
+
 }
+
 
 .service-number{
-  color:var(--gold);
-  font-weight:900;
+
+  color:#A36F00;
+
   font-size:11px;
+
+  font-weight:900;
+
 }
+
 
 .service-body h3{
-  margin:6px 0 8px;
-  font-size:21px;
+
+  color:var(--navy);
+
+  font-size:20px;
+
+  margin:5px 0 10px;
+
 }
+
 
 .service-body p{
+
   color:var(--gray);
+
   font-size:13px;
+
+  margin-bottom:17px;
+
 }
 
-/* =========================================================
-   FEATURE STRIP
-========================================================= */
 
-.feature-strip{
-  background:
-    linear-gradient(90deg,rgba(6,17,31,.96),rgba(6,17,31,.88)),
-    url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=80")
-    center/cover;
-  color:#fff;
-}
+.learn{
 
-.feature-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
+  color:#986600;
 
-.feature-box{
-  border:1px solid rgba(255,255,255,.13);
-  background:rgba(255,255,255,.05);
-  padding:27px;
-  border-radius:18px;
-}
-
-.feature-box .icon{
-  font-size:32px;
-  margin-bottom:12px;
-}
-
-.feature-box h3{
-  margin-bottom:7px;
-}
-
-.feature-box p{
-  color:#b8c3d1;
-  font-size:13px;
-}
-
-/* =========================================================
-   DESIGNS
-========================================================= */
-
-.design-toolbar{
-  display:flex;
-  justify-content:center;
-  gap:9px;
-  flex-wrap:wrap;
-  margin-bottom:30px;
-}
-
-.filter-btn{
-  border:1px solid var(--line);
-  background:#fff;
-  padding:9px 15px;
-  border-radius:999px;
-  font-weight:700;
-}
-
-.filter-btn.active{
-  background:var(--navy);
-  color:#fff;
-  border-color:var(--navy);
-}
-
-.design-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-
-.design-card{
-  background:#fff;
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid var(--line);
-}
-
-.design-img{
-  height:230px;
-  overflow:hidden;
-  position:relative;
-}
-
-.design-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.design-tag{
-  position:absolute;
-  top:11px;
-  left:11px;
-  background:rgba(6,17,31,.88);
-  color:#fff;
-  padding:6px 9px;
-  border-radius:7px;
-  font-size:10px;
-  font-weight:800;
-}
-
-.design-body{
-  padding:17px;
-}
-
-.design-body h3{
-  font-size:17px;
-  margin-bottom:5px;
-}
-
-.design-body p{
-  color:var(--gray);
   font-size:12px;
+
+  font-weight:900;
+
 }
 
-.design-meta{
-  display:flex;
-  justify-content:space-between;
-  border-top:1px solid var(--line);
-  margin-top:12px;
-  padding-top:11px;
-  font-size:11px;
-  font-weight:800;
-}
-
-/* =========================================================
-   MATERIALS
-========================================================= */
-
-.material-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-
-.material-card{
-  background:#fff;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 8px 28px rgba(7,17,31,.07);
-}
-
-.material-card img{
-  height:180px;
-  width:100%;
-  object-fit:cover;
-}
-
-.material-card div{
-  padding:18px;
-}
-
-.material-card h3{
-  margin-bottom:5px;
-  font-size:18px;
-}
-
-.material-card p{
-  color:var(--gray);
-  font-size:12px;
-}
 
 /* =========================================================
    PROCESS
 ========================================================= */
 
+.process{
+
+  background:var(--navy);
+
+  color:#fff;
+
+}
+
+
+.process h2{
+
+  color:#fff;
+
+}
+
+
+.process .section-head p{
+
+  color:#AEBCCD;
+
+}
+
+
 .process-grid{
+
   display:grid;
+
   grid-template-columns:repeat(5,1fr);
-  gap:13px;
+
+  gap:15px;
+
 }
 
-.process-card{
-  padding:23px 16px;
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:16px;
-  background:rgba(255,255,255,.04);
+
+.step{
+
+  text-align:center;
+
 }
 
-.process-number{
-  font-size:35px;
+
+.step-number{
+
+  width:68px;
+
+  height:68px;
+
+  margin:auto;
+
+  display:grid;
+
+  place-items:center;
+
+  border-radius:50%;
+
+  background:var(--gold);
+
+  color:#111;
+
   font-weight:900;
-  color:var(--gold);
-  line-height:1;
-  margin-bottom:17px;
+
 }
 
-.process-card h3{
+
+.step h3{
+
+  margin:17px 0 7px;
+
   font-size:16px;
-  margin-bottom:7px;
+
 }
 
-.process-card p{
-  color:#b8c3d1;
+
+.step p{
+
+  color:#94A6B8;
+
   font-size:12px;
+
 }
+
 
 /* =========================================================
-   TUTORIAL
+   HOUSE DESIGNS
 ========================================================= */
 
-.tutorial-grid{
+.house-grid{
+
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:45px;
-  align-items:center;
+
+  grid-template-columns:1.4fr .8fr .8fr;
+
+  grid-template-rows:250px 250px;
+
+  gap:15px;
+
 }
 
-.tutorial-box{
-  background:#fff;
-  border-radius:22px;
-  box-shadow:var(--shadow);
+
+.house{
+
+  position:relative;
+
   overflow:hidden;
-  border:1px solid var(--line);
+
+  border-radius:18px;
+
 }
 
-.tutorial-screen{
-  min-height:340px;
-  background:linear-gradient(135deg,#06111f,#123d67);
-  color:#fff;
-  padding:30px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+
+.house:first-child{
+
+  grid-row:span 2;
+
 }
 
-.tutorial-screen .step-icon{
-  font-size:60px;
-  margin-bottom:13px;
-}
 
-.tutorial-screen h3{
-  font-size:26px;
-  margin-bottom:7px;
-}
+.house img{
 
-.tutorial-screen p{
-  color:#c8d5e3;
-  max-width:390px;
-}
-
-.progress{
-  height:5px;
-  background:#dce3ea;
-  margin:0 23px 23px;
-  border-radius:999px;
-  overflow:hidden;
-}
-
-.progress span{
-  display:block;
-  width:0;
   height:100%;
-  background:var(--gold);
+
+  object-fit:cover;
+
+  transition:.5s;
+
 }
 
-.tutorial-copy h2{
-  font-size:clamp(32px,4vw,50px);
-  line-height:1.08;
-  margin:10px 0 17px;
+
+.house:hover img{
+
+  transform:scale(1.05);
+
 }
 
-.tutorial-copy p{
-  color:var(--gray);
-  font-size:16px;
-  margin-bottom:23px;
+
+.house:after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      transparent 35%,
+      rgba(0,0,0,.85)
+    );
+
 }
 
-.tutorial-list{
-  display:grid;
-  gap:12px;
+
+.house-label{
+
+  position:absolute;
+
+  z-index:2;
+
+  left:20px;
+
+  bottom:18px;
+
+  color:#fff;
+
 }
 
-.tutorial-list div{
-  display:flex;
-  gap:12px;
+
+.house-label small{
+
+  color:var(--gold2);
+
+  font-weight:900;
+
 }
 
-.tutorial-list b{
-  color:var(--gold);
+
+.house-label h3{
+
+  font-size:19px;
+
 }
+
 
 /* =========================================================
    APPLICATION
 ========================================================= */
 
 .application{
-  background:linear-gradient(135deg,#06111f,#0d2944);
-  color:#fff;
+
+  background:#F4F7FA;
+
 }
+
 
 .application-grid{
+
   display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:40px;
+
+  grid-template-columns:.7fr 1.3fr;
+
+  gap:30px;
+
   align-items:start;
+
 }
 
-.application-copy h2{
-  font-size:clamp(35px,4vw,56px);
-  line-height:1.05;
-  margin:10px 0 18px;
+
+.application-intro{
+
+  background:
+    linear-gradient(
+      145deg,
+      #061522,
+      #103C5D
+    );
+
+  color:#fff;
+
+  border-radius:22px;
+
+  padding:38px;
+
+  position:sticky;
+
+  top:105px;
+
+  box-shadow:var(--shadow);
+
 }
 
-.application-copy p{
-  color:#bdc9d6;
-  font-size:15px;
+
+.application-intro h2{
+
+  color:#fff;
+
+  font-size:34px;
+
+  line-height:1.15;
+
 }
 
-.application-points{
+
+.application-intro p{
+
+  color:#B7C5D3;
+
+  margin:16px 0 25px;
+
+}
+
+
+.application-benefits{
+
   display:grid;
+
   gap:13px;
-  margin-top:28px;
+
+  font-size:13px;
+
 }
 
-.application-points div{
-  display:flex;
-  gap:10px;
-  color:#e3ebf3;
+
+.application-benefits span{
+
+  color:var(--gold2);
+
+  margin-right:7px;
+
 }
+
 
 .form-card{
+
   background:#fff;
-  color:var(--black);
-  padding:28px;
-  border-radius:23px;
-  box-shadow:0 25px 70px rgba(0,0,0,.25);
+
+  border:1px solid var(--line);
+
+  border-radius:22px;
+
+  padding:35px;
+
+  box-shadow:
+    0 12px 45px rgba(7,17,31,.05);
+
 }
 
-.form-card h3{
-  font-size:24px;
-  margin-bottom:4px;
+
+.form-card-header{
+
+  margin-bottom:25px;
+
 }
 
-.form-card>p{
+
+.form-card-header h3{
+
+  color:var(--navy);
+
+  font-size:26px;
+
+}
+
+
+.form-card-header p{
+
   color:var(--gray);
-  font-size:12px;
-  margin-bottom:22px;
+
+  font-size:13px;
+
+  margin-top:4px;
+
 }
+
 
 .form-grid{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
-  gap:15px;
+
+  gap:16px;
+
 }
+
 
 .field{
+
   display:flex;
+
   flex-direction:column;
-  gap:6px;
+
+  gap:7px;
+
 }
 
-.field.full{
+
+.full{
+
   grid-column:1/-1;
+
 }
+
 
 .field label{
-  font-size:11px;
-  font-weight:800;
+
   color:#344054;
+
+  font-size:12px;
+
+  font-weight:900;
+
 }
+
+
+.required{
+
+  color:var(--red);
+
+}
+
 
 .field input,
 .field select,
 .field textarea{
+
   width:100%;
-  border:1px solid #d0d5dd;
-  border-radius:10px;
-  padding:12px;
+
+  border:
+    1px solid #D6DCE4;
+
+  border-radius:9px;
+
+  padding:13px 14px;
+
   outline:none;
-  background:#fff;
+
   color:#101828;
+
+  background:#fff;
+
+  transition:.2s;
+
 }
 
-.field textarea{
-  min-height:115px;
-  resize:vertical;
-}
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus{
+
   border-color:var(--gold);
-  box-shadow:0 0 0 3px rgba(244,169,0,.12);
+
+  box-shadow:
+    0 0 0 3px rgba(223,175,53,.14);
+
 }
 
-.valid{
-  border-color:var(--green)!important;
+
+.field textarea{
+
+  min-height:130px;
+
+  resize:vertical;
+
 }
 
-.invalid{
-  border-color:var(--red)!important;
-}
-
-.services-select{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
-}
-
-.service-check{
-  border:1px solid var(--line);
-  border-radius:9px;
-  padding:9px;
-  display:flex;
-  gap:7px;
-  align-items:center;
-  font-size:11px;
-}
-
-.service-check input{
-  accent-color:var(--gold);
-}
-
-.char-count{
-  text-align:right;
-  color:var(--gray);
-  font-size:10px;
-}
-
-.live-summary{
-  background:#f8fafc;
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:13px;
-  margin-top:15px;
-  display:none;
-}
-
-.live-summary.show{
-  display:block;
-}
-
-.live-summary strong{
-  font-size:12px;
-}
-
-.live-summary p{
-  font-size:11px;
-  color:var(--gray);
-  margin-top:4px;
-}
-
-.submit-btn{
-  width:100%;
-  margin-top:16px;
-}
-
-.form-note{
-  margin-top:10px;
-  color:var(--gray);
-  font-size:10px;
-}
 
 /* =========================================================
-   LOCATION
+   PHONE
 ========================================================= */
 
-.location-section{
-  background:#fff;
+.phone-wrapper{
+
+  position:relative;
+
 }
+
+
+.phone-prefix{
+
+  position:absolute;
+
+  left:1px;
+
+  top:1px;
+
+  bottom:1px;
+
+  width:57px;
+
+  border-radius:8px 0 0 8px;
+
+  background:#F4F6F8;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  color:var(--navy);
+
+  font-size:12px;
+
+  font-weight:900;
+
+  border-right:
+    1px solid #D6DCE4;
+
+  pointer-events:none;
+
+}
+
+
+.phone-wrapper input{
+
+  padding-left:68px;
+
+}
+
+
+.input-status{
+
+  font-size:10px;
+
+  font-weight:800;
+
+  min-height:15px;
+
+}
+
+
+.input-valid{
+
+  border-color:var(--green)!important;
+
+  box-shadow:
+    0 0 0 3px rgba(18,183,106,.08)!important;
+
+}
+
+
+.input-invalid{
+
+  border-color:var(--red)!important;
+
+  box-shadow:
+    0 0 0 3px rgba(217,45,32,.08)!important;
+
+}
+
+
+/* =========================================================
+   KENYA LOCATION FORM
+========================================================= */
+
+.location-box{
+
+  grid-column:1/-1;
+
+  background:#F8FAFC;
+
+  border:
+    1px solid #E4E7EC;
+
+  border-radius:15px;
+
+  padding:20px;
+
+}
+
+
+.location-title{
+
+  color:var(--navy);
+
+  font-weight:900;
+
+  font-size:15px;
+
+}
+
+
+.location-description{
+
+  color:var(--gray);
+
+  font-size:12px;
+
+  margin:3px 0 17px;
+
+}
+
 
 .location-grid{
+
   display:grid;
-  grid-template-columns:.85fr 1.15fr;
-  gap:30px;
-  align-items:stretch;
-}
 
-.location-card{
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:28px;
-  box-shadow:var(--shadow);
-}
+  grid-template-columns:1fr 1fr;
 
-.location-card h3{
-  font-size:27px;
-  margin:10px 0;
-}
-
-.location-card>p{
-  color:var(--gray);
-  font-size:14px;
-}
-
-.location-list{
-  display:grid;
   gap:15px;
-  margin:25px 0;
+
 }
 
-.location-row{
-  display:flex;
-  gap:12px;
-  align-items:flex-start;
-}
 
-.location-icon{
-  min-width:42px;
-  height:42px;
-  border-radius:10px;
-  background:#eef4f9;
-  display:grid;
-  place-items:center;
-  font-size:19px;
-}
+.kenya-badge{
 
-.location-row small{
-  display:block;
-  color:var(--gray);
-  font-size:10px;
-}
+  display:inline-flex;
 
-.location-row strong{
-  font-size:14px;
-}
-
-.map-box{
-  min-height:500px;
-  border-radius:20px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  box-shadow:var(--shadow);
-  background:#eef2f5;
-}
-
-.map-box iframe{
-  width:100%;
-  height:100%;
-  min-height:500px;
-  border:0;
-}
-
-.map-note{
-  margin-top:10px;
-  font-size:11px;
-  color:var(--gray);
-}
-
-/* =========================================================
-   FAQ
-========================================================= */
-
-.faq{
-  max-width:850px;
-  margin:auto;
-}
-
-.faq-item{
-  border:1px solid var(--line);
-  border-radius:14px;
-  margin-bottom:10px;
-  overflow:hidden;
-  background:#fff;
-}
-
-.faq-question{
-  width:100%;
-  border:0;
-  background:#fff;
-  text-align:left;
-  padding:18px;
-  font-weight:800;
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.faq-answer{
-  display:none;
-  padding:0 18px 18px;
-  color:var(--gray);
-  font-size:13px;
-}
-
-.faq-item.open .faq-answer{
-  display:block;
-}
-
-/* =========================================================
-   FINAL CTA
-========================================================= */
-
-.final-cta{
-  padding:70px 0;
-  background:var(--gold);
-}
-
-.final-cta-inner{
-  display:flex;
-  justify-content:space-between;
   align-items:center;
-  gap:25px;
+
+  gap:7px;
+
+  background:#EAFBF1;
+
+  color:#087A42;
+
+  padding:6px 10px;
+
+  border-radius:999px;
+
+  font-size:10px;
+
+  font-weight:900;
+
+  margin-bottom:12px;
+
 }
 
-.final-cta h2{
-  font-size:clamp(30px,4vw,50px);
-  line-height:1.05;
-  color:var(--navy);
+
+.county-help{
+
+  color:var(--green);
+
+  font-size:11px;
+
+  font-weight:700;
+
+  margin-top:3px;
+
 }
 
-.final-cta p{
-  color:#4b3a08;
-  margin-top:7px;
+
+/* =========================================================
+   SERVICES CHECKBOXES
+========================================================= */
+
+.service-options{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:9px;
+
 }
 
-.final-actions{
+
+.service-option{
+
+  border:
+    1px solid #E0E5EB;
+
+  padding:11px;
+
+  border-radius:9px;
+
+  cursor:pointer;
+
+  font-size:12px;
+
+  transition:.2s;
+
+}
+
+
+.service-option:hover{
+
+  border-color:var(--gold);
+
+  background:#FFFCF4;
+
+}
+
+
+.service-option input{
+
+  width:auto;
+
+  margin-right:6px;
+
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp-submit{
+
+  margin-top:20px;
+
+  padding:18px;
+
+  border-radius:14px;
+
+  background:#EAFBF1;
+
+  border:
+    1px solid #BDEECF;
+
+}
+
+
+.whatsapp-submit-title{
+
+  color:#087A42;
+
+  font-weight:900;
+
+  font-size:14px;
+
+}
+
+
+.whatsapp-submit-text{
+
+  color:#4B6356;
+
+  font-size:11px;
+
+  margin:4px 0 13px;
+
+}
+
+
+.whatsapp-button{
+
+  width:100%;
+
+  min-height:56px;
+
+  border:0;
+
+  border-radius:10px;
+
+  background:var(--whatsapp);
+
+  color:#fff;
+
+  font-size:14px;
+
+  font-weight:900;
+
+  cursor:pointer;
+
   display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
   gap:10px;
-  flex-wrap:wrap;
+
+  transition:.25s;
+
 }
+
+
+.whatsapp-button:hover{
+
+  background:#1EBE5D;
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(37,211,102,.25);
+
+}
+
+
+.whatsapp-icon{
+
+  font-size:23px;
+
+}
+
+
+.form-note{
+
+  color:#7A8492;
+
+  font-size:10px;
+
+  margin-top:13px;
+
+  line-height:1.5;
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-grid{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:25px;
+
+}
+
+
+.contact-card{
+
+  min-height:490px;
+
+  border-radius:22px;
+
+  overflow:hidden;
+
+}
+
+
+.contact-info{
+
+  background:var(--navy);
+
+  color:#fff;
+
+  padding:42px;
+
+}
+
+
+.contact-info h2{
+
+  color:#fff;
+
+  font-size:40px;
+
+  line-height:1.1;
+
+}
+
+
+.contact-info>p{
+
+  color:#ACBDCD;
+
+  margin:17px 0 25px;
+
+}
+
+
+.contact-row{
+
+  display:flex;
+
+  gap:13px;
+
+  padding:17px 0;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.09);
+
+}
+
+
+.contact-icon{
+
+  width:42px;
+
+  height:42px;
+
+  border-radius:10px;
+
+  display:grid;
+
+  place-items:center;
+
+  color:var(--gold2);
+
+  background:
+    rgba(223,175,53,.12);
+
+}
+
+
+.contact-row strong{
+
+  display:block;
+
+  font-size:12px;
+
+}
+
+
+.contact-row span{
+
+  color:#9FB0C0;
+
+  font-size:12px;
+
+}
+
+
+.contact-row a:hover{
+
+  color:var(--gold2);
+
+}
+
+
+.contact-buttons{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:9px;
+
+  margin-top:22px;
+
+}
+
+
+/* =========================================================
+   REAL KISUMU MAP
+========================================================= */
+
+.contact-map{
+
+  position:relative;
+
+  min-height:490px;
+
+  background:#E9EEF2;
+
+  padding:0;
+
+  overflow:hidden;
+
+}
+
+
+#meshaqMap{
+
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+
+  height:100%;
+
+  min-height:490px;
+
+  z-index:1;
+
+}
+
+
+/* =========================================================
+   MAP INFORMATION CARD
+========================================================= */
+
+.map-card{
+
+  position:absolute;
+
+  z-index:500;
+
+  left:22px;
+
+  bottom:22px;
+
+  width:min(390px,calc(100% - 44px));
+
+  background:rgba(255,255,255,.97);
+
+  backdrop-filter:blur(12px);
+
+  padding:22px;
+
+  border-radius:17px;
+
+  box-shadow:
+    0 15px 45px rgba(0,0,0,.20);
+
+  border:
+    1px solid rgba(255,255,255,.8);
+
+}
+
+
+.map-badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:7px;
+
+  background:#EAFBF1;
+
+  color:#087A42;
+
+  padding:6px 10px;
+
+  border-radius:999px;
+
+  font-size:10px;
+
+  font-weight:900;
+
+  margin-bottom:9px;
+
+}
+
+
+.map-card h3{
+
+  color:var(--navy);
+
+  font-size:19px;
+
+  line-height:1.25;
+
+  margin-bottom:5px;
+
+}
+
+
+.map-address{
+
+  color:#475467;
+
+  font-size:12px;
+
+  line-height:1.6;
+
+  margin-bottom:15px;
+
+}
+
+
+.map-address strong{
+
+  color:var(--navy);
+
+}
+
+
+.map-actions{
+
+  display:flex;
+
+  gap:8px;
+
+  flex-wrap:wrap;
+
+}
+
+
+.map-actions .btn{
+
+  min-height:43px;
+
+  padding:0 15px;
+
+  font-size:11px;
+
+}
+
+
+/* =========================================================
+   CUSTOM MAP MARKER
+========================================================= */
+
+.meshaq-marker{
+
+  width:48px;
+
+  height:48px;
+
+  border-radius:
+    50% 50% 50% 0;
+
+  background:var(--gold);
+
+  border:4px solid #fff;
+
+  box-shadow:
+    0 7px 22px rgba(0,0,0,.30);
+
+  transform:rotate(-45deg);
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+}
+
+
+.meshaq-marker-inner{
+
+  transform:rotate(45deg);
+
+  font-size:19px;
+
+}
+
+
+/* =========================================================
+   MAP POPUP
+========================================================= */
+
+.leaflet-popup-content-wrapper{
+
+  border-radius:14px;
+
+}
+
+
+.leaflet-popup-content{
+
+  margin:14px 16px;
+
+}
+
+
+.office-popup{
+
+  min-width:220px;
+
+}
+
+
+.office-popup strong{
+
+  display:block;
+
+  color:var(--navy);
+
+  font-size:14px;
+
+  margin-bottom:5px;
+
+}
+
+
+.office-popup span{
+
+  display:block;
+
+  color:#667085;
+
+  font-size:11px;
+
+  line-height:1.6;
+
+}
+
+
+.office-popup a{
+
+  display:inline-block;
+
+  margin-top:10px;
+
+  color:#A36F00;
+
+  font-size:11px;
+
+  font-weight:900;
+
+}
+
 
 /* =========================================================
    FOOTER
 ========================================================= */
 
 footer{
-  background:#030b14;
-  color:#fff;
-  padding:60px 0 25px;
+
+  background:#020811;
+
+  color:#A9B8C8;
+
+  padding:65px 0 25px;
+
 }
+
 
 .footer-grid{
+
   display:grid;
+
   grid-template-columns:1.5fr 1fr 1fr 1fr;
-  gap:35px;
+
+  gap:40px;
+
   padding-bottom:40px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
+
 }
 
-.footer-brand p{
-  color:#9eabba;
-  max-width:360px;
-  margin-top:14px;
-  font-size:13px;
+
+.footer-about{
+
+  max-width:350px;
+
+  font-size:12px;
+
+  margin-top:16px;
+
 }
 
-.footer-title{
-  font-weight:900;
-  margin-bottom:13px;
+
+.footer h3{
+
+  color:#fff;
+
+  font-size:14px;
+
+  margin-bottom:16px;
+
 }
+
 
 .footer-links{
+
   display:grid;
+
   gap:9px;
+
+  font-size:12px;
+
 }
 
-.footer-links a{
-  color:#9eabba;
-  font-size:12px;
-}
 
 .footer-links a:hover{
+
   color:var(--gold2);
+
 }
 
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.1);
+
+.copyright{
+
   padding-top:20px;
-  color:#7f8b98;
-  font-size:11px;
+
   display:flex;
+
   justify-content:space-between;
-  gap:15px;
-  flex-wrap:wrap;
+
+  gap:20px;
+
+  font-size:10px;
+
 }
+
 
 /* =========================================================
-   FIXED CONTACT CONTROLS
-   NO WAVING / NO BOUNCING
+   FLOATING BUTTONS
 ========================================================= */
 
-.quick-contact{
+.floating{
+
   position:fixed;
+
   right:18px;
+
   bottom:18px;
-  z-index:1500;
+
+  z-index:900;
+
   display:flex;
+
   flex-direction:column;
-  gap:8px;
+
+  gap:10px;
+
 }
 
-.quick-contact a{
-  min-width:145px;
-  height:48px;
-  padding:0 15px;
-  border-radius:10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
+
+.float{
+
+  width:52px;
+
+  height:52px;
+
+  border-radius:50%;
+
+  display:grid;
+
+  place-items:center;
+
   color:#fff;
-  font-size:13px;
-  font-weight:900;
-  box-shadow:0 8px 25px rgba(0,0,0,.18);
+
+  font-size:21px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.22);
+
 }
 
-.quick-call{
-  background:var(--navy);
-}
 
-.quick-whatsapp{
+.float-whatsapp{
+
   background:var(--whatsapp);
+
 }
+
+
+.float-call{
+
+  background:var(--navy);
+
+}
+
 
 /* =========================================================
    MODAL
 ========================================================= */
 
 .modal{
+
   position:fixed;
+
   inset:0;
-  background:rgba(3,11,20,.76);
+
+  z-index:3000;
+
+  background:rgba(0,0,0,.7);
+
   display:none;
+
   align-items:center;
+
   justify-content:center;
-  z-index:2500;
+
   padding:20px;
+
 }
 
-.modal.show{
+
+.modal.active{
+
   display:flex;
+
 }
 
-.modal-card{
-  width:min(500px,100%);
+
+.modal-box{
+
   background:#fff;
-  border-radius:23px;
-  padding:32px;
+
+  width:min(500px,100%);
+
+  border-radius:22px;
+
+  padding:35px;
+
   text-align:center;
-  box-shadow:0 30px 90px rgba(0,0,0,.3);
+
+  position:relative;
+
 }
+
+
+.close-modal{
+
+  position:absolute;
+
+  top:10px;
+
+  right:15px;
+
+  border:0;
+
+  background:none;
+
+  font-size:28px;
+
+}
+
 
 .success-icon{
-  width:68px;
-  height:68px;
+
+  width:70px;
+
+  height:70px;
+
   border-radius:50%;
-  background:#e8f8ef;
+
+  background:#E7F8EF;
+
   color:var(--green);
+
   display:grid;
+
   place-items:center;
-  font-size:33px;
+
+  font-size:32px;
+
   margin:0 auto 16px;
+
 }
 
-.modal-card h2{
-  font-size:28px;
-  margin-bottom:7px;
-}
-
-.modal-card p{
-  color:var(--gray);
-  font-size:13px;
-}
 
 .reference{
+
   margin:17px 0;
-  padding:13px;
+
+  padding:15px;
+
+  background:#F5F7FA;
+
   border-radius:10px;
-  background:#f5f7fa;
-  font-weight:900;
-  color:var(--navy);
+
 }
 
-.modal-actions{
-  display:flex;
-  gap:9px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-top:18px;
+
+.reference small{
+
+  color:var(--gray);
+
+  display:block;
+
 }
+
+
+.reference strong{
+
+  color:var(--navy);
+
+  font-size:22px;
+
+}
+
 
 /* =========================================================
    RESPONSIVE
 ========================================================= */
 
-@media(max-width:1100px){
+@media(max-width:1000px){
 
   .nav-links{
+
     gap:12px;
-  }
 
-  .design-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .material-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .process-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-}
-
-@media(max-width:900px){
-
-  .menu-btn{
-    display:block;
-  }
-
-  .nav-links{
-    position:absolute;
-    left:16px;
-    right:16px;
-    top:86px;
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:14px;
-    box-shadow:var(--shadow);
-    display:none;
-    flex-direction:column;
-    align-items:stretch;
-    padding:12px;
-  }
-
-  .nav-links.open{
-    display:flex;
   }
 
   .nav-links a{
-    padding:10px;
-  }
 
-  .about-grid,
-  .tutorial-grid,
-  .application-grid,
-  .location-grid{
-    grid-template-columns:1fr;
+    font-size:11px;
+
   }
 
   .services-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
 
-  .feature-grid{
     grid-template-columns:1fr 1fr;
-  }
 
-  .design-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
-}
-
-@media(max-width:650px){
-
-  .section{
-    padding:65px 0;
-  }
-
-  .topbar{
-    display:none;
-  }
-
-  .hero{
-    min-height:650px;
-  }
-
-  .hero h1{
-    letter-spacing:-2px;
-  }
-
-  .hero-actions{
-    flex-direction:column;
-    align-items:stretch;
-  }
-
-  .hero-actions .btn{
-    width:100%;
   }
 
   .trust-grid{
+
     grid-template-columns:1fr 1fr;
+
   }
 
-  .trust-item{
-    border-bottom:1px solid var(--line);
-  }
-
-  .services-grid,
-  .feature-grid,
-  .design-grid,
-  .material-grid,
   .process-grid{
+
+    grid-template-columns:1fr 1fr;
+
+    gap:35px;
+
+  }
+
+  .application-grid{
+
     grid-template-columns:1fr;
+
   }
 
-  .form-grid{
-    grid-template-columns:1fr;
-  }
+  .application-intro{
 
-  .field.full{
-    grid-column:auto;
-  }
+    position:static;
 
-  .services-select{
-    grid-template-columns:1fr;
-  }
-
-  .final-cta-inner{
-    flex-direction:column;
-    align-items:flex-start;
   }
 
   .footer-grid{
+
+    grid-template-columns:1fr 1fr;
+
+  }
+
+}
+
+
+@media(max-width:800px){
+
+  .topbar{
+
+    display:none;
+
+  }
+
+  .nav{
+
+    height:72px;
+
+  }
+
+  .menu{
+
+    display:block;
+
+  }
+
+  .nav-links{
+
+    display:none;
+
+    position:absolute;
+
+    left:4%;
+
+    right:4%;
+
+    top:72px;
+
+    background:#081522;
+
+    padding:15px;
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+    gap:0;
+
+    border-radius:
+      0 0 15px 15px;
+
+  }
+
+  .nav-links.active{
+
+    display:flex;
+
+  }
+
+  .nav-links a{
+
+    padding:12px 8px;
+
+    border-bottom:
+      1px solid rgba(255,255,255,.07);
+
+    font-size:13px;
+
+  }
+
+  .about-grid,
+  .contact-grid{
+
     grid-template-columns:1fr;
-  }
 
-  .quick-contact{
-    right:10px;
-    bottom:10px;
-  }
-
-  .quick-contact a{
-    min-width:130px;
-    height:44px;
-    font-size:12px;
   }
 
   .about-image img{
-    height:400px;
+
+    height:470px;
+
   }
+
+  .house-grid{
+
+    grid-template-columns:1fr 1fr;
+
+    grid-template-rows:
+      250px 250px 250px;
+
+  }
+
+  .house:first-child{
+
+    grid-column:span 2;
+
+    grid-row:auto;
+
+  }
+
+}
+
+
+@media(max-width:600px){
+
+  .section{
+
+    padding:70px 0;
+
+  }
+
+  .hero{
+
+    min-height:700px;
+
+  }
+
+  .hero h1{
+
+    font-size:48px;
+
+  }
+
+  .hero p{
+
+    font-size:15px;
+
+  }
+
+  .trust-grid,
+  .services-grid,
+  .footer-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .trust-item{
+
+    border-right:0;
+
+    border-bottom:
+      1px solid rgba(255,255,255,.1);
+
+    padding-bottom:10px;
+
+  }
+
+  .checks,
+  .form-grid,
+  .location-grid,
+  .service-options{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .full,
+  .location-box{
+
+    grid-column:auto;
+
+  }
+
+  .house-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    grid-template-rows:
+      270px 220px 220px 220px;
+
+  }
+
+  .house:first-child{
+
+    grid-column:auto;
+
+  }
+
+  .form-card,
+  .application-intro{
+
+    padding:23px;
+
+  }
+
+  .contact-info{
+
+    padding:30px;
+
+  }
+
+  .contact-info h2{
+
+    font-size:34px;
+
+  }
+
+  .copyright{
+
+    flex-direction:column;
+
+  }
+
+  .contact-map{
+
+    min-height:560px;
+
+  }
+
+  #meshaqMap{
+
+    min-height:560px;
+
+  }
+
+  .map-card{
+
+    left:14px;
+
+    bottom:14px;
+
+    width:calc(100% - 28px);
+
+    padding:18px;
+
+  }
+
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- ======================================================
+
+<!-- =========================================================
      TOP BAR
-====================================================== -->
+========================================================= -->
 
 <div class="topbar">
 
   <div class="container topbar-inner">
 
-    <div class="topbar-links">
-      <span>🇰🇪 Kenya & East Africa</span>
-      <span>Engineering • Construction • Design</span>
+    <div class="top-links">
+
+      <span>
+        📍 Kenya • Kisumu
+      </span>
+
+      <span>
+
+        ✉
+
+        <a href="mailto:meshaqengineeringlimitedsupport@gmail.com">
+
+          meshaqengineeringlimitedsupport@gmail.com
+
+        </a>
+
+      </span>
+
     </div>
 
-    <div class="topbar-links">
 
-      <span>🟢 Open 24/7</span>
+    <div class="top-links">
 
-      <a href="tel:0712242050">
-        ☎ 0712242050
-      </a>
+      <span>
 
-      <a href="mailto:meshaqengineeringlimitedsupport@gmail.com">
-        ✉ Email
-      </a>
+        ☎
+
+        <a href="tel:+254712242050">
+
+          +254 712 242050
+
+        </a>
+
+      </span>
+
+
+      <span>
+
+        ☎
+
+        <a href="tel:+254732444187">
+
+          +254 732 444187
+
+        </a>
+
+      </span>
 
     </div>
 
@@ -1522,9 +2720,10 @@ footer{
 </div>
 
 
-<!-- ======================================================
+
+<!-- =========================================================
      HEADER
-====================================================== -->
+========================================================= -->
 
 <header>
 
@@ -1532,123 +2731,163 @@ footer{
 
     <a href="#home" class="logo">
 
-      <div class="logo-mark">
-        MC
-      </div>
+      <svg
+        class="logo-mark"
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+
+        <rect
+          x="3"
+          y="3"
+          width="94"
+          height="94"
+          rx="18"
+          fill="#DFAF35"/>
+
+        <path
+          d="M18 75V28L31 42L44 25L57 42L70 28V75"
+          stroke="#071A2B"
+          stroke-width="8"
+          stroke-linejoin="round"/>
+
+        <path
+          d="M18 75H82"
+          stroke="#071A2B"
+          stroke-width="8"
+          stroke-linecap="round"/>
+
+      </svg>
+
 
       <div class="logo-text">
-        <strong>MESHAQ</strong>
-        <span>CONNECTION LIMITED</span>
+
+        <strong>
+          MESHAQ
+        </strong>
+
+        <small>
+          ENGINEERING & CONTRACTORS
+        </small>
+
       </div>
 
     </a>
 
-    <nav class="nav-links" id="navLinks">
 
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#designs">House Designs</a>
-      <a href="#process">How We Work</a>
-      <a href="#location">Location</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+    <button
+      class="menu"
+      id="menuBtn"
+      aria-label="Open menu">
 
-      <a href="#application" class="nav-cta">
-        Start a Project
+      ☰
+
+    </button>
+
+
+    <nav
+      class="nav-links"
+      id="navLinks">
+
+      <a href="#home">
+        Home
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#designs">
+        Designs
+      </a>
+
+      <a href="#process">
+        How We Work
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+      <a
+        href="#application"
+        class="nav-cta">
+
+        START A PROJECT
+
       </a>
 
     </nav>
-
-    <button
-      class="menu-btn"
-      id="menuBtn"
-      aria-label="Open menu"
-      type="button"
-    >
-      ☰
-    </button>
 
   </div>
 
 </header>
 
 
-<!-- ======================================================
-     HERO
-====================================================== -->
 
-<section class="hero" id="home">
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+  class="hero"
+  id="home">
 
   <div class="container">
 
     <div class="hero-content">
 
-      <div class="badge">
-        ✦ Engineering • Construction • Design
+      <div class="eyebrow">
+
+        ENGINEERING • CONSTRUCTION • DESIGN
+
       </div>
 
-      <div style="margin-bottom:18px;">
-        <span class="open-status">
-          <span class="open-dot"></span>
-          Open 24/7
-        </span>
-      </div>
 
       <h1>
-        Building Ideas Into
-        <span>Exceptional Spaces.</span>
+
+        ENGINEERING<br>
+
+        <span>
+          EXCELLENCE.
+        </span><br>
+
+        BUILDING THE FUTURE.
+
       </h1>
 
+
       <p>
-        MESHAQ Connection Limited provides professional construction,
-        engineering, civil works, structural solutions, house design
-        and project support in Kenya.
+
+        Professional engineering, construction, civil works,
+        structural solutions, project management and modern
+        building design delivered around your vision.
+
       </p>
 
-      <div class="hero-actions">
+
+      <div class="hero-buttons">
 
         <a
           href="#application"
-          class="btn btn-gold"
-        >
-          Start Your Project →
+          class="btn btn-gold">
+
+          🏗 START A PROJECT
+
         </a>
+
 
         <a
-          href="tel:0712242050"
-          class="btn btn-white"
-        >
-          ☎ Call MESHAQ
+          href="tel:+254712242050"
+          class="btn btn-outline">
+
+          ☎ CALL MESHAQ
+
         </a>
-
-        <a
-          href="https://wa.me/254712242050"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-whatsapp"
-        >
-          💬 WhatsApp
-        </a>
-
-      </div>
-
-      <div class="hero-mini">
-
-        <div>
-          <strong>47</strong>
-          <span>Kenya counties</span>
-        </div>
-
-        <div>
-          <strong>6+</strong>
-          <span>Core services</span>
-        </div>
-
-        <div>
-          <strong>24/7</strong>
-          <span>Open for enquiries</span>
-        </div>
 
       </div>
 
@@ -1659,130 +2898,93 @@ footer{
 </section>
 
 
-<!-- ======================================================
+
+<!-- =========================================================
      TRUST
-====================================================== -->
+========================================================= -->
 
-<div class="container">
+<section class="trust">
 
-  <div class="trust">
+  <div class="container trust-grid">
 
-    <div class="trust-grid">
+    <div class="trust-item">
 
-      <div class="trust-item">
-        <div class="trust-icon">🏗️</div>
-        <strong>Engineering Led</strong>
-        <span>Technical project approach</span>
+      <div class="trust-icon">
+        ✓
       </div>
 
-      <div class="trust-item">
-        <div class="trust-icon">📐</div>
-        <strong>Design Focused</strong>
-        <span>Modern building concepts</span>
-      </div>
+      <div>
 
-      <div class="trust-item">
-        <div class="trust-icon">🦺</div>
-        <strong>Safety Conscious</strong>
-        <span>Safety-aware planning</span>
-      </div>
+        <strong>
+          Quality Focused
+        </strong>
 
-      <div class="trust-item">
-        <div class="trust-icon">🟢</div>
-        <strong>Open 24/7</strong>
-        <span>Enquiries anytime</span>
+        <span>
+          Attention to detail
+        </span>
+
       </div>
 
     </div>
 
-  </div>
 
-</div>
+    <div class="trust-item">
 
+      <div class="trust-icon">
+        ◆
+      </div>
 
-<!-- ======================================================
-     ABOUT
-====================================================== -->
+      <div>
 
-<section class="section" id="about">
+        <strong>
+          Engineering Led
+        </strong>
 
-  <div class="container">
-
-    <div class="about-grid">
-
-      <div class="about-image">
-
-        <img
-          src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85"
-          alt="Engineer working on a construction project"
-          loading="lazy"
-        >
-
-        <div class="about-card">
-          <strong>MESHAQ</strong>
-          <span>Connection Limited</span>
-        </div>
+        <span>
+          Technical approach
+        </span>
 
       </div>
 
-      <div class="about-content">
+    </div>
 
-        <div class="eyebrow">
-          About MESHAQ
-        </div>
 
-        <h2>
-          Professional solutions from concept to construction.
-        </h2>
+    <div class="trust-item">
 
-        <p>
-          MESHAQ Connection Limited brings together engineering thinking,
-          construction planning, design concepts and project coordination
-          to help clients move from an idea to a practical project.
-        </p>
+      <div class="trust-icon">
+        ◈
+      </div>
 
-        <div class="check-list">
+      <div>
 
-          <div class="check">
-            <div class="check-icon">✓</div>
-            <div>
-              <strong>Project Planning</strong>
-              <p>Understand project requirements before implementation.</p>
-            </div>
-          </div>
+        <strong>
+          Safety Conscious
+        </strong>
 
-          <div class="check">
-            <div class="check-icon">✓</div>
-            <div>
-              <strong>House Design</strong>
-              <p>Explore modern residential design concepts.</p>
-            </div>
-          </div>
+        <span>
+          Responsible practices
+        </span>
 
-          <div class="check">
-            <div class="check-icon">✓</div>
-            <div>
-              <strong>Engineering & Construction</strong>
-              <p>Support for building, structural and civil projects.</p>
-            </div>
-          </div>
+      </div>
 
-          <div class="check">
-            <div class="check-icon">✓</div>
-            <div>
-              <strong>Direct Communication</strong>
-              <p>Call, WhatsApp or email MESHAQ directly.</p>
-            </div>
-          </div>
+    </div>
 
-        </div>
 
-        <a
-          href="#application"
-          class="btn btn-dark"
-        >
-          Discuss Your Project →
-        </a>
+    <div class="trust-item">
+
+      <div class="trust-icon">
+        ↗
+      </div>
+
+      <div>
+
+        <strong>
+          Client Focused
+        </strong>
+
+        <span>
+          Clear communication
+        </span>
 
       </div>
 
@@ -1793,141 +2995,378 @@ footer{
 </section>
 
 
-<!-- ======================================================
-     SERVICES
-====================================================== -->
 
-<section class="section section-light" id="services">
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+  class="section"
+  id="about">
+
+  <div class="container about-grid">
+
+
+    <div class="about-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1300&q=88"
+        alt="Engineering professional">
+
+      <div class="about-badge">
+
+        <strong>
+          MESHAQ
+        </strong>
+
+        <span>
+          ENGINEERED WITH PURPOSE
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <div class="section-kicker">
+
+        ABOUT MESHAQ
+
+      </div>
+
+
+      <h2>
+
+        Engineering solutions built around your vision.
+
+      </h2>
+
+
+      <p class="about-copy">
+
+        MESHAQ Engineering & Contractors is focused on
+        construction, engineering, building design, project
+        coordination and technical solutions across Kenya.
+
+      </p>
+
+
+      <p class="about-copy">
+
+        Our approach combines planning, technical thinking,
+        quality workmanship and communication throughout the
+        project journey.
+
+      </p>
+
+
+      <div class="checks">
+
+        <div class="check">
+          <span>✓</span>
+          Professional planning
+        </div>
+
+        <div class="check">
+          <span>✓</span>
+          Quality materials
+        </div>
+
+        <div class="check">
+          <span>✓</span>
+          Technical supervision
+        </div>
+
+        <div class="check">
+          <span>✓</span>
+          Safety-conscious work
+        </div>
+
+        <div class="check">
+          <span>✓</span>
+          Clear communication
+        </div>
+
+        <div class="check">
+          <span>✓</span>
+          Project coordination
+        </div>
+
+      </div>
+
+
+      <a
+        href="#application"
+        class="btn btn-gold">
+
+        DISCUSS YOUR PROJECT →
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section
+  class="section soft"
+  id="services">
 
   <div class="container">
 
-    <div class="section-head">
+    <div class="section-head center">
 
-      <div class="eyebrow">
-        Our Services
+      <div class="section-kicker">
+        OUR SERVICES
       </div>
 
       <h2>
-        Complete solutions for your building project.
+        Complete engineering & construction solutions.
       </h2>
 
       <p>
-        From initial concepts and technical planning to construction
-        and project coordination.
+        From the first consultation to project completion,
+        MESHAQ provides a structured approach to your project.
       </p>
 
     </div>
+
 
     <div class="services-grid">
 
+
       <article class="service-card">
 
-        <img
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80"
-          alt="Building construction"
-          loading="lazy"
-        >
+        <div class="service-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
+            alt="Building construction">
+
+        </div>
 
         <div class="service-body">
-          <span class="service-number">01</span>
-          <h3>Building & Contracting</h3>
+
+          <span class="service-number">
+            01 / CONSTRUCTION
+          </span>
+
+          <h3>
+            Building & Contracting
+          </h3>
+
           <p>
-            Building construction support for residential,
-            commercial and development projects.
+            Building construction, structural works,
+            finishes and general contracting solutions.
           </p>
+
+          <a
+            href="#application"
+            class="learn">
+
+            REQUEST SERVICE →
+
+          </a>
+
         </div>
 
       </article>
 
+
       <article class="service-card">
 
-        <img
-          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80"
-          alt="Civil engineering construction"
-          loading="lazy"
-        >
+        <div class="service-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85"
+            alt="Civil engineering">
+
+        </div>
 
         <div class="service-body">
-          <span class="service-number">02</span>
-          <h3>Civil Engineering</h3>
+
+          <span class="service-number">
+            02 / CIVIL
+          </span>
+
+          <h3>
+            Civil Engineering
+          </h3>
+
           <p>
-            Civil works, site development, drainage and related
-            engineering requirements.
+            Site development, drainage, earthworks and
+            infrastructure-related solutions.
           </p>
+
+          <a
+            href="#application"
+            class="learn">
+
+            REQUEST SERVICE →
+
+          </a>
+
         </div>
 
       </article>
 
+
       <article class="service-card">
 
-        <img
-          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80"
-          alt="Structural construction"
-          loading="lazy"
-        >
+        <div class="service-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85"
+            alt="Structural engineering">
+
+        </div>
 
         <div class="service-body">
-          <span class="service-number">03</span>
-          <h3>Structural Solutions</h3>
+
+          <span class="service-number">
+            03 / STRUCTURAL
+          </span>
+
+          <h3>
+            Structural Solutions
+          </h3>
+
           <p>
-            Structural concepts and technical support for practical
-            building solutions.
+            Technical structural coordination and
+            construction-oriented engineering solutions.
           </p>
+
+          <a
+            href="#application"
+            class="learn">
+
+            REQUEST SERVICE →
+
+          </a>
+
         </div>
 
       </article>
 
+
       <article class="service-card">
 
-        <img
-          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80"
-          alt="Modern house interior"
-          loading="lazy"
-        >
+        <div class="service-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern house design">
+
+        </div>
 
         <div class="service-body">
-          <span class="service-number">04</span>
-          <h3>House Design & Planning</h3>
+
+          <span class="service-number">
+            04 / DESIGN
+          </span>
+
+          <h3>
+            House Design & Planning
+          </h3>
+
           <p>
-            Modern house concepts, spatial planning and design discussions.
+            Modern residential concepts and
+            construction-oriented planning.
           </p>
+
+          <a
+            href="#application"
+            class="learn">
+
+            REQUEST SERVICE →
+
+          </a>
+
         </div>
 
       </article>
 
+
       <article class="service-card">
 
-        <img
-          src="https://images.unsplash.com/photo-1542621334-a254cf47733d?auto=format&fit=crop&w=1000&q=80"
-          alt="Project management"
-          loading="lazy"
-        >
+        <div class="service-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1542621334-a254cf47733d?auto=format&fit=crop&w=1000&q=85"
+            alt="Project management">
+
+        </div>
 
         <div class="service-body">
-          <span class="service-number">05</span>
-          <h3>Project Management</h3>
+
+          <span class="service-number">
+            05 / MANAGEMENT
+          </span>
+
+          <h3>
+            Project Management
+          </h3>
+
           <p>
-            Planning, coordination, communication and project progress
-            management.
+            Project planning, coordination, scheduling
+            and construction monitoring.
           </p>
+
+          <a
+            href="#application"
+            class="learn">
+
+            REQUEST SERVICE →
+
+          </a>
+
         </div>
 
       </article>
 
+
       <article class="service-card">
 
-        <img
-          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80"
-          alt="Engineering consultancy"
-          loading="lazy"
-        >
+        <div class="service-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=85"
+            alt="Engineering consultation">
+
+        </div>
 
         <div class="service-body">
-          <span class="service-number">06</span>
-          <h3>Technical Consultancy</h3>
+
+          <span class="service-number">
+            06 / CONSULTANCY
+          </span>
+
+          <h3>
+            Technical Consultancy
+          </h3>
+
           <p>
-            Discuss your project idea and determine practical next steps.
+            Project consultation, site assessment and
+            technical support.
           </p>
+
+          <a
+            href="#application"
+            class="learn">
+
+            REQUEST SERVICE →
+
+          </a>
+
         </div>
 
       </article>
@@ -1939,526 +3378,119 @@ footer{
 </section>
 
 
-<!-- ======================================================
-     FEATURES
-====================================================== -->
 
-<section class="section feature-strip">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="eyebrow">
-        Client Platform
-      </div>
-
-      <h2>
-        Designed to make starting a project simple.
-      </h2>
-
-      <p>
-        Explore services, house concepts, location information
-        and submit project requirements.
-      </p>
-
-    </div>
-
-    <div class="feature-grid">
-
-      <div class="feature-box">
-        <div class="icon">📱</div>
-        <h3>Mobile Friendly</h3>
-        <p>Designed for smartphones, tablets and computers.</p>
-      </div>
-
-      <div class="feature-box">
-        <div class="icon">💬</div>
-        <h3>WhatsApp Applications</h3>
-        <p>Application information is prepared for WhatsApp.</p>
-      </div>
-
-      <div class="feature-box">
-        <div class="icon">☎️</div>
-        <h3>Direct Calling</h3>
-        <p>Tap a phone number to open your phone's calling interface.</p>
-      </div>
-
-      <div class="feature-box">
-        <div class="icon">🇰🇪</div>
-        <h3>47 Counties</h3>
-        <p>Clients can select any of Kenya's 47 counties.</p>
-      </div>
-
-      <div class="feature-box">
-        <div class="icon">🏠</div>
-        <h3>House Gallery</h3>
-        <p>Explore modern residential design concepts.</p>
-      </div>
-
-      <div class="feature-box">
-        <div class="icon">🟢</div>
-        <h3>Open 24/7</h3>
-        <p>Website enquiries and communication channels remain available 24/7.</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
-     HOUSE DESIGNS
-====================================================== -->
-
-<section class="section section-light" id="designs">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="eyebrow">
-        House Designs
-      </div>
-
-      <h2>
-        Explore modern home design ideas.
-      </h2>
-
-      <p>
-        Browse different styles and use the application form
-        to discuss the design you prefer.
-      </p>
-
-    </div>
-
-    <div class="design-toolbar">
-
-      <button class="filter-btn active" data-filter="all">
-        All Designs
-      </button>
-
-      <button class="filter-btn" data-filter="modern">
-        Modern
-      </button>
-
-      <button class="filter-btn" data-filter="luxury">
-        Luxury
-      </button>
-
-      <button class="filter-btn" data-filter="family">
-        Family
-      </button>
-
-    </div>
-
-    <div class="design-grid">
-
-      <article class="design-card" data-category="modern">
-
-        <div class="design-img">
-
-          <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-            alt="Modern family house"
-            loading="lazy"
-          >
-
-          <span class="design-tag">
-            MODERN
-          </span>
-
-        </div>
-
-        <div class="design-body">
-          <h3>Modern Family Residence</h3>
-          <p>Clean exterior lines with practical family spaces.</p>
-
-          <div class="design-meta">
-            <span>Residential</span>
-            <span>Concept</span>
-          </div>
-        </div>
-
-      </article>
-
-
-      <article class="design-card" data-category="luxury">
-
-        <div class="design-img">
-
-          <img
-            src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=85"
-            alt="Executive residence"
-            loading="lazy"
-          >
-
-          <span class="design-tag">
-            LUXURY
-          </span>
-
-        </div>
-
-        <div class="design-body">
-          <h3>Executive Residence</h3>
-          <p>Premium residential concept with a modern identity.</p>
-
-          <div class="design-meta">
-            <span>Executive</span>
-            <span>Concept</span>
-          </div>
-        </div>
-
-      </article>
-
-
-      <article class="design-card" data-category="modern">
-
-        <div class="design-img">
-
-          <img
-            src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85"
-            alt="Contemporary home"
-            loading="lazy"
-          >
-
-          <span class="design-tag">
-            MODERN
-          </span>
-
-        </div>
-
-        <div class="design-body">
-          <h3>Contemporary Home</h3>
-          <p>Balanced proportions and modern finishes.</p>
-
-          <div class="design-meta">
-            <span>Residential</span>
-            <span>Concept</span>
-          </div>
-        </div>
-
-      </article>
-
-
-      <article class="design-card" data-category="luxury">
-
-        <div class="design-img">
-
-          <img
-            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85"
-            alt="Luxury villa"
-            loading="lazy"
-          >
-
-          <span class="design-tag">
-            LUXURY
-          </span>
-
-        </div>
-
-        <div class="design-body">
-          <h3>Luxury Villa</h3>
-          <p>Elegant spaces focused on comfort and presentation.</p>
-
-          <div class="design-meta">
-            <span>Villa</span>
-            <span>Concept</span>
-          </div>
-        </div>
-
-      </article>
-
-
-      <article class="design-card" data-category="family">
-
-        <div class="design-img">
-
-          <img
-            src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85"
-            alt="Modern family home"
-            loading="lazy"
-          >
-
-          <span class="design-tag">
-            FAMILY
-          </span>
-
-        </div>
-
-        <div class="design-body">
-          <h3>Modern Family Home</h3>
-          <p>Comfortable spaces for modern family lifestyles.</p>
-
-          <div class="design-meta">
-            <span>Family</span>
-            <span>Concept</span>
-          </div>
-        </div>
-
-      </article>
-
-
-      <article class="design-card" data-category="modern">
-
-        <div class="design-img">
-
-          <img
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
-            alt="Open plan residence"
-            loading="lazy"
-          >
-
-          <span class="design-tag">
-            MODERN
-          </span>
-
-        </div>
-
-        <div class="design-body">
-          <h3>Open-Plan Residence</h3>
-          <p>Open living, dining and kitchen concept.</p>
-
-          <div class="design-meta">
-            <span>Modern</span>
-            <span>Concept</span>
-          </div>
-        </div>
-
-      </article>
-
-
-      <article class="design-card" data-category="luxury">
-
-        <div class="design-img">
-
-          <img
-            src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85"
-            alt="Premium contemporary home"
-            loading="lazy"
-          >
-
-          <span class="design-tag">
-            LUXURY
-          </span>
-
-        </div>
-
-        <div class="design-body">
-          <h3>Premium Contemporary</h3>
-          <p>Contemporary architectural concept.</p>
-
-          <div class="design-meta">
-            <span>Premium</span>
-            <span>Concept</span>
-          </div>
-        </div>
-
-      </article>
-
-
-      <article class="design-card" data-category="family">
-
-        <div class="design-img">
-
-          <img
-            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
-            alt="Modern interior concept"
-            loading="lazy"
-          >
-
-          <span class="design-tag">
-            FAMILY
-          </span>
-
-        </div>
-
-        <div class="design-body">
-          <h3>Modern Interior Concept</h3>
-          <p>Interior planning focused on space and comfort.</p>
-
-          <div class="design-meta">
-            <span>Interior</span>
-            <span>Concept</span>
-          </div>
-        </div>
-
-      </article>
-
-    </div>
-
-    <p style="text-align:center;color:#667085;font-size:11px;margin-top:23px;">
-      Gallery images are design inspiration/concepts and should not be represented
-      as completed MESHAQ projects unless they are verified MESHAQ photographs.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
-     MATERIALS
-====================================================== -->
-
-<section class="section" id="materials">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="eyebrow">
-        Construction Materials
-      </div>
-
-      <h2>
-        Built around the details that matter.
-      </h2>
-
-      <p>
-        Construction quality depends on planning, workmanship,
-        materials and appropriate technical decisions.
-      </p>
-
-    </div>
-
-    <div class="material-grid">
-
-      <article class="material-card">
-
-        <img
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80"
-          alt="Concrete construction"
-          loading="lazy"
-        >
-
-        <div>
-          <h3>Concrete & Masonry</h3>
-          <p>
-            Building components used across foundations,
-            walls and construction.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="material-card">
-
-        <img
-          src="https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=900&q=80"
-          alt="Construction steel"
-          loading="lazy"
-        >
-
-        <div>
-          <h3>Steel & Reinforcement</h3>
-          <p>
-            Structural reinforcement and steelwork considerations.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="material-card">
-
-        <img
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80"
-          alt="Roof construction"
-          loading="lazy"
-        >
-
-        <div>
-          <h3>Roofing Systems</h3>
-          <p>
-            Roofing concepts selected according to project requirements.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="material-card">
-
-        <img
-          src="https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=900&q=80"
-          alt="Interior finishes"
-          loading="lazy"
-        >
-
-        <div>
-          <h3>Finishes & Interiors</h3>
-          <p>
-            Interior finishes and details contributing to the final building.
-          </p>
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
+<!-- =========================================================
      PROCESS
-====================================================== -->
+========================================================= -->
 
-<section class="section section-dark" id="process">
+<section
+  class="section process"
+  id="process">
 
   <div class="container">
 
-    <div class="section-head">
+    <div class="section-head center">
 
-      <div class="eyebrow">
-        How We Work
+      <div class="section-kicker">
+        OUR PROCESS
       </div>
 
       <h2>
-        A simple process from idea to project.
+        How we work with you.
       </h2>
 
       <p>
-        Submit your requirements and start a conversation about your project.
+        A structured project journey from consultation
+        through delivery.
       </p>
 
     </div>
+
 
     <div class="process-grid">
 
-      <div class="process-card">
-        <div class="process-number">01</div>
-        <h3>Consultation</h3>
-        <p>Tell us what you want to build or improve.</p>
+      <div class="step">
+
+        <div class="step-number">
+          01
+        </div>
+
+        <h3>
+          Consultation
+        </h3>
+
+        <p>
+          Understand your goals and requirements.
+        </p>
+
       </div>
 
-      <div class="process-card">
-        <div class="process-number">02</div>
-        <h3>Assessment</h3>
-        <p>Review location, requirements and project scope.</p>
+
+      <div class="step">
+
+        <div class="step-number">
+          02
+        </div>
+
+        <h3>
+          Assessment
+        </h3>
+
+        <p>
+          Review site, scope and technical needs.
+        </p>
+
       </div>
 
-      <div class="process-card">
-        <div class="process-number">03</div>
-        <h3>Planning</h3>
-        <p>Discuss design, technical requirements and direction.</p>
+
+      <div class="step">
+
+        <div class="step-number">
+          03
+        </div>
+
+        <h3>
+          Planning
+        </h3>
+
+        <p>
+          Develop the project approach.
+        </p>
+
       </div>
 
-      <div class="process-card">
-        <div class="process-number">04</div>
-        <h3>Construction</h3>
-        <p>Move into the agreed implementation stage.</p>
+
+      <div class="step">
+
+        <div class="step-number">
+          04
+        </div>
+
+        <h3>
+          Construction
+        </h3>
+
+        <p>
+          Coordinate the work and execution.
+        </p>
+
       </div>
 
-      <div class="process-card">
-        <div class="process-number">05</div>
-        <h3>Handover</h3>
-        <p>Complete the agreed project scope and requirements.</p>
+
+      <div class="step">
+
+        <div class="step-number">
+          05
+        </div>
+
+        <h3>
+          Handover
+        </h3>
+
+        <p>
+          Review completed work and handover.
+        </p>
+
       </div>
 
     </div>
@@ -2468,82 +3500,137 @@ footer{
 </section>
 
 
-<!-- ======================================================
-     TUTORIAL
-====================================================== -->
 
-<section class="section" id="tutorial">
+<!-- =========================================================
+     HOUSE DESIGNS
+========================================================= -->
+
+<section
+  class="section"
+  id="designs">
 
   <div class="container">
 
-    <div class="tutorial-grid">
+    <div class="section-head">
 
-      <div class="tutorial-box">
+      <div class="section-kicker">
+        HOUSE DESIGNS
+      </div>
 
-        <div class="tutorial-screen">
+      <h2>
+        Modern homes designed around your lifestyle.
+      </h2>
 
-          <div class="step-icon" id="tutorialIcon">
-            📝
-          </div>
+      <p>
+        Explore different architectural directions for
+        residential projects.
+      </p>
 
-          <h3 id="tutorialTitle">
-            Fill Application
+    </div>
+
+
+    <div class="house-grid">
+
+
+      <div class="house">
+
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=88"
+          alt="Modern residence">
+
+        <div class="house-label">
+
+          <small>
+            RESIDENTIAL
+          </small>
+
+          <h3>
+            Modern Family Residence
           </h3>
 
-          <p id="tutorialText">
-            Enter your project details and location.
-          </p>
-
-        </div>
-
-        <div class="progress">
-          <span id="tutorialProgress"></span>
         </div>
 
       </div>
 
 
-      <div class="tutorial-copy">
+      <div class="house">
 
-        <div class="eyebrow">
-          5-Second Website Tutorial
+        <img
+          src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=88"
+          alt="Contemporary home">
+
+        <div class="house-label">
+
+          <small>
+            CONTEMPORARY
+          </small>
+
+          <h3>
+            Contemporary Home
+          </h3>
+
         </div>
 
-        <h2>
-          Starting a project is only a few steps away.
-        </h2>
+      </div>
 
-        <p>
-          The website guides clients through the application process
-          and prepares project details for WhatsApp.
-        </p>
 
-        <div class="tutorial-list">
+      <div class="house">
 
-          <div>
-            <b>01</b>
-            <span>Choose the service you need.</span>
-          </div>
+        <img
+          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=88"
+          alt="Modern interior">
 
-          <div>
-            <b>02</b>
-            <span>Enter your contact and project location.</span>
-          </div>
+        <div class="house-label">
 
-          <div>
-            <b>03</b>
-            <span>Describe your project.</span>
-          </div>
+          <small>
+            INTERIOR
+          </small>
 
-          <div>
-            <b>04</b>
-            <span>Submit the application.</span>
-          </div>
+          <h3>
+            Modern Interior
+          </h3>
 
-          <div>
-            <b>05</b>
-            <span>WhatsApp opens with the prepared details.</span>
-          </div>
+        </div>
+
+      </div>
+
+
+      <div class="house">
+
+        <img
+          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=88"
+          alt="Executive house">
+
+        <div class="house-label">
+
+          <small>
+            PREMIUM
+          </small>
+
+          <h3>
+            Executive Residence
+          </h3>
+
+        </div>
+
+      </div>
+
+
+      <div class="house">
+
+        <img
+          src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=88"
+          alt="Luxury house">
+
+        <div class="house-label">
+
+          <small>
+            ARCHITECTURE
+          </small>
+
+          <h3>
+            Luxury Living Space
+          </h3>
 
         </div>
 
@@ -2556,446 +3643,552 @@ footer{
 </section>
 
 
-<!-- ======================================================
+
+<!-- =========================================================
      APPLICATION
-====================================================== -->
+========================================================= -->
 
-<section class="section application" id="application">
+<section
+  class="section application"
+  id="application">
 
-  <div class="container">
+  <div class="container application-grid">
 
-    <div class="application-grid">
 
-      <div class="application-copy">
+    <div class="application-intro">
 
-        <div class="eyebrow">
-          Start A Project
+      <div class="section-kicker">
+        START A PROJECT
+      </div>
+
+      <h2>
+        Tell MESHAQ what you want to build.
+      </h2>
+
+      <p>
+        Complete the application and send your project
+        information directly to the MESHAQ WhatsApp line.
+      </p>
+
+
+      <div class="application-benefits">
+
+        <div>
+          <span>✓</span>
+          Kenya-based application
         </div>
 
-        <h2>
-          Tell us what you want to build.
-        </h2>
+        <div>
+          <span>✓</span>
+          Choose from all 47 counties
+        </div>
 
-        <p>
-          Complete the application and your project information
-          will be formatted into a WhatsApp message for direct
-          communication with MESHAQ Connection Limited.
-        </p>
+        <div>
+          <span>✓</span>
+          Describe your project
+        </div>
 
-        <div class="application-points">
+        <div>
+          <span>✓</span>
+          Select required services
+        </div>
 
-          <div>
-            <span>✓</span>
-            <span>Select your Kenya county.</span>
-          </div>
+        <div>
+          <span>✓</span>
+          Provide project location
+        </div>
 
-          <div>
-            <span>✓</span>
-            <span>Select one or multiple services.</span>
-          </div>
-
-          <div>
-            <span>✓</span>
-            <span>Receive an application reference.</span>
-          </div>
-
-          <div>
-            <span>✓</span>
-            <span>Submit through WhatsApp.</span>
-          </div>
-
-          <div>
-            <span>✓</span>
-            <span>MESHAQ is open 24/7 for enquiries.</span>
-          </div>
-
+        <div>
+          <span>✓</span>
+          Send directly through WhatsApp
         </div>
 
       </div>
 
 
-      <div class="form-card">
+      <br>
+
+
+      <p style="font-size:11px">
+
+        Never enter passwords, M-PESA PINs, card PINs or
+        other confidential authentication information.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="form-card">
+
+      <div class="form-card-header">
 
         <h3>
           Project Application
         </h3>
 
         <p>
-          Please provide accurate information so your request
-          can be understood clearly.
+          Complete the form below. Your application will be
+          formatted into a WhatsApp message.
         </p>
 
-        <form id="projectForm">
-
-          <div class="form-grid">
-
-            <div class="field">
-
-              <label for="fullName">
-                Full Name *
-              </label>
-
-              <input
-                id="fullName"
-                name="fullName"
-                type="text"
-                placeholder="Your full name"
-                required
-              >
-
-            </div>
+      </div>
 
 
-            <div class="field">
+      <form
+        id="projectForm"
+        novalidate>
 
-              <label for="phone">
-                Phone Number *
-              </label>
+
+        <div class="form-grid">
+
+
+          <!-- FULL NAME -->
+
+          <div class="field">
+
+            <label for="name">
+
+              Full Name
+              <span class="required">*</span>
+
+            </label>
+
+            <input
+              id="name"
+              type="text"
+              required
+              autocomplete="name"
+              placeholder="Enter your full name">
+
+          </div>
+
+
+
+          <!-- PHONE -->
+
+          <div class="field">
+
+            <label for="phone">
+
+              Kenyan Phone Number
+              <span class="required">*</span>
+
+            </label>
+
+            <div class="phone-wrapper">
+
+              <div class="phone-prefix">
+                +254
+              </div>
 
               <input
                 id="phone"
-                name="phone"
                 type="tel"
-                inputmode="tel"
-                placeholder="07XXXXXXXX"
+                inputmode="numeric"
+                autocomplete="tel"
+                maxlength="13"
                 required
-              >
+                placeholder="712345678">
+
+            </div>
+
+            <div
+              class="input-status"
+              id="phoneStatus">
+            </div>
+
+          </div>
+
+
+
+          <!-- EMAIL -->
+
+          <div class="field">
+
+            <label for="email">
+              Email Address
+            </label>
+
+            <input
+              id="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com">
+
+          </div>
+
+
+
+          <!-- PROJECT TYPE -->
+
+          <div class="field">
+
+            <label for="projectType">
+
+              Project Type
+              <span class="required">*</span>
+
+            </label>
+
+            <select
+              id="projectType"
+              required>
+
+              <option value="">
+                Select project type
+              </option>
+
+              <option>
+                Residential House
+              </option>
+
+              <option>
+                Commercial Building
+              </option>
+
+              <option>
+                Industrial Project
+              </option>
+
+              <option>
+                Renovation
+              </option>
+
+              <option>
+                Civil Works
+              </option>
+
+              <option>
+                Infrastructure
+              </option>
+
+              <option>
+                Other
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- KENYA LOCATION -->
+
+          <div class="location-box">
+
+            <div class="kenya-badge">
+              🇰🇪 KENYA ONLY
+            </div>
+
+            <div class="location-title">
+              📍 Your Location in Kenya
+            </div>
+
+            <div class="location-description">
+
+              Select your county from all 47 official Kenya
+              counties.
 
             </div>
 
 
-            <div class="field">
-
-              <label for="email">
-                Email
-              </label>
-
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="you@example.com"
-              >
-
-            </div>
+            <div class="location-grid">
 
 
-            <div class="field">
+              <div class="field">
 
-              <label for="country">
-                Country *
-              </label>
-
-              <select id="country" name="country" required>
-
-                <option value="">
-                  Select country
-                </option>
-
-                <option value="Kenya">
-                  Kenya
-                </option>
-
-                <option value="Uganda">
-                  Uganda
-                </option>
-
-                <option value="Tanzania">
-                  Tanzania
-                </option>
-
-                <option value="Rwanda">
-                  Rwanda
-                </option>
-
-                <option value="South Sudan">
-                  South Sudan
-                </option>
-
-                <option value="Other">
-                  Other
-                </option>
-
-              </select>
-
-            </div>
-
-
-            <div class="field">
-
-              <label for="county">
-                Kenya County *
-              </label>
-
-              <select
-                id="county"
-                name="county"
-                disabled
-              >
-
-                <option value="">
-                  Select county
-                </option>
-
-              </select>
-
-            </div>
-
-
-            <div class="field">
-
-              <label for="town">
-                Project Town / Area *
-              </label>
-
-              <input
-                id="town"
-                name="town"
-                type="text"
-                placeholder="e.g. Kisumu, Kendule"
-                required
-              >
-
-            </div>
-
-
-            <div class="field">
-
-              <label for="projectType">
-                Project Type *
-              </label>
-
-              <select
-                id="projectType"
-                name="projectType"
-                required
-              >
-
-                <option value="">
-                  Select project type
-                </option>
-
-                <option>
-                  Residential House
-                </option>
-
-                <option>
-                  Commercial Building
-                </option>
-
-                <option>
-                  Office Building
-                </option>
-
-                <option>
-                  Apartment / Flats
-                </option>
-
-                <option>
-                  Renovation
-                </option>
-
-                <option>
-                  Road / Civil Works
-                </option>
-
-                <option>
-                  Structural Project
-                </option>
-
-                <option>
-                  Other
-                </option>
-
-              </select>
-
-            </div>
-
-
-            <div class="field">
-
-              <label for="budget">
-                Estimated Budget
-              </label>
-
-              <select
-                id="budget"
-                name="budget"
-              >
-
-                <option value="">
-                  Select budget range
-                </option>
-
-                <option>
-                  Below KSh 500,000
-                </option>
-
-                <option>
-                  KSh 500,000 – 1 Million
-                </option>
-
-                <option>
-                  KSh 1 Million – 3 Million
-                </option>
-
-                <option>
-                  KSh 3 Million – 5 Million
-                </option>
-
-                <option>
-                  KSh 5 Million – 10 Million
-                </option>
-
-                <option>
-                  Above KSh 10 Million
-                </option>
-
-                <option>
-                  Not Yet Decided
-                </option>
-
-              </select>
-
-            </div>
-
-
-            <div class="field full">
-
-              <label>
-                Services Required *
-              </label>
-
-              <div class="services-select">
-
-                <label class="service-check">
-                  <input
-                    type="checkbox"
-                    name="services"
-                    value="Building & Contracting"
-                  >
-                  Building & Contracting
+                <label for="country">
+                  Country
                 </label>
 
-                <label class="service-check">
-                  <input
-                    type="checkbox"
-                    name="services"
-                    value="Civil Engineering"
-                  >
-                  Civil Engineering
-                </label>
+                <select
+                  id="country"
+                  required>
 
-                <label class="service-check">
-                  <input
-                    type="checkbox"
-                    name="services"
-                    value="Structural Solutions"
-                  >
-                  Structural Solutions
-                </label>
+                  <option value="Kenya">
+                    🇰🇪 Kenya
+                  </option>
 
-                <label class="service-check">
-                  <input
-                    type="checkbox"
-                    name="services"
-                    value="House Design"
-                  >
-                  House Design
-                </label>
-
-                <label class="service-check">
-                  <input
-                    type="checkbox"
-                    name="services"
-                    value="Project Management"
-                  >
-                  Project Management
-                </label>
-
-                <label class="service-check">
-                  <input
-                    type="checkbox"
-                    name="services"
-                    value="Technical Consultancy"
-                  >
-                  Technical Consultancy
-                </label>
+                </select>
 
               </div>
 
-            </div>
 
 
-            <div class="field full">
+              <div class="field">
 
-              <label for="message">
-                Tell Us About Your Project *
-              </label>
+                <label for="county">
 
-              <textarea
-                id="message"
-                name="message"
-                maxlength="1000"
-                placeholder="Describe the house, building, construction or engineering project..."
-                required
-              ></textarea>
+                  County
+                  <span class="required">*</span>
 
-              <div class="char-count">
-                <span id="charCount">0</span>/1000
+                </label>
+
+                <select
+                  id="county"
+                  required>
+
+                  <option value="">
+                    Select your county
+                  </option>
+
+                </select>
+
+                <div
+                  class="county-help"
+                  id="countyHelp">
+                </div>
+
               </div>
-
-            </div>
-
-
-            <div class="field">
-
-              <label for="startDate">
-                Preferred Start Date
-              </label>
-
-              <input
-                id="startDate"
-                name="startDate"
-                type="date"
-              >
 
             </div>
 
           </div>
 
 
-          <div
-            class="live-summary"
-            id="liveSummary"
-          >
 
-            <strong>
-              Application Preview
-            </strong>
+          <!-- PROJECT AREA -->
 
-            <p id="summaryText">
-              Complete the required fields to preview your request.
-            </p>
+          <div class="field">
+
+            <label for="projectLocation">
+
+              Project Town / Area
+              <span class="required">*</span>
+
+            </label>
+
+            <input
+              id="projectLocation"
+              type="text"
+              required
+              placeholder="e.g. Kabarnet, Nairobi, Kisumu">
 
           </div>
 
+
+
+          <!-- BUDGET -->
+
+          <div class="field">
+
+            <label for="budget">
+              Estimated Budget
+            </label>
+
+            <select id="budget">
+
+              <option value="">
+                Select budget range
+              </option>
+
+              <option>
+                Below KSh 500,000
+              </option>
+
+              <option>
+                KSh 500,000 – 1M
+              </option>
+
+              <option>
+                KSh 1M – 5M
+              </option>
+
+              <option>
+                KSh 5M – 10M
+              </option>
+
+              <option>
+                Above KSh 10M
+              </option>
+
+              <option>
+                Not yet determined
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- SERVICES -->
+
+          <div class="field full">
+
+            <label>
+              Services Required
+            </label>
+
+
+            <div class="service-options">
+
+
+              <label class="service-option">
+
+                <input
+                  type="checkbox"
+                  name="services"
+                  value="Construction & Contracting">
+
+                Construction & Contracting
+
+              </label>
+
+
+              <label class="service-option">
+
+                <input
+                  type="checkbox"
+                  name="services"
+                  value="Civil Engineering">
+
+                Civil Engineering
+
+              </label>
+
+
+              <label class="service-option">
+
+                <input
+                  type="checkbox"
+                  name="services"
+                  value="Structural Solutions">
+
+                Structural Solutions
+
+              </label>
+
+
+              <label class="service-option">
+
+                <input
+                  type="checkbox"
+                  name="services"
+                  value="House Design">
+
+                House Design
+
+              </label>
+
+
+              <label class="service-option">
+
+                <input
+                  type="checkbox"
+                  name="services"
+                  value="Project Management">
+
+                Project Management
+
+              </label>
+
+
+              <label class="service-option">
+
+                <input
+                  type="checkbox"
+                  name="services"
+                  value="Consultancy">
+
+                Consultancy
+
+              </label>
+
+
+            </div>
+
+          </div>
+
+
+
+          <!-- MESSAGE -->
+
+          <div class="field full">
+
+            <label for="message">
+
+              Tell us about your project
+
+              <span class="required">*</span>
+
+            </label>
+
+            <textarea
+              id="message"
+              required
+              placeholder="Describe what you want to build, your requirements, project size, current stage or anything else we should know..."></textarea>
+
+          </div>
+
+
+
+          <!-- START DATE -->
+
+          <div class="field full">
+
+            <label for="startDate">
+
+              Preferred Start Date
+
+            </label>
+
+            <input
+              id="startDate"
+              type="date">
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- WHATSAPP -->
+
+        <div class="whatsapp-submit">
+
+          <div class="whatsapp-submit-title">
+
+            💬 Send Application Directly to MESHAQ WhatsApp
+
+          </div>
+
+          <div class="whatsapp-submit-text">
+
+            Your application will be formatted automatically.
+            WhatsApp will open so you can review it before
+            sending.
+
+          </div>
 
           <button
-            class="btn btn-whatsapp submit-btn"
             type="submit"
-          >
-            💬 Submit Application on WhatsApp →
+            class="whatsapp-button">
+
+            <span class="whatsapp-icon">
+              💬
+            </span>
+
+            SUBMIT APPLICATION VIA WHATSAPP
+
           </button>
 
-          <p class="form-note">
-            Your application will be prepared and WhatsApp will open
-            with the project information ready for submission.
-          </p>
+        </div>
 
-        </form>
 
-      </div>
+        <div class="form-note">
+
+          WhatsApp must be installed or accessible on the
+          device. The application is not automatically sent
+          until the client taps the WhatsApp Send button.
+
+        </div>
+
+
+      </form>
 
     </div>
 
@@ -3004,359 +4197,24 @@ footer{
 </section>
 
 
-<!-- ======================================================
-     LOCATION
-====================================================== -->
 
-<section class="section location-section" id="location">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="eyebrow">
-        Our Office Location
-      </div>
-
-      <h2>
-        Find MESHAQ in Kisumu.
-      </h2>
-
-      <p>
-        Our stated office location is Kendule, Kisumu, Kenya.
-        Use the live map to view the area and get directions.
-      </p>
-
-    </div>
-
-
-    <div class="location-grid">
-
-      <div class="location-card">
-
-        <span class="open-status">
-          <span class="open-dot"></span>
-          Open 24/7
-        </span>
-
-        <h3>
-          MESHAQ Connection Limited
-        </h3>
-
-        <p>
-          Engineering, construction, civil works, structural solutions,
-          house design and project support.
-        </p>
-
-        <div class="location-list">
-
-          <div class="location-row">
-
-            <div class="location-icon">
-              📍
-            </div>
-
-            <div>
-              <small>
-                Office Location
-              </small>
-
-              <strong>
-                Kendule, Kisumu, Kenya
-              </strong>
-            </div>
-
-          </div>
-
-
-          <div class="location-row">
-
-            <div class="location-icon">
-              🏙️
-            </div>
-
-            <div>
-              <small>
-                City / County
-              </small>
-
-              <strong>
-                Kisumu, Kisumu County
-              </strong>
-            </div>
-
-          </div>
-
-
-          <div class="location-row">
-
-            <div class="location-icon">
-              🕐
-            </div>
-
-            <div>
-              <small>
-                Business Availability
-              </small>
-
-              <strong>
-                Open 24 hours / 7 days
-              </strong>
-            </div>
-
-          </div>
-
-
-          <div class="location-row">
-
-            <div class="location-icon">
-              ☎️
-            </div>
-
-            <div>
-              <small>
-                Call
-              </small>
-
-              <strong>
-                <a href="tel:0712242050">
-                  0712242050
-                </a>
-              </strong>
-            </div>
-
-          </div>
-
-
-          <div class="location-row">
-
-            <div class="location-icon">
-              💬
-            </div>
-
-            <div>
-              <small>
-                WhatsApp
-              </small>
-
-              <strong>
-                <a
-                  href="https://wa.me/254712242050"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Chat with MESHAQ
-                </a>
-              </strong>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=Kendule%2C%20Kisumu%2C%20Kenya"
-            target="_blank"
-            rel="noopener"
-            class="btn btn-dark"
-          >
-            📍 Get Directions
-          </a>
-
-          <a
-            href="tel:0712242050"
-            class="btn btn-gold"
-          >
-            ☎ Call Office
-          </a>
-
-        </div>
-
-        <p class="map-note">
-          The map below uses a live Google Maps search for Kendule,
-          Kisumu, Kenya. If your office has a specific street,
-          building or Plus Code, replace the map query with that
-          exact address for a precise pin.
-        </p>
-
-      </div>
-
-
-      <div class="map-box">
-
-        <iframe
-          title="MESHAQ Connection Limited location in Kendule, Kisumu, Kenya"
-          src="https://www.google.com/maps?q=Kendule%2C%20Kisumu%2C%20Kenya&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
-        </iframe>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
-     FAQ
-====================================================== -->
-
-<section class="section section-light" id="faq">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div class="eyebrow">
-        Frequently Asked Questions
-      </div>
-
-      <h2>
-        Questions clients may have.
-      </h2>
-
-      <p>
-        Find quick information before submitting your project request.
-      </p>
-
-    </div>
-
-
-    <div class="faq">
-
-      <div class="faq-item">
-
-        <button
-          class="faq-question"
-          type="button"
-        >
-          Can I contact MESHAQ directly?
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-          Yes. Tap any phone number to open your phone's
-          calling interface, or use WhatsApp for messaging.
-        </div>
-
-      </div>
-
-
-      <div class="faq-item">
-
-        <button
-          class="faq-question"
-          type="button"
-        >
-          Where is the MESHAQ office?
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-          The stated office location is Kendule, Kisumu, Kenya.
-          The website includes a live Google Maps search for the area.
-        </div>
-
-      </div>
-
-
-      <div class="faq-item">
-
-        <button
-          class="faq-question"
-          type="button"
-        >
-          Is MESHAQ available 24/7?
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-          MESHAQ Connection Limited is presented on this website
-          as open 24 hours a day, 7 days a week for enquiries.
-        </div>
-
-      </div>
-
-
-      <div class="faq-item">
-
-        <button
-          class="faq-question"
-          type="button"
-        >
-          Can I apply from any county in Kenya?
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-          Yes. The application form includes all 47 Kenyan counties.
-        </div>
-
-      </div>
-
-
-      <div class="faq-item">
-
-        <button
-          class="faq-question"
-          type="button"
-        >
-          How does WhatsApp application work?
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-          After completing the form, the website creates a structured
-          application message and opens WhatsApp with the information.
-        </div>
-
-      </div>
-
-
-      <div class="faq-item">
-
-        <button
-          class="faq-question"
-          type="button"
-        >
-          Are the house pictures actual MESHAQ projects?
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-          The gallery is presented as design inspiration and concept
-          imagery. Verified MESHAQ project photographs should be used
-          when available.
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
+<!-- =========================================================
      CONTACT
-====================================================== -->
+========================================================= -->
 
-<section class="section" id="contact">
+<section
+  class="section"
+  id="contact">
 
-  <div class="container">
+  <div class="container contact-grid">
 
-    <div class="section-head">
 
-      <div class="eyebrow">
-        Contact MESHAQ
+    <!-- CONTACT INFORMATION -->
+
+    <div class="contact-card contact-info">
+
+      <div class="section-kicker">
+        CONTACT MESHAQ
       </div>
 
       <h2>
@@ -3364,269 +4222,37 @@ footer{
       </h2>
 
       <p>
-        Choose the communication method that works best for you.
+        Contact the MESHAQ team for construction,
+        engineering, design and project enquiries.
       </p>
 
-    </div>
 
+      <!-- OFFICE -->
 
-    <div class="location-grid">
+      <div class="contact-row">
 
-      <div class="location-card">
-
-        <span class="open-status">
-          <span class="open-dot"></span>
-          Open 24/7
-        </span>
-
-        <h3>
-          MESHAQ Connection Limited
-        </h3>
-
-        <p>
-          Engineering, construction, design and project support.
-        </p>
-
-        <div class="location-list">
-
-          <div class="location-row">
-
-            <div class="location-icon">
-              ☎️
-            </div>
-
-            <div>
-              <small>
-                Office Line
-              </small>
-
-              <strong>
-                <a href="tel:0712242050">
-                  0712242050
-                </a>
-              </strong>
-            </div>
-
-          </div>
-
-
-          <div class="location-row">
-
-            <div class="location-icon">
-              ☎️
-            </div>
-
-            <div>
-              <small>
-                Office Line
-              </small>
-
-              <strong>
-                <a href="tel:0732444187">
-                  0732444187
-                </a>
-              </strong>
-            </div>
-
-          </div>
-
-
-          <div class="location-row">
-
-            <div class="location-icon">
-              📞
-            </div>
-
-            <div>
-              <small>
-                Hotline / Agent
-              </small>
-
-              <strong>
-                <a href="tel:0141976710">
-                  0141 976710
-                </a>
-              </strong>
-            </div>
-
-          </div>
-
-
-          <div class="location-row">
-
-            <div class="location-icon">
-              ✉️
-            </div>
-
-            <div>
-              <small>
-                Email Support
-              </small>
-
-              <strong>
-                <a href="mailto:meshaqengineeringlimitedsupport@gmail.com">
-                  meshaqengineeringlimitedsupport@gmail.com
-                </a>
-              </strong>
-            </div>
-
-          </div>
-
-
-          <div class="location-row">
-
-            <div class="location-icon">
-              📍
-            </div>
-
-            <div>
-              <small>
-                Office Location
-              </small>
-
-              <strong>
-                Kendule, Kisumu, Kenya
-              </strong>
-            </div>
-
-          </div>
-
+        <div class="contact-icon">
+          ☎
         </div>
 
+        <div>
 
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <strong>
+            OFFICE NUMBERS
+          </strong>
 
-          <a
-            href="tel:0712242050"
-            class="btn btn-dark"
-          >
-            ☎ Call
-          </a>
+          <span>
 
-          <a
-            href="https://wa.me/254712242050"
-            target="_blank"
-            rel="noopener"
-            class="btn btn-whatsapp"
-          >
-            💬 WhatsApp
-          </a>
+            <a href="tel:+254712242050">
+              +254 712 242050
+            </a>
 
-        </div>
+            &nbsp; / &nbsp;
 
-      </div>
+            <a href="tel:+254732444187">
+              +254 732 444187
+            </a>
 
-
-      <div class="map-box">
-
-        <iframe
-          title="Kendule Kisumu Kenya map"
-          src="https://www.google.com/maps?q=Kendule%2C%20Kisumu%2C%20Kenya&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
-        </iframe>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
-     FINAL CTA
-====================================================== -->
-
-<section class="final-cta">
-
-  <div class="container final-cta-inner">
-
-    <div>
-
-      <h2>
-        Have a project in mind?
-      </h2>
-
-      <p>
-        Start by telling MESHAQ Connection Limited what you need.
-      </p>
-
-    </div>
-
-
-    <div class="final-actions">
-
-      <a
-        href="#application"
-        class="btn btn-dark"
-      >
-        Start Application
-      </a>
-
-      <a
-        href="https://wa.me/254712242050"
-        target="_blank"
-        rel="noopener"
-        class="btn btn-whatsapp"
-      >
-        WhatsApp
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
-     FOOTER
-====================================================== -->
-
-<footer>
-
-  <div class="container">
-
-    <div class="footer-grid">
-
-      <div class="footer-brand">
-
-        <div
-          class="logo"
-          style="color:#fff;"
-        >
-
-          <div class="logo-mark">
-            MC
-          </div>
-
-          <div class="logo-text">
-
-            <strong style="color:#fff;">
-              MESHAQ
-            </strong>
-
-            <span style="color:#9eabba;">
-              CONNECTION LIMITED
-            </span>
-
-          </div>
-
-        </div>
-
-        <p>
-          Engineering, construction, civil works, structural solutions,
-          modern house design and project support.
-        </p>
-
-        <div style="margin-top:15px;">
-
-          <span class="open-status">
-            <span class="open-dot"></span>
-            Open 24/7
           </span>
 
         </div>
@@ -3634,11 +4260,272 @@ footer{
       </div>
 
 
+
+      <!-- HOTLINE -->
+
+      <div class="contact-row">
+
+        <div class="contact-icon">
+          ☎
+        </div>
+
+        <div>
+
+          <strong>
+            HOTLINE / AGENT LINE
+          </strong>
+
+          <span>
+
+            <a href="tel:+254141976710">
+              +254 141 976710
+            </a>
+
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- EMAIL -->
+
+      <div class="contact-row">
+
+        <div class="contact-icon">
+          ✉
+        </div>
+
+        <div>
+
+          <strong>
+            EMAIL SUPPORT
+          </strong>
+
+          <span>
+
+            <a href="mailto:meshaqengineeringlimitedsupport@gmail.com">
+
+              meshaqengineeringlimitedsupport@gmail.com
+
+            </a>
+
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- LOCATION -->
+
+      <div class="contact-row">
+
+        <div class="contact-icon">
+          📍
+        </div>
+
+        <div>
+
+          <strong>
+            OFFICE LOCATION
+          </strong>
+
+          <span>
+            Kisumu, Kenya • 5th Floor
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="contact-buttons">
+
+        <a
+          href="tel:+254712242050"
+          class="btn btn-gold">
+
+          ☎ CALL OFFICE
+
+        </a>
+
+
+        <a
+          href="https://wa.me/254712242050"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-whatsapp">
+
+          💬 WHATSAPP
+
+        </a>
+
+
+        <a
+          href="mailto:meshaqengineeringlimitedsupport@gmail.com"
+          class="btn"
+          style="background:#fff;color:#07111f">
+
+          ✉ EMAIL
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- REAL MAP -->
+
+    <div class="contact-card contact-map">
+
+      <div id="meshaqMap"></div>
+
+
+      <div class="map-card">
+
+        <div class="map-badge">
+
+          📍 OFFICE LOCATION
+
+        </div>
+
+
+        <h3>
+          MESHAQ Engineering & Contractors
+        </h3>
+
+
+        <div class="map-address">
+
+          <strong>
+            Kenya, Kisumu
+          </strong>
+
+          <br>
+
+          5th Floor
+
+          <br>
+
+          Kisumu, Kenya
+
+        </div>
+
+
+        <div class="map-actions">
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=MESHAQ+Engineering+%26+Contractors+Kisumu+Kenya"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-gold">
+
+            📍 GET DIRECTIONS
+
+          </a>
+
+
+          <a
+            href="#application"
+            class="btn"
+            style="background:var(--navy);color:#fff">
+
+            START PROJECT
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+
       <div>
 
-        <div class="footer-title">
-          Company
+        <div class="logo">
+
+          <svg
+            class="logo-mark"
+            viewBox="0 0 100 100"
+            fill="none">
+
+            <rect
+              x="3"
+              y="3"
+              width="94"
+              height="94"
+              rx="18"
+              fill="#DFAF35"/>
+
+            <path
+              d="M18 75V28L31 42L44 25L57 42L70 28V75"
+              stroke="#071A2B"
+              stroke-width="8"/>
+
+            <path
+              d="M18 75H82"
+              stroke="#071A2B"
+              stroke-width="8"/>
+
+          </svg>
+
+
+          <div class="logo-text">
+
+            <strong>
+              MESHAQ
+            </strong>
+
+            <small>
+              ENGINEERING & CONTRACTORS
+            </small>
+
+          </div>
+
         </div>
+
+
+        <p class="footer-about">
+
+          Engineering and construction solutions built around
+          precision, quality, communication and responsible
+          project execution in Kenya.
+
+        </p>
+
+      </div>
+
+
+
+      <div>
+
+        <h3>
+          Company
+        </h3>
 
         <div class="footer-links">
 
@@ -3651,40 +4538,15 @@ footer{
           </a>
 
           <a href="#designs">
-            House Designs
+            Designs
           </a>
 
           <a href="#process">
             How We Work
           </a>
 
-          <a href="#location">
-            Location
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <div>
-
-        <div class="footer-title">
-          Client
-        </div>
-
-        <div class="footer-links">
-
           <a href="#application">
-            Start a Project
-          </a>
-
-          <a href="#faq">
-            FAQ
-          </a>
-
-          <a href="#tutorial">
-            How The System Works
+            Start Project
           </a>
 
         </div>
@@ -3692,36 +4554,72 @@ footer{
       </div>
 
 
+
       <div>
 
-        <div class="footer-title">
-          Contact
-        </div>
+        <h3>
+          Services
+        </h3>
 
         <div class="footer-links">
 
-          <a href="tel:0712242050">
-            0712242050
+          <a href="#services">
+            Construction
           </a>
 
-          <a href="tel:0732444187">
-            0732444187
+          <a href="#services">
+            Civil Engineering
           </a>
 
-          <a href="tel:0141976710">
-            0141 976710
+          <a href="#services">
+            Structural Works
+          </a>
+
+          <a href="#services">
+            House Design
+          </a>
+
+          <a href="#services">
+            Consultancy
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div>
+
+        <h3>
+          Contact
+        </h3>
+
+        <div class="footer-links">
+
+          <a href="tel:+254712242050">
+            ☎ +254 712 242050
+          </a>
+
+          <a href="tel:+254732444187">
+            ☎ +254 732 444187
+          </a>
+
+          <a href="tel:+254141976710">
+            ☎ +254 141 976710
           </a>
 
           <a href="mailto:meshaqengineeringlimitedsupport@gmail.com">
-            Email MESHAQ
+            ✉ Email Support
           </a>
 
           <a
             href="https://wa.me/254712242050"
             target="_blank"
-            rel="noopener"
-          >
-            WhatsApp
+            rel="noopener">
+
+            💬 WhatsApp
+
           </a>
 
         </div>
@@ -3731,16 +4629,24 @@ footer{
     </div>
 
 
-    <div class="footer-bottom">
+    <div class="copyright">
 
       <span>
-        © <span id="year"></span>
-        MESHAQ Connection Limited.
+
+        ©
+        <span id="year"></span>
+
+        MESHAQ Engineering & Contractors.
+
         All rights reserved.
+
       </span>
 
+
       <span>
-        Kendule • Kisumu • Kenya • Open 24/7
+
+        Engineering Excellence. Building the Future.
+
       </span>
 
     </div>
@@ -3750,108 +4656,182 @@ footer{
 </footer>
 
 
-<!-- ======================================================
-     FIXED CALL + WHATSAPP
-     STABLE / NO WAVE / NO ANIMATION
-====================================================== -->
 
-<div class="quick-contact">
+<!-- =========================================================
+     FLOATING BUTTONS
+========================================================= -->
+
+<div class="floating">
+
 
   <a
     href="https://wa.me/254712242050"
     target="_blank"
     rel="noopener"
-    class="quick-whatsapp"
-    aria-label="WhatsApp MESHAQ"
-  >
-    💬 WhatsApp
+    class="float float-whatsapp"
+    aria-label="WhatsApp MESHAQ">
+
+    💬
+
   </a>
 
+
   <a
-    href="tel:0712242050"
-    class="quick-call"
-    aria-label="Call MESHAQ"
-  >
-    ☎ Call MESHAQ
+    href="tel:+254712242050"
+    class="float float-call"
+    aria-label="Call MESHAQ">
+
+    ☎
+
   </a>
+
 
 </div>
 
 
-<!-- ======================================================
+
+<!-- =========================================================
      SUCCESS MODAL
-====================================================== -->
+========================================================= -->
 
 <div
   class="modal"
-  id="successModal"
->
+  id="successModal">
 
-  <div class="modal-card">
+  <div class="modal-box">
+
+
+    <button
+      class="close-modal"
+      id="closeModal"
+      aria-label="Close">
+
+      ×
+
+    </button>
+
 
     <div class="success-icon">
       ✓
     </div>
 
-    <h2 id="successGreeting">
-      Jambo!
+
+    <h2>
+      Application Prepared
     </h2>
 
-    <p>
-      Your application has been prepared successfully.
+
+    <p
+      style="color:#667085;margin-top:8px">
+
+      WhatsApp is being opened with your
+      project application.
+
     </p>
+
 
     <div class="reference">
 
-      Application Reference:
-      <span id="applicationReference"></span>
+      <small>
+        APPLICATION REFERENCE
+      </small>
+
+      <strong
+        id="referenceNumber">
+      </strong>
 
     </div>
 
-    <p>
-      WhatsApp will open with your project details ready for submission.
+
+    <p
+      style="font-size:12px;color:#667085;margin-bottom:18px">
+
+      Once WhatsApp opens, review the application
+      and tap <strong>Send</strong>.
+
     </p>
 
-    <div class="modal-actions">
 
-      <button
-        class="btn btn-dark"
-        id="continueWhatsApp"
-        type="button"
-      >
-        Continue to WhatsApp
-      </button>
+    <button
+      id="doneBtn"
+      class="btn btn-whatsapp"
+      style="width:100%">
 
-      <button
-        class="btn"
-        id="closeModal"
-        type="button"
-      >
-        Close
-      </button>
+      OPENED / DONE
 
-    </div>
+    </button>
 
   </div>
 
 </div>
 
 
-<!-- ======================================================
-     JAVASCRIPT
-====================================================== -->
+
+<!-- =========================================================
+     LEAFLET MAP LIBRARY
+========================================================= -->
+
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+
 
 <script>
 
 /* =========================================================
-   CONFIGURATION
+   MESHAQ WHATSAPP NUMBER
 ========================================================= */
 
-const MESHAQ_WHATSAPP = "254712242050";
+const MESHAQ_WHATSAPP =
+  "254712242050";
+
 
 
 /* =========================================================
-   KENYA COUNTIES
+   MOBILE MENU
+========================================================= */
+
+const menuBtn =
+  document.getElementById("menuBtn");
+
+const navLinks =
+  document.getElementById("navLinks");
+
+
+menuBtn.addEventListener(
+  "click",
+  () => {
+
+    navLinks.classList.toggle(
+      "active"
+    );
+
+  }
+);
+
+
+document
+  .querySelectorAll(".nav-links a")
+  .forEach(link => {
+
+    link.addEventListener(
+      "click",
+      () => {
+
+        navLinks.classList.remove(
+          "active"
+        );
+
+      }
+    );
+
+  });
+
+
+
+/* =========================================================
+   ALL 47 KENYA COUNTIES
 ========================================================= */
 
 const counties = [
@@ -3907,983 +4887,933 @@ const counties = [
 ];
 
 
+
 /* =========================================================
-   MOBILE MENU
+   POPULATE COUNTIES
 ========================================================= */
 
-const menuBtn =
-  document.getElementById("menuBtn");
+const county =
+  document.getElementById("county");
 
-const navLinks =
-  document.getElementById("navLinks");
+const countyHelp =
+  document.getElementById("countyHelp");
 
-menuBtn.addEventListener("click",function(){
 
-  navLinks.classList.toggle("open");
+counties.forEach(
+  (countyName,index) => {
 
-});
+    const option =
+      document.createElement("option");
+
+    option.value =
+      countyName;
+
+    option.textContent =
+      `${String(index + 1).padStart(2,"0")} — ${countyName}`;
+
+    county.appendChild(option);
+
+  }
+);
+
+
+countyHelp.textContent =
+  "✓ All 47 Kenya counties are available.";
+
+
+
+/* =========================================================
+   PHONE NUMBER
+========================================================= */
+
+const phoneInput =
+  document.getElementById("phone");
+
+const phoneStatus =
+  document.getElementById("phoneStatus");
+
+
+
+function normalizeKenyanPhone(value){
+
+  let digits =
+    String(value || "")
+      .replace(/\D/g,"");
+
+
+  if(digits.startsWith("254")){
+
+    digits =
+      digits.substring(3);
+
+  }
+
+
+  if(digits.startsWith("0")){
+
+    digits =
+      digits.substring(1);
+
+  }
+
+
+  if(
+    !/^[17]\d{8}$/.test(digits)
+  ){
+
+    return null;
+
+  }
+
+
+  return "+254" + digits;
+
+}
+
+
+
+function validatePhone(){
+
+  const raw =
+    phoneInput.value.trim();
+
+
+  if(!raw){
+
+    phoneStatus.textContent = "";
+
+    phoneInput.classList.remove(
+      "input-valid",
+      "input-invalid"
+    );
+
+    return false;
+
+  }
+
+
+  const normalized =
+    normalizeKenyanPhone(raw);
+
+
+  if(normalized){
+
+    phoneInput.classList.remove(
+      "input-invalid"
+    );
+
+    phoneInput.classList.add(
+      "input-valid"
+    );
+
+    phoneStatus.style.color =
+      "var(--green)";
+
+    phoneStatus.textContent =
+      `✓ Valid Kenyan number: ${normalized}`;
+
+    return true;
+
+  }
+
+
+  phoneInput.classList.remove(
+    "input-valid"
+  );
+
+  phoneInput.classList.add(
+    "input-invalid"
+  );
+
+  phoneStatus.style.color =
+    "var(--red)";
+
+  phoneStatus.textContent =
+    "Enter a valid Kenyan number starting with 7 or 1.";
+
+  return false;
+
+}
+
+
+phoneInput.addEventListener(
+  "input",
+  validatePhone
+);
+
+phoneInput.addEventListener(
+  "blur",
+  validatePhone
+);
+
+
+
+/* =========================================================
+   APPLICATION REFERENCE
+========================================================= */
+
+function generateReference(){
+
+  const now =
+    new Date();
+
+  const year =
+    now.getFullYear();
+
+  const random =
+    Math.floor(
+      100000 +
+      Math.random() * 900000
+    );
+
+  return `MES-${year}-${random}`;
+
+}
+
+
+
+/* =========================================================
+   SELECTED SERVICES
+========================================================= */
+
+function getSelectedServices(){
+
+  return [
+
+    ...document.querySelectorAll(
+      'input[name="services"]:checked'
+    )
+
+  ].map(
+    item => item.value
+  );
+
+}
+
+
+
+/* =========================================================
+   CLEAN TEXT
+========================================================= */
+
+function cleanText(value){
+
+  return String(value || "")
+    .trim();
+
+}
+
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+const form =
+  document.getElementById(
+    "projectForm"
+  );
+
+
+form.addEventListener(
+  "submit",
+  function(event){
+
+    event.preventDefault();
+
+
+    const name =
+      cleanText(
+        document.getElementById("name").value
+      );
+
+
+    const phoneRaw =
+      cleanText(
+        document.getElementById("phone").value
+      );
+
+
+    const normalizedPhone =
+      normalizeKenyanPhone(
+        phoneRaw
+      );
+
+
+    const email =
+      cleanText(
+        document.getElementById("email").value
+      );
+
+
+    const countyValue =
+      cleanText(
+        document.getElementById("county").value
+      );
+
+
+    const projectLocation =
+      cleanText(
+        document.getElementById("projectLocation").value
+      );
+
+
+    const projectType =
+      cleanText(
+        document.getElementById("projectType").value
+      );
+
+
+    const budget =
+      cleanText(
+        document.getElementById("budget").value
+      );
+
+
+    const message =
+      cleanText(
+        document.getElementById("message").value
+      );
+
+
+    const startDate =
+      cleanText(
+        document.getElementById("startDate").value
+      );
+
+
+    const services =
+      getSelectedServices();
+
+
+
+    /* =====================================================
+       VALIDATION
+    ===================================================== */
+
+    if(!name){
+
+      alert(
+        "Please enter your full name."
+      );
+
+      document
+        .getElementById("name")
+        .focus();
+
+      return;
+
+    }
+
+
+    if(!normalizedPhone){
+
+      alert(
+        "Please enter a valid Kenyan phone number beginning with 7 or 1."
+      );
+
+      phoneInput.focus();
+
+      validatePhone();
+
+      return;
+
+    }
+
+
+    if(!countyValue){
+
+      alert(
+        "Please select your Kenya county."
+      );
+
+      document
+        .getElementById("county")
+        .focus();
+
+      return;
+
+    }
+
+
+    if(!projectLocation){
+
+      alert(
+        "Please enter your project town or area."
+      );
+
+      document
+        .getElementById("projectLocation")
+        .focus();
+
+      return;
+
+    }
+
+
+    if(!projectType){
+
+      alert(
+        "Please select your project type."
+      );
+
+      document
+        .getElementById("projectType")
+        .focus();
+
+      return;
+
+    }
+
+
+    if(!message){
+
+      alert(
+        "Please describe your project."
+      );
+
+      document
+        .getElementById("message")
+        .focus();
+
+      return;
+
+    }
+
+
+
+    /* =====================================================
+       REFERENCE
+    ===================================================== */
+
+    const reference =
+      generateReference();
+
+
+
+    /* =====================================================
+       SERVICES
+    ===================================================== */
+
+    const servicesText =
+      services.length
+      ? services.join(", ")
+      : "Not specified";
+
+
+
+    /* =====================================================
+       SUBMISSION DATE
+    ===================================================== */
+
+    const submittedAt =
+      new Date();
+
+
+    const formattedDate =
+      submittedAt.toLocaleString(
+        "en-KE",
+        {
+          dateStyle:"medium",
+          timeStyle:"short"
+        }
+      );
+
+
+
+    /* =====================================================
+       WHATSAPP MESSAGE
+    ===================================================== */
+
+    const whatsappMessage =
+
+`🏗️ *MESHAQ ENGINEERING & CONTRACTORS*
+
+━━━━━━━━━━━━━━━━━━━━
+📋 *NEW PROJECT APPLICATION*
+━━━━━━━━━━━━━━━━━━━━
+
+🔖 *APPLICATION REFERENCE*
+${reference}
+
+👤 *CLIENT INFORMATION*
+
+Name: ${name}
+Phone: ${normalizedPhone}
+Email: ${email || "Not provided"}
+
+🇰🇪 *CLIENT LOCATION*
+
+Country: Kenya
+County: ${countyValue}
+
+🏗️ *PROJECT INFORMATION*
+
+Project Area: ${projectLocation}
+Project Type: ${projectType}
+Estimated Budget: ${budget || "Not specified"}
+
+🛠️ *SERVICES REQUIRED*
+
+${servicesText}
+
+📝 *PROJECT DESCRIPTION*
+
+${message}
+
+📅 *PREFERRED START DATE*
+
+${startDate || "Not specified"}
+
+🕒 *SUBMISSION TIME*
+
+${formattedDate}
+
+━━━━━━━━━━━━━━━━━━━━
+📌 *SUBMITTED THROUGH*
+MESHAQ WEBSITE
+
+🔖 Reference:
+${reference}
+
+━━━━━━━━━━━━━━━━━━━━
+
+Please review this project application and contact the client for the next step.
+
+— *MESHAQ Engineering & Contractors*`;
+
+
+
+    /* =====================================================
+       WHATSAPP URL
+    ===================================================== */
+
+    const whatsappURL =
+      "https://wa.me/" +
+      MESHAQ_WHATSAPP +
+      "?text=" +
+      encodeURIComponent(
+        whatsappMessage
+      );
+
+
+
+    /* =====================================================
+       SAVE LOCAL COPY
+    ===================================================== */
+
+    const applicationData = {
+
+      reference:reference,
+
+      name:name,
+
+      phone:normalizedPhone,
+
+      email:email,
+
+      country:"Kenya",
+
+      county:countyValue,
+
+      projectLocation:projectLocation,
+
+      projectType:projectType,
+
+      budget:budget,
+
+      services:services,
+
+      message:message,
+
+      startDate:startDate,
+
+      submittedAt:
+        submittedAt.toISOString()
+
+    };
+
+
+    try{
+
+      localStorage.setItem(
+        "meshaq_last_application",
+        JSON.stringify(
+          applicationData
+        )
+      );
+
+    }catch(error){
+
+      console.warn(
+        "Local storage unavailable.",
+        error
+      );
+
+    }
+
+
+
+    /* =====================================================
+       SHOW SUCCESS MODAL
+    ===================================================== */
+
+    document
+      .getElementById(
+        "referenceNumber"
+      )
+      .textContent =
+      reference;
+
+
+    document
+      .getElementById(
+        "successModal"
+      )
+      .classList.add(
+        "active"
+      );
+
+
+
+    /* =====================================================
+       OPEN WHATSAPP
+    ===================================================== */
+
+    setTimeout(
+      () => {
+
+        window.location.href =
+          whatsappURL;
+
+      },
+      350
+    );
+
+  }
+);
+
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+const modal =
+  document.getElementById(
+    "successModal"
+  );
 
 
 document
-.querySelectorAll(".nav-links a")
-.forEach(function(link){
+  .getElementById(
+    "closeModal"
+  )
+  .addEventListener(
+    "click",
+    () => {
 
-  link.addEventListener("click",function(){
+      modal.classList.remove(
+        "active"
+      );
 
-    navLinks.classList.remove("open");
+    }
+  );
 
-  });
 
-});
+document
+  .getElementById(
+    "doneBtn"
+  )
+  .addEventListener(
+    "click",
+    () => {
+
+      modal.classList.remove(
+        "active"
+      );
+
+    }
+  );
+
+
+modal.addEventListener(
+  "click",
+  event => {
+
+    if(event.target === modal){
+
+      modal.classList.remove(
+        "active"
+      );
+
+    }
+
+  }
+);
+
 
 
 /* =========================================================
    YEAR
 ========================================================= */
 
-document.getElementById("year").textContent =
+document
+  .getElementById("year")
+  .textContent =
   new Date().getFullYear();
 
 
+
 /* =========================================================
-   COUNTY SELECTOR
+   REAL KISUMU MAP
+   OpenStreetMap + Leaflet
 ========================================================= */
 
-const country =
-  document.getElementById("country");
+/*
+  Kisumu city coordinates.
 
-const county =
-  document.getElementById("county");
+  IMPORTANT:
+  This is currently a city-level marker because
+  the exact building/street has not been supplied.
+*/
 
+const KISUMU_LAT =
+  -0.1022;
 
-counties.forEach(function(item){
-
-  const option =
-    document.createElement("option");
-
-  option.value = item;
-  option.textContent = item;
-
-  county.appendChild(option);
-
-});
+const KISUMU_LNG =
+  34.7617;
 
 
-country.addEventListener("change",function(){
 
-  if(country.value === "Kenya"){
+function initializeMeshaqMap(){
 
-    county.disabled = false;
-    county.required = true;
+  const mapElement =
+    document.getElementById(
+      "meshaqMap"
+    );
 
-  }else{
 
-    county.disabled = true;
-    county.required = false;
-    county.value = "";
+  if(!mapElement){
+
+    return;
 
   }
 
-  updateSummary();
 
-});
+  /* =====================================================
+     CREATE MAP
+  ===================================================== */
 
+  const map =
+    L.map(
+      "meshaqMap",
+      {
 
-/* =========================================================
-   CHARACTER COUNTER
-========================================================= */
+        scrollWheelZoom:false,
 
-const message =
-  document.getElementById("message");
+        zoomControl:true
 
-const charCount =
-  document.getElementById("charCount");
-
-
-message.addEventListener("input",function(){
-
-  charCount.textContent =
-    message.value.length;
-
-  updateSummary();
-
-});
+      }
+    ).setView(
+      [
+        KISUMU_LAT,
+        KISUMU_LNG
+      ],
+      13
+    );
 
 
-/* =========================================================
-   FORM ELEMENT VALIDATION
-========================================================= */
 
-const formInputs =
-  document.querySelectorAll(
-    "#projectForm input:not([type='checkbox']), #projectForm select, #projectForm textarea"
+  /* =====================================================
+     OPENSTREETMAP TILE LAYER
+  ===================================================== */
+
+  L.tileLayer(
+
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+
+    {
+
+      maxZoom:19,
+
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+
+    }
+
+  ).addTo(map);
+
+
+
+  /* =====================================================
+     CUSTOM MESHAQ MARKER
+  ===================================================== */
+
+  const meshaqIcon =
+
+    L.divIcon({
+
+      className:"",
+
+      html:`
+
+        <div class="meshaq-marker">
+
+          <div class="meshaq-marker-inner">
+
+            🏗️
+
+          </div>
+
+        </div>
+
+      `,
+
+      iconSize:[
+        48,
+        48
+      ],
+
+      iconAnchor:[
+        24,
+        48
+      ],
+
+      popupAnchor:[
+        0,
+        -45
+      ]
+
+    });
+
+
+
+  /* =====================================================
+     CREATE OFFICE MARKER
+  ===================================================== */
+
+  const marker =
+
+    L.marker(
+
+      [
+        KISUMU_LAT,
+        KISUMU_LNG
+      ],
+
+      {
+
+        icon:
+          meshaqIcon
+
+      }
+
+    ).addTo(map);
+
+
+
+  /* =====================================================
+     OFFICE POPUP
+  ===================================================== */
+
+  marker.bindPopup(`
+
+    <div class="office-popup">
+
+      <strong>
+        MESHAQ Engineering & Contractors
+      </strong>
+
+      <span>
+        📍 Kisumu, Kenya
+      </span>
+
+      <span>
+        🏢 5th Floor
+      </span>
+
+      <span>
+        Engineering • Construction • Design
+      </span>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=MESHAQ+Engineering+%26+Contractors+Kisumu+Kenya"
+        target="_blank"
+        rel="noopener">
+
+        GET DIRECTIONS →
+
+      </a>
+
+    </div>
+
+  `);
+
+
+
+  /* =====================================================
+     OPEN OFFICE POPUP
+  ===================================================== */
+
+  marker.openPopup();
+
+
+
+  /* =====================================================
+     FIX MAP SIZE
+  ===================================================== */
+
+  setTimeout(
+    () => {
+
+      map.invalidateSize();
+
+    },
+    400
   );
 
 
-formInputs.forEach(function(input){
 
-  input.addEventListener("input",function(){
+  /* =====================================================
+     ENABLE MAP ZOOM AFTER USER FOCUSES MAP
+  ===================================================== */
 
-    validateField(input);
-    updateSummary();
+  map.on(
+    "focus",
+    () => {
 
-  });
-
-  input.addEventListener("change",function(){
-
-    validateField(input);
-    updateSummary();
-
-  });
-
-});
-
-
-function validateField(field){
-
-  if(field.disabled){
-    return;
-  }
-
-  if(
-    field.required &&
-    field.value.trim() === ""
-  ){
-
-    field.classList.remove("valid");
-    field.classList.add("invalid");
-
-  }else{
-
-    field.classList.remove("invalid");
-
-    if(field.value.trim() !== ""){
-      field.classList.add("valid");
-    }
-
-  }
-
-
-  if(
-    field.type === "tel" &&
-    field.value.trim() !== ""
-  ){
-
-    const phone =
-      field.value.replace(/\s+/g,"");
-
-
-    if(
-      /^(\+254|254|0)7\d{8}$/.test(phone) ||
-      /^7\d{8}$/.test(phone)
-    ){
-
-      field.classList.remove("invalid");
-      field.classList.add("valid");
-
-    }else{
-
-      field.classList.remove("valid");
-      field.classList.add("invalid");
+      map.scrollWheelZoom.enable();
 
     }
+  );
 
-  }
+
+  map.on(
+    "blur",
+    () => {
+
+      map.scrollWheelZoom.disable();
+
+    }
+  );
 
 }
 
 
-/* =========================================================
-   LIVE SUMMARY
-========================================================= */
-
-const liveSummary =
-  document.getElementById("liveSummary");
-
-const summaryText =
-  document.getElementById("summaryText");
-
-
-function updateSummary(){
-
-  const name =
-    document.getElementById("fullName").value.trim();
-
-  const projectType =
-    document.getElementById("projectType").value;
-
-  const town =
-    document.getElementById("town").value.trim();
-
-  const selectedServices =
-    [
-      ...document.querySelectorAll(
-        'input[name="services"]:checked'
-      )
-    ].map(function(item){
-
-      return item.value;
-
-    });
-
-
-  if(
-    name ||
-    projectType ||
-    town ||
-    selectedServices.length
-  ){
-
-    liveSummary.classList.add("show");
-
-    let text = "";
-
-    if(name){
-      text += "Client: " + name + " • ";
-    }
-
-    if(projectType){
-      text += "Project: " + projectType + " • ";
-    }
-
-    if(town){
-      text += "Location: " + town + " • ";
-    }
-
-    if(selectedServices.length){
-      text +=
-        "Services selected: " +
-        selectedServices.length;
-    }
-
-    summaryText.textContent = text;
-
-  }else{
-
-    liveSummary.classList.remove("show");
-
-  }
-
-}
-
 
 /* =========================================================
-   DESIGN FILTER
+   START MAP
 ========================================================= */
 
-const filterButtons =
-  document.querySelectorAll(".filter-btn");
-
-const designCards =
-  document.querySelectorAll(".design-card");
-
-
-filterButtons.forEach(function(button){
-
-  button.addEventListener("click",function(){
-
-    filterButtons.forEach(function(btn){
-
-      btn.classList.remove("active");
-
-    });
-
-    button.classList.add("active");
-
-    const filter =
-      button.dataset.filter;
-
-
-    designCards.forEach(function(card){
-
-      if(
-        filter === "all" ||
-        card.dataset.category === filter
-      ){
-
-        card.style.display = "";
-
-      }else{
-
-        card.style.display = "none";
-
-      }
-
-    });
-
-  });
-
-});
-
-
-/* =========================================================
-   FAQ
-========================================================= */
-
-document
-.querySelectorAll(".faq-question")
-.forEach(function(question){
-
-  question.addEventListener("click",function(){
-
-    const item =
-      question.parentElement;
-
-    document
-    .querySelectorAll(".faq-item")
-    .forEach(function(other){
-
-      if(other !== item){
-
-        other.classList.remove("open");
-
-      }
-
-    });
-
-    item.classList.toggle("open");
-
-  });
-
-});
-
-
-/* =========================================================
-   5 SECOND TUTORIAL
-========================================================= */
-
-const tutorialSteps = [
-
-  {
-    icon:"📝",
-    title:"Fill Application",
-    text:"Enter your project details and location."
-  },
-
-  {
-    icon:"📍",
-    title:"Choose Location",
-    text:"Select your country and Kenya county."
-  },
-
-  {
-    icon:"🏗️",
-    title:"Choose Services",
-    text:"Select the engineering or construction services you need."
-  },
-
-  {
-    icon:"📋",
-    title:"Review Request",
-    text:"Your application receives a unique reference."
-  },
-
-  {
-    icon:"💬",
-    title:"WhatsApp",
-    text:"WhatsApp opens with your application prepared."
-  }
-
-];
-
-
-const tutorialIcon =
-  document.getElementById("tutorialIcon");
-
-const tutorialTitle =
-  document.getElementById("tutorialTitle");
-
-const tutorialText =
-  document.getElementById("tutorialText");
-
-const tutorialProgress =
-  document.getElementById("tutorialProgress");
-
-
-let tutorialIndex = 0;
-
-
-function runTutorial(){
-
-  const step =
-    tutorialSteps[tutorialIndex];
-
-  tutorialIcon.textContent =
-    step.icon;
-
-  tutorialTitle.textContent =
-    step.title;
-
-  tutorialText.textContent =
-    step.text;
-
-  tutorialProgress.style.width =
-    (
-      (tutorialIndex + 1) /
-      tutorialSteps.length *
-      100
-    ) + "%";
-
-
-  tutorialIndex =
-    (tutorialIndex + 1) %
-    tutorialSteps.length;
-
-}
-
-
-/*
-  One second per step.
-  No animation or bouncing.
-*/
-
-runTutorial();
-
-setInterval(
-  runTutorial,
-  1000
+window.addEventListener(
+  "load",
+  initializeMeshaqMap
 );
-
-
-/* =========================================================
-   APPLICATION FORM
-========================================================= */
-
-const successModal =
-  document.getElementById("successModal");
-
-const successGreeting =
-  document.getElementById("successGreeting");
-
-const applicationReference =
-  document.getElementById("applicationReference");
-
-const continueWhatsApp =
-  document.getElementById("continueWhatsApp");
-
-const closeModal =
-  document.getElementById("closeModal");
-
-
-let pendingWhatsAppUrl = "";
-
-
-document
-.getElementById("projectForm")
-.addEventListener("submit",function(event){
-
-  event.preventDefault();
-
-
-  const fullName =
-    document
-    .getElementById("fullName")
-    .value
-    .trim();
-
-
-  const phone =
-    document
-    .getElementById("phone")
-    .value
-    .trim();
-
-
-  const email =
-    document
-    .getElementById("email")
-    .value
-    .trim();
-
-
-  const countryValue =
-    document
-    .getElementById("country")
-    .value;
-
-
-  const countyValue =
-    document
-    .getElementById("county")
-    .value;
-
-
-  const town =
-    document
-    .getElementById("town")
-    .value
-    .trim();
-
-
-  const projectType =
-    document
-    .getElementById("projectType")
-    .value;
-
-
-  const budget =
-    document
-    .getElementById("budget")
-    .value;
-
-
-  const projectMessage =
-    document
-    .getElementById("message")
-    .value
-    .trim();
-
-
-  const startDate =
-    document
-    .getElementById("startDate")
-    .value;
-
-
-  const selectedServices =
-    [
-      ...document.querySelectorAll(
-        'input[name="services"]:checked'
-      )
-    ].map(function(item){
-
-      return item.value;
-
-    });
-
-
-  /* =====================================================
-     VALIDATION
-  ===================================================== */
-
-  if(!fullName){
-
-    alert("Please enter your full name.");
-
-    document
-    .getElementById("fullName")
-    .focus();
-
-    return;
-
-  }
-
-
-  if(!phone){
-
-    alert("Please enter your phone number.");
-
-    document
-    .getElementById("phone")
-    .focus();
-
-    return;
-
-  }
-
-
-  const cleanPhone =
-    phone.replace(/\s+/g,"");
-
-
-  const validPhone =
-    /^(\+254|254|0)7\d{8}$/.test(cleanPhone) ||
-    /^7\d{8}$/.test(cleanPhone);
-
-
-  if(!validPhone){
-
-    alert(
-      "Please enter a valid Kenyan mobile number."
-    );
-
-    document
-    .getElementById("phone")
-    .focus();
-
-    return;
-
-  }
-
-
-  if(!countryValue){
-
-    alert("Please select your country.");
-
-    document
-    .getElementById("country")
-    .focus();
-
-    return;
-
-  }
-
-
-  if(
-    countryValue === "Kenya" &&
-    !countyValue
-  ){
-
-    alert(
-      "Please select your Kenya county."
-    );
-
-    document
-    .getElementById("county")
-    .focus();
-
-    return;
-
-  }
-
-
-  if(!town){
-
-    alert(
-      "Please enter the project town or area."
-    );
-
-    document
-    .getElementById("town")
-    .focus();
-
-    return;
-
-  }
-
-
-  if(!projectType){
-
-    alert(
-      "Please select your project type."
-    );
-
-    document
-    .getElementById("projectType")
-    .focus();
-
-    return;
-
-  }
-
-
-  if(selectedServices.length === 0){
-
-    alert(
-      "Please select at least one service."
-    );
-
-    return;
-
-  }
-
-
-  if(!projectMessage){
-
-    alert(
-      "Please describe your project."
-    );
-
-    document
-    .getElementById("message")
-    .focus();
-
-    return;
-
-  }
-
-
-  /* =====================================================
-     APPLICATION REFERENCE
-  ===================================================== */
-
-  const now =
-    new Date();
-
-
-  const reference =
-    "MES-" +
-    now.getFullYear() +
-    "-" +
-    Math.floor(
-      100000 +
-      Math.random() *
-      900000
-    );
-
-
-  /* =====================================================
-     PHONE FORMAT
-  ===================================================== */
-
-  let formattedPhone =
-    cleanPhone;
-
-
-  if(
-    formattedPhone.startsWith("0")
-  ){
-
-    formattedPhone =
-      "254" +
-      formattedPhone.substring(1);
-
-  }
-
-
-  if(
-    formattedPhone.startsWith("+254")
-  ){
-
-    formattedPhone =
-      formattedPhone.substring(1);
-
-  }
-
-
-  /* =====================================================
-     WHATSAPP MESSAGE
-  ===================================================== */
-
-  const whatsappMessage =
-
-`Jambo MESHAQ Connection Limited 👋
-
-NEW PROJECT APPLICATION
-
-Application Reference:
-${reference}
-
-CLIENT DETAILS
-------------------------------
-Name: ${fullName}
-Phone: ${phone}
-Email: ${email || "Not provided"}
-
-LOCATION
-------------------------------
-Country: ${countryValue}
-County: ${countyValue || "Not applicable"}
-Town / Area: ${town}
-
-PROJECT
-------------------------------
-Project Type: ${projectType}
-Estimated Budget: ${budget || "Not specified"}
-Preferred Start Date: ${startDate || "Not specified"}
-
-SERVICES REQUIRED
-------------------------------
-${selectedServices.map(function(service){
-
-  return "• " + service;
-
-}).join("\n")}
-
-PROJECT DESCRIPTION
-------------------------------
-${projectMessage}
-
-OFFICE
-------------------------------
-MESHAQ Connection Limited
-Kendule, Kisumu, Kenya
-Open 24/7
-
-------------------------------
-Submitted through MESHAQ Connection Limited website.
-
-Reference: ${reference}
-`;
-
-
-  pendingWhatsAppUrl =
-    "https://wa.me/" +
-    MESHAQ_WHATSAPP +
-    "?text=" +
-    encodeURIComponent(
-      whatsappMessage
-    );
-
-
-  /* =====================================================
-     SAVE LAST APPLICATION LOCALLY
-  ===================================================== */
-
-  try{
-
-    localStorage.setItem(
-      "meshaq_last_application",
-      JSON.stringify({
-
-        reference:reference,
-        name:fullName,
-        phone:phone,
-        email:email,
-        country:countryValue,
-        county:countyValue,
-        town:town,
-        projectType:projectType,
-        budget:budget,
-        services:selectedServices,
-        message:projectMessage,
-        startDate:startDate,
-        createdAt:
-          new Date().toISOString()
-
-      })
-    );
-
-  }catch(error){
-
-    console.log(
-      "Local storage unavailable."
-    );
-
-  }
-
-
-  /* =====================================================
-     SUCCESS MESSAGE
-  ===================================================== */
-
-  successGreeting.textContent =
-    "Jambo " + fullName + "!";
-
-
-  applicationReference.textContent =
-    reference;
-
-
-  successModal.classList.add("show");
-
-});
-
-
-/* =========================================================
-   OPEN WHATSAPP
-========================================================= */
-
-continueWhatsApp.addEventListener(
-  "click",
-  function(){
-
-    if(!pendingWhatsAppUrl){
-      return;
-    }
-
-
-    /*
-      Direct navigation is more reliable on phones
-      than opening a new browser tab.
-    */
-
-    window.location.href =
-      pendingWhatsAppUrl;
-
-  }
-);
-
-
-/* =========================================================
-   CLOSE MODAL
-========================================================= */
-
-closeModal.addEventListener(
-  "click",
-  function(){
-
-    successModal.classList.remove("show");
-
-  }
-);
-
-
-successModal.addEventListener(
-  "click",
-  function(event){
-
-    if(
-      event.target === successModal
-    ){
-
-      successModal.classList.remove(
-        "show"
-      );
-
-    }
-
-  }
-);
-
-
-/* =========================================================
-   ESCAPE KEY
-========================================================= */
-
-document.addEventListener(
-  "keydown",
-  function(event){
-
-    if(event.key === "Escape"){
-
-      successModal.classList.remove(
-        "show"
-      );
-
-    }
-
-  }
-);
-
-
-/* =========================================================
-   PHONE INPUT
-========================================================= */
-
-const phoneInput =
-  document.getElementById("phone");
-
-
-phoneInput.addEventListener(
-  "input",
-  function(){
-
-    phoneInput.value =
-      phoneInput.value.replace(
-        /[^\d+\s]/g,
-        ""
-      );
-
-  }
-);
-
-
-/* =========================================================
-   START DATE
-========================================================= */
-
-const startDateInput =
-  document.getElementById("startDate");
-
-
-const today =
-  new Date()
-  .toISOString()
-  .split("T")[0];
-
-
-startDateInput.min =
-  today;
-
-
-/* =========================================================
-   INITIAL SUMMARY
-========================================================= */
-
-updateSummary();
 
 </script>
 
+
 </body>
-  </html>
+
+             </html>
